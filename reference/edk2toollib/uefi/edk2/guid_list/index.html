@@ -1,0 +1,2448 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Guid List - edk2-pytool-library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#4caf50">
+      
+    
+    
+      <script src="../../../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="green" data-md-color-accent="lightgreen">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#module-edk2toollibuefiedk2guid_list" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../../../.." title="edk2-pytool-library" aria-label="edk2-pytool-library" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              edk2-pytool-library
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Guid List
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/tianocore/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    edk2-pytool-library
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../../../../.." title="edk2-pytool-library" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    edk2-pytool-library
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/tianocore/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    edk2-pytool-library
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../readme.md" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../docs/using.md" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../docs/developing.md" title="Developing" class="md-nav__link">
+      Developing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../docs/publishing.md" title="Publishing" class="md-nav__link">
+      Publishing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../docs/features/logging.ansi_handler.md" title="Ansi" class="md-nav__link">
+      Ansi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../docs/features/utility_functions.GetHostInfo.md" title="GetHostInfo" class="md-nav__link">
+      GetHostInfo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../docs/features/windows_firmware_policy.md" title="Windows Firmware Policy" class="md-nav__link">
+      Windows Firmware Policy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1" checked>
+    
+    <label class="md-nav__link" for="nav-6-1">
+      Edk2Toollib
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        Edk2Toollib
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bin/" title="Bin" class="md-nav__link">
+      Bin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../gitignore_parser/" title="Gitignore Parser" class="md-nav__link">
+      Gitignore Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../utility_functions/" title="Utility Functions" class="md-nav__link">
+      Utility Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../utility_functions_test/" title="Utility Functions Test" class="md-nav__link">
+      Utility Functions Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-6" type="checkbox" id="nav-6-1-6">
+    
+    <label class="md-nav__link" for="nav-6-1-6">
+      Acpi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-6">
+        Acpi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/dmar_parser/" title="Dmar Parser" class="md-nav__link">
+      Dmar Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/ivrs_parser/" title="Ivrs Parser" class="md-nav__link">
+      Ivrs Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/ivrs_parser_test/" title="Ivrs Parser Test" class="md-nav__link">
+      Ivrs Parser Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-7" type="checkbox" id="nav-6-1-7">
+    
+    <label class="md-nav__link" for="nav-6-1-7">
+      Log
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-7">
+        Log
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/ansi_handler/" title="Ansi Handler" class="md-nav__link">
+      Ansi Handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/ansi_handler_test/" title="Ansi Handler Test" class="md-nav__link">
+      Ansi Handler Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/file_handler/" title="File Handler" class="md-nav__link">
+      File Handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/junit_report_format/" title="Junit Report Format" class="md-nav__link">
+      Junit Report Format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/junit_report_format_test/" title="Junit Report Format Test" class="md-nav__link">
+      Junit Report Format Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/markdown_handler/" title="Markdown Handler" class="md-nav__link">
+      Markdown Handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/string_handler/" title="String Handler" class="md-nav__link">
+      String Handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/string_handler_test/" title="String Handler Test" class="md-nav__link">
+      String Handler Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-8" type="checkbox" id="nav-6-1-8">
+    
+    <label class="md-nav__link" for="nav-6-1-8">
+      Tpm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-8">
+        Tpm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_defs/" title="Tpm2 Defs" class="md-nav__link">
+      Tpm2 Defs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_defs_test/" title="Tpm2 Defs Test" class="md-nav__link">
+      Tpm2 Defs Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_policy_calc/" title="Tpm2 Policy Calc" class="md-nav__link">
+      Tpm2 Policy Calc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_policy_calc_test/" title="Tpm2 Policy Calc Test" class="md-nav__link">
+      Tpm2 Policy Calc Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_simulator/" title="Tpm2 Simulator" class="md-nav__link">
+      Tpm2 Simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_stream/" title="Tpm2 Stream" class="md-nav__link">
+      Tpm2 Stream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_stream_test/" title="Tpm2 Stream Test" class="md-nav__link">
+      Tpm2 Stream Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-9" type="checkbox" id="nav-6-1-9" checked>
+    
+    <label class="md-nav__link" for="nav-6-1-9">
+      Uefi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-9">
+        Uefi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../authenticated_variables_structure_support/" title="Authenticated Variables Structure Support" class="md-nav__link">
+      Authenticated Variables Structure Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bmp_object/" title="Bmp Object" class="md-nav__link">
+      Bmp Object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bmp_object_test/" title="Bmp Object Test" class="md-nav__link">
+      Bmp Object Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_auth_header/" title="Fmp Auth Header" class="md-nav__link">
+      Fmp Auth Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_capsule_header/" title="Fmp Capsule Header" class="md-nav__link">
+      Fmp Capsule Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_capsule_header_test/" title="Fmp Capsule Header Test" class="md-nav__link">
+      Fmp Capsule Header Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pi_firmware_file/" title="Pi Firmware File" class="md-nav__link">
+      Pi Firmware File
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pi_firmware_volume/" title="Pi Firmware Volume" class="md-nav__link">
+      Pi Firmware Volume
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../status_codes/" title="Status Codes" class="md-nav__link">
+      Status Codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../status_codes_test/" title="Status Codes Test" class="md-nav__link">
+      Status Codes Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uefi_capsule_header/" title="Uefi Capsule Header" class="md-nav__link">
+      Uefi Capsule Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uefi_multi_phase/" title="Uefi Multi Phase" class="md-nav__link">
+      Uefi Multi Phase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wincert/" title="Wincert" class="md-nav__link">
+      Wincert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-9-15" type="checkbox" id="nav-6-1-9-15" checked>
+    
+    <label class="md-nav__link" for="nav-6-1-9-15">
+      Edk2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-9-15">
+        Edk2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fmp_payload_header/" title="Fmp Payload Header" class="md-nav__link">
+      Fmp Payload Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ftw_working_block_format/" title="Ftw Working Block Format" class="md-nav__link">
+      Ftw Working Block Format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Guid List
+      </label>
+    
+    <a href="./" title="Guid List" class="md-nav__link md-nav__link--active">
+      Guid List
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidlist" class="md-nav__link">
+    GuidList
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    Static methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidlist_from_filesystem" class="md-nav__link">
+    guidlist_from_filesystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_guids_from_dec" class="md-nav__link">
+    parse_guids_from_dec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_guids_from_edk2_file" class="md-nav__link">
+    parse_guids_from_edk2_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_guids_from_inf" class="md-nav__link">
+    parse_guids_from_inf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guidlistentry" class="md-nav__link">
+    GuidListEntry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guid_list_test/" title="Guid List Test" class="md-nav__link">
+      Guid List Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../path_utilities/" title="Path Utilities" class="md-nav__link">
+      Path Utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variable_format/" title="Variable Format" class="md-nav__link">
+      Variable Format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variable_format_test/" title="Variable Format Test" class="md-nav__link">
+      Variable Format Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variablestore_manulipulations/" title="Variablestore Manulipulations" class="md-nav__link">
+      Variablestore Manulipulations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-9-15-10" type="checkbox" id="nav-6-1-9-15-10">
+    
+    <label class="md-nav__link" for="nav-6-1-9-15-10">
+      Build Objects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-1-9-15-10">
+        Build Objects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/dsc/" title="Dsc" class="md-nav__link">
+      Dsc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/dsc_test/" title="Dsc Test" class="md-nav__link">
+      Dsc Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/dsc_translator/" title="Dsc Translator" class="md-nav__link">
+      Dsc Translator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/dsc_translator_test/" title="Dsc Translator Test" class="md-nav__link">
+      Dsc Translator Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-9-15-11" type="checkbox" id="nav-6-1-9-15-11">
+    
+    <label class="md-nav__link" for="nav-6-1-9-15-11">
+      Parsers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="5">
+      <label class="md-nav__title" for="nav-6-1-9-15-11">
+        Parsers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/base_parser/" title="Base Parser" class="md-nav__link">
+      Base Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/base_parser_test/" title="Base Parser Test" class="md-nav__link">
+      Base Parser Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/buildreport_parser/" title="Buildreport Parser" class="md-nav__link">
+      Buildreport Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dec_parser/" title="Dec Parser" class="md-nav__link">
+      Dec Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dec_parser_test/" title="Dec Parser Test" class="md-nav__link">
+      Dec Parser Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dsc_parser/" title="Dsc Parser" class="md-nav__link">
+      Dsc Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dsc_parser_test/" title="Dsc Parser Test" class="md-nav__link">
+      Dsc Parser Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/fdf_parser/" title="Fdf Parser" class="md-nav__link">
+      Fdf Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/guid_parser/" title="Guid Parser" class="md-nav__link">
+      Guid Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/guid_parser_test/" title="Guid Parser Test" class="md-nav__link">
+      Guid Parser Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/hash_file_parser_test/" title="Hash File Parser Test" class="md-nav__link">
+      Hash File Parser Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/inf_parser/" title="Inf Parser" class="md-nav__link">
+      Inf Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/override_parser/" title="Override Parser" class="md-nav__link">
+      Override Parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/override_parser_test/" title="Override Parser Test" class="md-nav__link">
+      Override Parser Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/targettxt_parser/" title="Targettxt Parser" class="md-nav__link">
+      Targettxt Parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-10" type="checkbox" id="nav-6-1-10">
+    
+    <label class="md-nav__link" for="nav-6-1-10">
+      Windows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-1-10">
+        Windows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/locate_tools/" title="Locate Tools" class="md-nav__link">
+      Locate Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/locate_tools_test/" title="Locate Tools Test" class="md-nav__link">
+      Locate Tools Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-10-4" type="checkbox" id="nav-6-1-10-4">
+    
+    <label class="md-nav__link" for="nav-6-1-10-4">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-10-4">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/cat_generator/" title="Cat Generator" class="md-nav__link">
+      Cat Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/cat_generator_test/" title="Cat Generator Test" class="md-nav__link">
+      Cat Generator Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/inf_generator/" title="Inf Generator" class="md-nav__link">
+      Inf Generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/inf_generator_test/" title="Inf Generator Test" class="md-nav__link">
+      Inf Generator Test
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-1-10-5" type="checkbox" id="nav-6-1-10-5">
+    
+    <label class="md-nav__link" for="nav-6-1-10-5">
+      Policy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-1-10-5">
+        Policy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/policy/firmware_policy/" title="Firmware Policy" class="md-nav__link">
+      Firmware Policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/policy/firmware_policy_test/" title="Firmware Policy Test" class="md-nav__link">
+      Firmware Policy Test
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/policy/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidlist" class="md-nav__link">
+    GuidList
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    Static methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guidlist_from_filesystem" class="md-nav__link">
+    guidlist_from_filesystem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_guids_from_dec" class="md-nav__link">
+    parse_guids_from_dec
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_guids_from_edk2_file" class="md-nav__link">
+    parse_guids_from_edk2_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_guids_from_inf" class="md-nav__link">
+    parse_guids_from_inf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guidlistentry" class="md-nav__link">
+    GuidListEntry
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/tianocore/edk2-pytool-library/edit/master/reference/edk2toollib/uefi/edk2/guid_list.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="module-edk2toollibuefiedk2guid_list">Module edk2toollib.uefi.edk2.guid_list</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="c1"># @file guid_list</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># Simple list of GuidListEntry objects parsed from edk2 specific files.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># Copyright (c) Microsoft Corporation</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># SPDX-License-Identifier: BSD-2-Clause-Patent</span>
+
+<span class="c1">##</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">edk2toollib.gitignore_parser</span> <span class="kn">import</span> <span class="n">parse_gitignore_lines</span>
+
+<span class="kn">from</span> <span class="nn">edk2toollib.uefi.edk2.parsers.dec_parser</span> <span class="kn">import</span> <span class="n">DecParser</span>
+
+<span class="kn">from</span> <span class="nn">edk2toollib.uefi.edk2.parsers.inf_parser</span> <span class="kn">import</span> <span class="n">InfParser</span>
+
+<span class="k">class</span> <span class="nc">GuidListEntry</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">guid</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot; Create GuidListEntry for later review and compare.</span>
+
+<span class="sd">        name: name of guid</span>
+
+<span class="sd">        guid: registry format guid in string format</span>
+
+<span class="sd">        filepath: absolute path to file where this guid was found</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">guid</span> <span class="o">=</span> <span class="n">guid</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">absfilepath</span> <span class="o">=</span> <span class="n">filepath</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="n">f</span><span class="s2">&quot;GUID: {self.guid} NAME: {self.name} FILE: {self.absfilepath}&quot;</span>
+
+<span class="k">class</span> <span class="nc">GuidList</span><span class="p">():</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">guidlist_from_filesystem</span><span class="p">(</span><span class="n">folder</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ignore_lines</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">())</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot; Create a list of GuidListEntry from files found in the file system</span>
+
+<span class="sd">        folder: path string to root folder to walk</span>
+
+<span class="sd">        ignore_lines: list of gitignore syntax to ignore files and folders</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">guids</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">ignore</span> <span class="o">=</span> <span class="n">parse_gitignore_lines</span><span class="p">(</span><span class="n">ignore_lines</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span> <span class="s2">&quot;nofile.txt&quot;</span><span class="p">),</span> <span class="n">folder</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">folder</span><span class="p">):</span>
+
+            <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">[:]:</span>
+
+                <span class="n">fullpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">ignore</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)):</span>
+
+                    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Ignore folder: {fullpath}&quot;</span><span class="p">)</span>
+
+                    <span class="n">dirs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+
+                <span class="n">fullpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">ignore</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)):</span>
+
+                    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Ignore file: {fullpath}&quot;</span><span class="p">)</span>
+
+                    <span class="k">continue</span>
+
+                <span class="n">new_guids</span> <span class="o">=</span> <span class="n">GuidList</span><span class="o">.</span><span class="n">parse_guids_from_edk2_file</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span>
+
+                <span class="n">guids</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_guids</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">guids</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">parse_guids_from_edk2_file</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot; parse edk2 files for guids</span>
+
+<span class="sd">        filename: abspath to dec file</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.dec&quot;</span><span class="p">)):</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+
+                <span class="k">return</span> <span class="n">GuidList</span><span class="o">.</span><span class="n">parse_guids_from_dec</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">elif</span><span class="p">(</span><span class="n">filename</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.inf&quot;</span><span class="p">)):</span>
+
+            <span class="k">return</span> <span class="n">GuidList</span><span class="o">.</span><span class="n">parse_guids_from_inf</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">parse_guids_from_dec</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot; find all guids in a dec file contents contained with stream</span>
+
+<span class="sd">        stream: lines of dec file content</span>
+
+<span class="sd">        filename: abspath to dec file</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">dec</span> <span class="o">=</span> <span class="n">DecParser</span><span class="p">()</span>
+
+        <span class="n">dec</span><span class="o">.</span><span class="n">ParseStream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">dec</span><span class="o">.</span><span class="n">Protocols</span><span class="p">:</span>
+
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">guid</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">filename</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">dec</span><span class="o">.</span><span class="n">PPIs</span><span class="p">:</span>
+
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">guid</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">filename</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">dec</span><span class="o">.</span><span class="n">Guids</span><span class="p">:</span>
+
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">guid</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">filename</span><span class="p">))</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">dec</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="s2">&quot;PACKAGE_NAME&quot;</span><span class="p">],</span> <span class="n">dec</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="s2">&quot;PACKAGE_GUID&quot;</span><span class="p">],</span> <span class="n">filename</span><span class="p">))</span>
+
+        <span class="k">except</span><span class="p">:</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to find Package Guid from dec file: &quot;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">results</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">parse_guids_from_inf</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+
+        <span class="sd">&quot;&quot;&quot; find the module guid in an Edk2 inf file</span>
+
+<span class="sd">        filename: abspath to inf file</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">inf</span> <span class="o">=</span> <span class="n">InfParser</span><span class="p">()</span>
+
+        <span class="n">inf</span><span class="o">.</span><span class="n">ParseFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="p">[</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">inf</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="s2">&quot;BASE_NAME&quot;</span><span class="p">],</span> <span class="n">inf</span><span class="o">.</span><span class="n">Dict</span><span class="p">[</span><span class="s2">&quot;FILE_GUID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="n">filename</span><span class="p">)]</span>
+
+        <span class="k">except</span><span class="p">:</span>
+
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Failed to find info from INF file: &quot;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="guidlist">GuidList</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">GuidList</span><span class="p">(</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">GuidList</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">guidlist_from_filesystem</span><span class="p">(</span><span class="nl">folder</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"> </span><span class="nl">ignore_lines</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">())</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; Create a list of GuidListEntry from files found in the file system</span>
+
+<span class="ss">        folder: path string to root folder to walk</span>
+
+<span class="ss">        ignore_lines: list of gitignore syntax to ignore files and folders</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">guids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">ignore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_gitignore_lines</span><span class="p">(</span><span class="n">ignore_lines</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;nofile.txt&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">folder</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">dirs</span><span class="p">,</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">dirs</span><span class="o">[</span><span class="n">:</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">fullpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">ignore</span><span class="p">(</span><span class="n">fullpath</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Ignore folder: {fullpath}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">dirs</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">files</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">fullpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">ignore</span><span class="p">(</span><span class="n">fullpath</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Ignore file: {fullpath}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">continue</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_guids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GuidList</span><span class="p">.</span><span class="n">parse_guids_from_edk2_file</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">guids</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_guids</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">guids</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_guids_from_edk2_file</span><span class="p">(</span><span class="nl">filename</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; parse edk2 files for guids</span>
+
+<span class="ss">        filename: abspath to dec file</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="nf">lower</span><span class="p">().</span><span class="n">endswith</span><span class="p">(</span><span class="ss">&quot;.dec&quot;</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">with</span><span class="w"> </span><span class="k">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;r&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nl">f</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">GuidList</span><span class="p">.</span><span class="n">parse_guids_from_dec</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">elif</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="nf">lower</span><span class="p">().</span><span class="n">endswith</span><span class="p">(</span><span class="ss">&quot;.inf&quot;</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">GuidList</span><span class="p">.</span><span class="n">parse_guids_from_inf</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_guids_from_dec</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="nl">filename</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; find all guids in a dec file contents contained with stream</span>
+
+<span class="ss">        stream: lines of dec file content</span>
+
+<span class="ss">        filename: abspath to dec file</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DecParser</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">dec</span><span class="p">.</span><span class="n">ParseStream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="nl">Protocols</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">guid</span><span class="p">).</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="nl">PPIs</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">guid</span><span class="p">).</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="nl">Guids</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">guid</span><span class="p">).</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="k">dec</span><span class="p">.</span><span class="n">Dict</span><span class="o">[</span><span class="n">&quot;PACKAGE_NAME&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="n">Dict</span><span class="o">[</span><span class="n">&quot;PACKAGE_GUID&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logging</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="ss">&quot;Failed to find Package Guid from dec file: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">results</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_guids_from_inf</span><span class="p">(</span><span class="nl">filename</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; find the module guid in an Edk2 inf file</span>
+
+<span class="ss">        filename: abspath to inf file</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">inf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfParser</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">inf</span><span class="p">.</span><span class="n">ParseFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">GuidListEntry(inf.Dict[&quot;BASE_NAME&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">inf</span><span class="p">.</span><span class="n">Dict</span><span class="o">[</span><span class="n">&quot;FILE_GUID&quot;</span><span class="o">]</span><span class="p">.</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="err">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logging</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="ss">&quot;Failed to find info from INF file: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="static-methods">Static methods</h4>
+<h5 id="guidlist_from_filesystem">guidlist_from_filesystem</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">guidlist_from_filesystem</span><span class="p">(</span>
+    <span class="n">folder</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">ignore_lines</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+
+
+<p>Create a list of GuidListEntry from files found in the file system</p>
+<p>folder: path string to root folder to walk
+ignore_lines: list of gitignore syntax to ignore files and folders</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">guidlist_from_filesystem</span><span class="p">(</span><span class="nl">folder</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">,</span><span class="w"> </span><span class="nl">ignore_lines</span><span class="p">:</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">())</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; Create a list of GuidListEntry from files found in the file system</span>
+
+<span class="ss">        folder: path string to root folder to walk</span>
+
+<span class="ss">        ignore_lines: list of gitignore syntax to ignore files and folders</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">guids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">ignore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_gitignore_lines</span><span class="p">(</span><span class="n">ignore_lines</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">folder</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;nofile.txt&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">folder</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">dirs</span><span class="p">,</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">walk</span><span class="p">(</span><span class="n">folder</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">dirs</span><span class="o">[</span><span class="n">:</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">fullpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">ignore</span><span class="p">(</span><span class="n">fullpath</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Ignore folder: {fullpath}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">dirs</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">files</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">fullpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">ignore</span><span class="p">(</span><span class="n">fullpath</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Ignore file: {fullpath}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">continue</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_guids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GuidList</span><span class="p">.</span><span class="n">parse_guids_from_edk2_file</span><span class="p">(</span><span class="n">fullpath</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">guids</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_guids</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">guids</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h5 id="parse_guids_from_dec">parse_guids_from_dec</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_guids_from_dec</span><span class="p">(</span>
+    <span class="n">stream</span><span class="p">,</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+
+
+<p>find all guids in a dec file contents contained with stream</p>
+<p>stream: lines of dec file content
+filename: abspath to dec file</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_guids_from_dec</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span><span class="w"> </span><span class="nl">filename</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; find all guids in a dec file contents contained with stream</span>
+
+<span class="ss">        stream: lines of dec file content</span>
+
+<span class="ss">        filename: abspath to dec file</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">dec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DecParser</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">dec</span><span class="p">.</span><span class="n">ParseStream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="nl">Protocols</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">guid</span><span class="p">).</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="nl">PPIs</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">guid</span><span class="p">).</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="nl">Guids</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">guid</span><span class="p">).</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">GuidListEntry</span><span class="p">(</span><span class="k">dec</span><span class="p">.</span><span class="n">Dict</span><span class="o">[</span><span class="n">&quot;PACKAGE_NAME&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">dec</span><span class="p">.</span><span class="n">Dict</span><span class="o">[</span><span class="n">&quot;PACKAGE_GUID&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logging</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="ss">&quot;Failed to find Package Guid from dec file: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">results</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h5 id="parse_guids_from_edk2_file">parse_guids_from_edk2_file</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_guids_from_edk2_file</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+
+
+<p>parse edk2 files for guids</p>
+<p>filename: abspath to dec file</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_guids_from_edk2_file</span><span class="p">(</span><span class="nl">filename</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; parse edk2 files for guids</span>
+
+<span class="ss">        filename: abspath to dec file</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="nf">lower</span><span class="p">().</span><span class="n">endswith</span><span class="p">(</span><span class="ss">&quot;.dec&quot;</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">with</span><span class="w"> </span><span class="k">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;r&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nl">f</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">GuidList</span><span class="p">.</span><span class="n">parse_guids_from_dec</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">elif</span><span class="p">(</span><span class="n">filename</span><span class="p">.</span><span class="nf">lower</span><span class="p">().</span><span class="n">endswith</span><span class="p">(</span><span class="ss">&quot;.inf&quot;</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">GuidList</span><span class="p">.</span><span class="n">parse_guids_from_inf</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h5 id="parse_guids_from_inf">parse_guids_from_inf</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_guids_from_inf</span><span class="p">(</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div>
+
+
+<p>find the module guid in an Edk2 inf file</p>
+<p>filename: abspath to inf file</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_guids_from_inf</span><span class="p">(</span><span class="nl">filename</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot; find the module guid in an Edk2 inf file</span>
+
+<span class="ss">        filename: abspath to inf file</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">inf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InfParser</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">inf</span><span class="p">.</span><span class="n">ParseFile</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">GuidListEntry(inf.Dict[&quot;BASE_NAME&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">inf</span><span class="p">.</span><span class="n">Dict</span><span class="o">[</span><span class="n">&quot;FILE_GUID&quot;</span><span class="o">]</span><span class="p">.</span><span class="nf">upper</span><span class="p">(),</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="err">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logging</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="ss">&quot;Failed to find info from INF file: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">filename</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h3 id="guidlistentry">GuidListEntry</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">GuidListEntry</span><span class="p">(</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">guid</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">GuidListEntry</span>():
+
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="k">self</span>, <span class="n">name:</span> <span class="n">str</span>, <span class="n">guid:</span> <span class="n">str</span>, <span class="n">filepath:</span> <span class="n">str</span>):
+
+        <span class="s">&quot;&quot;&quot; Create GuidListEntry for later review and compare.</span>
+
+<span class="s">        name: name of guid</span>
+
+<span class="s">        guid: registry format guid in string format</span>
+
+<span class="s">        filepath: absolute path to file where this guid was found</span>
+
+<span class="s">        &quot;&quot;&quot;</span>
+
+        <span class="k">self</span>.<span class="nb">name</span> = <span class="nb">name</span>
+
+        <span class="k">self</span>.<span class="n">guid</span> = <span class="n">guid</span>
+
+        <span class="k">self</span>.<span class="n">absfilepath</span> = <span class="n">filepath</span>
+
+    <span class="n">def</span> <span class="n">__str__</span>(<span class="k">self</span>):
+
+        <span class="k">return</span> <span class="n">f</span><span class="s">&quot;GUID: {self.guid} NAME: {self.name} FILE: {self.absfilepath}&quot;</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../ftw_working_block_format/" title="Ftw Working Block Format" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Ftw Working Block Format
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../guid_list_test/" title="Guid List Test" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Guid List Test
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../../.."}})</script>
+      
+    
+  </body>
+</html>
