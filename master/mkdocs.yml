@@ -1,0 +1,117 @@
+copyright: Copyright (c) Microsoft.  All rights reserved
+docs_dir: C:\git\edk2-pytool-library\doc_output\docs
+markdown_extensions:
+- admonition
+- codehilite
+- meta
+- pymdownx.betterem:
+    smart_enable: all
+- pymdownx.caret
+- pymdownx.critic
+- pymdownx.details
+- pymdownx.emoji:
+    emoji_generator: '!!python / name: pymdownx.emoji.to_png'
+- pymdownx.inlinehilite
+- pymdownx.magiclink
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences
+- pymdownx.tasklist:
+    custom_checkbox: true
+- pymdownx.tilde
+- toc:
+    permalink: true
+- markdown.extensions.abbr
+- markdown.extensions.admonition
+- markdown.extensions.attr_list
+- markdown.extensions.def_list
+- markdown.extensions.fenced_code
+- markdown.extensions.footnotes
+- markdown.extensions.tables
+- markdown.extensions.smarty
+- markdown.extensions.toc
+nav:
+- Home: index.md
+- Reference:
+  - Bin: edk2toollib\bin.md
+  - Gitignore parser: edk2toollib\gitignore_parser.md
+  - Index: edk2toollib\index.md
+  - Utility functions: edk2toollib\utility_functions.md
+  - Acpi:
+    - Dmar parser: edk2toollib\acpi\dmar_parser.md
+    - Index: edk2toollib\acpi\index.md
+    - Ivrs parser: edk2toollib\acpi\ivrs_parser.md
+  - Log:
+    - Ansi handler: edk2toollib\log\ansi_handler.md
+    - File handler: edk2toollib\log\file_handler.md
+    - Index: edk2toollib\log\index.md
+    - Junit report format: edk2toollib\log\junit_report_format.md
+    - Markdown handler: edk2toollib\log\markdown_handler.md
+    - String handler: edk2toollib\log\string_handler.md
+  - Tpm:
+    - Index: edk2toollib\tpm\index.md
+    - Tpm2 defs: edk2toollib\tpm\tpm2_defs.md
+    - Tpm2 policy calc: edk2toollib\tpm\tpm2_policy_calc.md
+    - Tpm2 simulator: edk2toollib\tpm\tpm2_simulator.md
+    - Tpm2 stream: edk2toollib\tpm\tpm2_stream.md
+  - Uefi:
+    - Authenticated variables structure support: edk2toollib\uefi\authenticated_variables_structure_support.md
+    - Bmp object: edk2toollib\uefi\bmp_object.md
+    - Fmp auth header: edk2toollib\uefi\fmp_auth_header.md
+    - Fmp capsule header: edk2toollib\uefi\fmp_capsule_header.md
+    - Index: edk2toollib\uefi\index.md
+    - Pi firmware file: edk2toollib\uefi\pi_firmware_file.md
+    - Pi firmware volume: edk2toollib\uefi\pi_firmware_volume.md
+    - Status codes: edk2toollib\uefi\status_codes.md
+    - Uefi capsule header: edk2toollib\uefi\uefi_capsule_header.md
+    - Uefi multi phase: edk2toollib\uefi\uefi_multi_phase.md
+    - Wincert: edk2toollib\uefi\wincert.md
+    - Edk2:
+      - Fmp payload header: edk2toollib\uefi\edk2\fmp_payload_header.md
+      - Ftw working block format: edk2toollib\uefi\edk2\ftw_working_block_format.md
+      - Guid list: edk2toollib\uefi\edk2\guid_list.md
+      - Index: edk2toollib\uefi\edk2\index.md
+      - Path utilities: edk2toollib\uefi\edk2\path_utilities.md
+      - Variablestore manulipulations: edk2toollib\uefi\edk2\variablestore_manulipulations.md
+      - Variable format: edk2toollib\uefi\edk2\variable_format.md
+      - Build objects:
+        - Dsc: edk2toollib\uefi\edk2\build_objects\dsc.md
+        - Dsc translator: edk2toollib\uefi\edk2\build_objects\dsc_translator.md
+        - Index: edk2toollib\uefi\edk2\build_objects\index.md
+      - Parsers:
+        - Base parser: edk2toollib\uefi\edk2\parsers\base_parser.md
+        - Buildreport parser: edk2toollib\uefi\edk2\parsers\buildreport_parser.md
+        - Dec parser: edk2toollib\uefi\edk2\parsers\dec_parser.md
+        - Dsc parser: edk2toollib\uefi\edk2\parsers\dsc_parser.md
+        - Fdf parser: edk2toollib\uefi\edk2\parsers\fdf_parser.md
+        - Guid parser: edk2toollib\uefi\edk2\parsers\guid_parser.md
+        - Index: edk2toollib\uefi\edk2\parsers\index.md
+        - Inf parser: edk2toollib\uefi\edk2\parsers\inf_parser.md
+        - Override parser: edk2toollib\uefi\edk2\parsers\override_parser.md
+        - Targettxt parser: edk2toollib\uefi\edk2\parsers\targettxt_parser.md
+  - Windows:
+    - Index: edk2toollib\windows\index.md
+    - Locate tools: edk2toollib\windows\locate_tools.md
+    - Capsule:
+      - Cat generator: edk2toollib\windows\capsule\cat_generator.md
+      - Index: edk2toollib\windows\capsule\index.md
+      - Inf generator: edk2toollib\windows\capsule\inf_generator.md
+    - Policy:
+      - Firmware policy: edk2toollib\windows\policy\firmware_policy.md
+      - Index: edk2toollib\windows\policy\index.md
+plugins:
+- search
+repo_url: https://github.com/microsoft/mu
+site_description: Project Mu Documentation
+site_dir: C:\git\edk2-pytool-library\doc_output\html
+site_name: Project Mu
+site_url: https://microsoft.github.io/mu/
+theme:
+  name: material
+  palette:
+    accent: indigo
+    primary: indigo
+extra_css:
+- css\version-select.css
+extra_javascript:
+- js\version-select.js
