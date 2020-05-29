@@ -924,13 +924,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#getcontainingmodules" class="md-nav__link">
-    GetContainingModules
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#getcontainingpackage" class="md-nav__link">
     GetContainingPackage
   </a>
@@ -1415,13 +1408,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#getcontainingmodules" class="md-nav__link">
-    GetContainingModules
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#getcontainingpackage" class="md-nav__link">
     GetContainingPackage
   </a>
@@ -1734,74 +1720,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Workspace path is : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">WorkspacePath</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="bp">None</span>
-
-    <span class="c1"># Find the list of modules (infs) that file path is in</span>
-
-    <span class="c1">#</span>
-
-    <span class="c1"># for now just assume any inf in the same dir or if none</span>
-
-    <span class="c1"># then check parent dir.</span>
-
-    <span class="c1">#</span>
-
-    <span class="c1"># @param InputPath:  absolute path to file</span>
-
-    <span class="c1">#</span>
-
-    <span class="c1"># @ret list of abs path file paths for module infs</span>
-
-    <span class="k">def</span> <span class="nf">GetContainingModules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">InputPath</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;GetContainingModules: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">InputPath</span><span class="p">)</span>
-
-        <span class="c1"># if INF return self</span>
-
-        <span class="k">if</span> <span class="n">InputPath</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.inf&quot;</span><span class="p">):</span>
-
-            <span class="k">return</span> <span class="p">[</span><span class="n">InputPath</span><span class="p">]</span>
-
-        <span class="n">modules</span> <span class="o">=</span> <span class="p">[]</span>
-
-        <span class="c1"># Check current dir</span>
-
-        <span class="n">dirpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">InputPath</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dirpath</span><span class="p">):</span>
-
-            <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;*.inf&#39;</span><span class="p">):</span>
-
-                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Found INF file in </span><span class="si">%s</span><span class="s2">.  INf is: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-
-                <span class="n">modules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span>
-
-        <span class="c1"># if didn&#39;t find any in current dir go to parent dir.</span>
-
-        <span class="c1"># this handles cases like:</span>
-
-        <span class="c1"># ModuleDir/</span>
-
-        <span class="c1">#   Module.inf</span>
-
-        <span class="c1">#   x64/</span>
-
-        <span class="c1">#     file.c</span>
-
-        <span class="c1">#</span>
-
-        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">modules</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
-
-            <span class="n">dirpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">dirpath</span><span class="p">)</span>
-
-            <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dirpath</span><span class="p">):</span>
-
-                <span class="k">if</span> <span class="n">fnmatch</span><span class="o">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s1">&#39;*.inf&#39;</span><span class="p">):</span>
-
-                    <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Found INF file in </span><span class="si">%s</span><span class="s2">.  INf is: </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-
-                    <span class="n">modules</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span>
-
-        <span class="k">return</span> <span class="n">modules</span>
 </code></pre></div>
 
 
@@ -2056,74 +1974,6 @@
 <span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="ss">&quot;Workspace path is : %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">WorkspacePath</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">None</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">Find</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">modules</span><span class="w"> </span><span class="p">(</span><span class="n">infs</span><span class="p">)</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">in</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">assume</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="n">inf</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">same</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="k">none</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="n">parent</span><span class="w"> </span><span class="n">dir</span><span class="p">.</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="nv">@param</span><span class="w"> </span><span class="nl">InputPath</span><span class="p">:</span><span class="w">  </span><span class="k">absolute</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">file</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"></span>
-
-<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="nv">@ret</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nf">abs</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="n">paths</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="k">module</span><span class="w"> </span><span class="n">infs</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">GetContainingModules</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">InputPath</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;GetContainingModules: %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">InputPath</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">InputPath</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="ss">&quot;.inf&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">InputPath</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">modules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Check</span><span class="w"> </span><span class="k">current</span><span class="w"> </span><span class="n">dir</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">dirpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">InputPath</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dirpath</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">fnmatch</span><span class="p">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;*.inf&#39;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Found INF file in %s.  INf is: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">modules</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">))</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">didn</span><span class="s1">&#39;t find any in current dir go to parent dir.</span>
-
-<span class="s1">        # this handles cases like:</span>
-
-<span class="s1">        # ModuleDir/</span>
-
-<span class="s1">        #   Module.inf</span>
-
-<span class="s1">        #   x64/</span>
-
-<span class="s1">        #     file.c</span>
-
-<span class="s1">        #</span>
-
-<span class="s1">        if(len(modules) == 0):</span>
-
-<span class="s1">            dirpath = os.path.dirname(dirpath)</span>
-
-<span class="s1">            for f in os.listdir(dirpath):</span>
-
-<span class="s1">                if fnmatch.fnmatch(f, &#39;</span><span class="o">*</span><span class="p">.</span><span class="n">inf</span><span class="err">&#39;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Found INF file in %s.  INf is: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">modules</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">))</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">modules</span><span class="w"></span>
 </code></pre></div>
 
 
@@ -2165,69 +2015,6 @@
         <span class="k">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="ss">&quot;Relative Path: %s&quot;</span> <span class="o">%</span> <span class="n">relpath</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="k">None</span>
-</code></pre></div>
-
-
-</details>
-<h4 id="getcontainingmodules">GetContainingModules</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">GetContainingModules</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">,</span>
-    <span class="n">InputPath</span><span class="p">:</span> <span class="nb">str</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
-</code></pre></div>
-
-
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">GetContainingModules</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">InputPath</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">list</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;GetContainingModules: %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">InputPath</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">INF</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">InputPath</span><span class="p">.</span><span class="n">endswith</span><span class="p">(</span><span class="ss">&quot;.inf&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">[</span><span class="n">InputPath</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">modules</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Check</span><span class="w"> </span><span class="k">current</span><span class="w"> </span><span class="n">dir</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">dirpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">InputPath</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dirpath</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">fnmatch</span><span class="p">.</span><span class="n">fnmatch</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;*.inf&#39;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Found INF file in %s.  INf is: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">modules</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">))</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">didn</span><span class="s1">&#39;t find any in current dir go to parent dir.</span>
-
-<span class="s1">        # this handles cases like:</span>
-
-<span class="s1">        # ModuleDir/</span>
-
-<span class="s1">        #   Module.inf</span>
-
-<span class="s1">        #   x64/</span>
-
-<span class="s1">        #     file.c</span>
-
-<span class="s1">        #</span>
-
-<span class="s1">        if(len(modules) == 0):</span>
-
-<span class="s1">            dirpath = os.path.dirname(dirpath)</span>
-
-<span class="s1">            for f in os.listdir(dirpath):</span>
-
-<span class="s1">                if fnmatch.fnmatch(f, &#39;</span><span class="o">*</span><span class="p">.</span><span class="n">inf</span><span class="err">&#39;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Found INF file in %s.  INf is: %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">modules</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">dirpath</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">))</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">modules</span><span class="w"></span>
 </code></pre></div>
 
 

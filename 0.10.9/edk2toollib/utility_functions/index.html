@@ -2137,21 +2137,17 @@
 
     <span class="n">endtime_str</span> <span class="o">=</span> <span class="s2">&quot;{0[0]:02}:{0[1]:02}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">divmod</span><span class="p">(</span><span class="n">delta</span><span class="o">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
 
-    <span class="n">returncode_str</span> <span class="o">=</span> <span class="s2">&quot;{0:#010x}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">returncode</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------------Cmd Output Finished---------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------- Running Time (mm:ss): &quot;</span> <span class="o">+</span> <span class="n">endtime_str</span> <span class="o">+</span> <span class="s2">&quot; ----------&quot;</span><span class="p">)</span>
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;----------- Return Code: &quot;</span> <span class="o">+</span> <span class="n">returncode_str</span> <span class="o">+</span> <span class="s2">&quot; ------------&quot;</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">raise_exception_on_nonzero</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
 
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;{0} failed with Return Code: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">returncode_str</span><span class="p">))</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;{0} failed with error code: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span>
 
@@ -2899,21 +2895,17 @@
 
     <span class="n">endtime_str</span> <span class="o">=</span> <span class="ss">&quot;{0[0]:02}:{0[1]:02}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">divmod</span><span class="p">(</span><span class="n">delta</span><span class="p">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
 
-    <span class="n">returncode_str</span> <span class="o">=</span> <span class="ss">&quot;{0:#010x}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">returncode</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------------Cmd Output Finished---------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------- Running Time (mm:ss): &quot;</span> <span class="o">+</span> <span class="n">endtime_str</span> <span class="o">+</span> <span class="ss">&quot; ----------&quot;</span><span class="p">)</span>
 
-    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;----------- Return Code: &quot;</span> <span class="o">+</span> <span class="n">returncode_str</span> <span class="o">+</span> <span class="ss">&quot; ------------&quot;</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">raise_exception_on_nonzero</span> <span class="k">and</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
 
-        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;{0} failed with Return Code: {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">returncode_str</span><span class="p">))</span>
+        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;{0} failed with error code: {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span>
 </code></pre></div>
