@@ -774,24 +774,6 @@ Module edk2toollib.utility_functions
 
         
 
-        def is_valid_version(version):
-
-            '''
-
-            Returns whether a version is valid it must be (number).(number).(and so on) or (number) 
-
-            There is no limit to the number of extra numbers you can have in a version string
-
-            '''
-
-            version_reg = re.compile(r'^[0-9]+(\.[0-9]+)*$')
-
-            return version_reg.match(version) is not None
-
-        
-
-        
-
         def import_module_by_file_name(module_file_path):
 
             ''' Standard method of importing a Python file. Expecting absolute path. '''
@@ -1454,32 +1436,6 @@ Standard method of importing a Python file. Expecting absolute path.
         
 
             return ImportedModule
-
-    
-#### is_valid_version
-
-```python3
-def is_valid_version(
-    version
-)
-```
-Returns whether a version is valid it must be (number).(number).(and so on) or (number) 
-There is no limit to the number of extra numbers you can have in a version string
-
-??? example "View Source"
-        def is_valid_version(version):
-
-            '''
-
-            Returns whether a version is valid it must be (number).(number).(and so on) or (number) 
-
-            There is no limit to the number of extra numbers you can have in a version string
-
-            '''
-
-            version_reg = re.compile(r'^[0-9]+(\.[0-9]+)*$')
-
-            return version_reg.match(version) is not None
 
     
 #### locate_class_in_module

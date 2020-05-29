@@ -32,6 +32,13 @@ markdown_extensions:
 - markdown.extensions.toc
 nav:
 - Home: index.md
+- Developing: developing.md
+- Publishing: publishing.md
+- Using: using.md
+- Features:
+  - Logging.ansi handler: features\logging.ansi_handler.md
+  - Utility functions.get host info: features\utility_functions.GetHostInfo.md
+  - Windows firmware policy: features\windows_firmware_policy.md
 - Reference:
   - Bin: edk2toollib\bin.md
   - Gitignore parser: edk2toollib\gitignore_parser.md

@@ -4,6 +4,30 @@
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://microsoft.github.io/mu/developing/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/publishing/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/using/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/features/logging.ansi_handler/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/features/utility_functions.GetHostInfo/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://microsoft.github.io/mu/features/windows_firmware_policy/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://microsoft.github.io/mu/edk2toollib/bin/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>

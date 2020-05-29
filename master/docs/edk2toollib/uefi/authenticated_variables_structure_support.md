@@ -1120,7 +1120,7 @@ Classes
 
 ```python3
 class EFiVariableAuthentication2(
-    Time=datetime.datetime(2020, 5, 29, 14, 24, 52, 875769),
+    Time=datetime.datetime(2020, 5, 29, 14, 56, 40, 284631),
     decodefs=None
 )
 ```
@@ -2795,7 +2795,7 @@ def Write(
 
 ```python3
 class EfiTime(
-    Time=datetime.datetime(2020, 5, 29, 14, 24, 52, 875769),
+    Time=datetime.datetime(2020, 5, 29, 14, 56, 40, 284631),
     decodefs=None
 )
 ```
