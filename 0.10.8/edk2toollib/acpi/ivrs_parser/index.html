@@ -13,7 +13,7 @@
         <meta name="description" content="Project Mu Documentation">
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/edk2toollib/acpi/ivrs_parser/">
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/acpi/ivrs_parser/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Ivrs parser - Project Mu</title>
+        <title>Ivrs parser - EDK2 Pytool Library</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://microsoft.github.io/mu/" title="Project Mu" aria-label="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Project Mu
+              EDK2 Pytool Library
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    Project Mu
+    EDK2 Pytool Library
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -1068,32 +1068,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../uefi/edk2/build_objects/dsc/" title="Dsc" class="md-nav__link">
-      Dsc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../uefi/edk2/build_objects/dsc_translator/" title="Dsc translator" class="md-nav__link">
-      Dsc translator
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../uefi/edk2/build_objects/" title="Index" class="md-nav__link">
-      Index
+    <a href="../../uefi/edk2/build_objects/readme/" title="Readme" class="md-nav__link">
+      Readme
     </a>
   </li>
 
@@ -1360,54 +1336,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-4" type="checkbox" id="nav-6-9-4">
-    
-    <label class="md-nav__link" for="nav-6-9-4">
-      Policy
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-9-4">
-        Policy
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../windows/policy/firmware_policy/" title="Firmware policy" class="md-nav__link">
-      Firmware policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../windows/policy/" title="Index" class="md-nav__link">
-      Index
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -1571,7 +1499,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/microsoft/mu/edit/master/docs/edk2toollib/acpi/ivrs_parser.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/acpi/ivrs_parser.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="module-edk2toollibacpiivrs_parser">Module edk2toollib.acpi.ivrs_parser</h1>
@@ -1599,8 +1527,6 @@
 
 <span class="n">IVRSParserVersion</span> <span class="o">=</span> <span class="s1">&#39;1.00&#39;</span>
 
-<span class="c1"># spell-checker:ignore IVMD, IOMMUEFR</span>
-
 <span class="k">class</span> <span class="nc">IVRS_TABLE</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -1609,7 +1535,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">SubStructs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">IVMD_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">IVMDlist</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
 
@@ -1761,7 +1687,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">SubStructs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">IVMD_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">IVMDlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">updateACPISum</span><span class="p">()</span>
 
@@ -1926,8 +1852,6 @@
                                           <span class="n">header_byte_array</span><span class="p">[:</span><span class="n">IVRS_TABLE</span><span class="o">.</span><span class="n">REMAPPING_STRUCT_HEADER</span><span class="o">.</span><span class="n">struct_format_size</span><span class="p">])</span>
 
     <span class="k">class</span> <span class="nc">IVHD_STRUCT</span><span class="p">(</span><span class="n">REMAPPING_STRUCT_HEADER</span><span class="p">):</span>
-
-        <span class="c1"># cspell:disable-next disable the spell checker from thinking this a word</span>
 
         <span class="n">struct_format</span> <span class="o">=</span> <span class="s1">&#39;=BBHHHQHHI&#39;</span>
 
@@ -2148,8 +2072,6 @@
                 <span class="n">item</span><span class="o">.</span><span class="n">DumpInfo</span><span class="p">()</span>
 
     <span class="k">class</span> <span class="nc">IVMD_STRUCT</span><span class="p">(</span><span class="n">REMAPPING_STRUCT_HEADER</span><span class="p">):</span>
-
-        <span class="c1"># cspell:disable-next disable spell checker from thinking this is a word</span>
 
         <span class="n">struct_format</span> <span class="o">=</span> <span class="s1">&#39;=BBHHHQQQ&#39;</span>
 
@@ -3349,7 +3271,7 @@
 
                 <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">UID</span><span class="p">,)</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">unpack</span><span class="p">(</span><span class="s2">&quot;=Q&quot;</span><span class="p">,</span> <span class="n">header_byte_array</span><span class="p">[</span><span class="n">IVRS_TABLE</span><span class="o">.</span><span class="n">DEVICE_TABLE_ENTRY</span><span class="o">.</span><span class="n">dte_var_len</span><span class="p">:</span>
 
-                                                                    <span class="bp">self</span><span class="o">.</span><span class="n">Length</span><span class="p">])</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">Length</span><span class="p">])</span>
 
             <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">UIDFormat</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
 
@@ -3489,7 +3411,7 @@
 
 <span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">SubStructs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">()</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">IVMD_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">()</span><span class="w"></span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">IVMDlist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">()</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="err">:</span><span class="w"></span>
 
@@ -3641,7 +3563,7 @@
 
 <span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">SubStructs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">IVMD_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">IVMDlist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">updateACPISum</span><span class="p">()</span><span class="w"></span>
 
@@ -3806,8 +3728,6 @@
 <span class="w">                                          </span><span class="n">header_byte_array</span><span class="o">[</span><span class="n">:IVRS_TABLE.REMAPPING_STRUCT_HEADER.struct_format_size</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">IVHD_STRUCT</span><span class="p">(</span><span class="n">REMAPPING_STRUCT_HEADER</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nl">cspell</span><span class="p">:</span><span class="n">disable</span><span class="o">-</span><span class="k">next</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">spell</span><span class="w"> </span><span class="n">checker</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">thinking</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">word</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">struct_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;=BBHHHQHHI&#39;</span><span class="w"></span>
 
@@ -4028,8 +3948,6 @@
 <span class="w">                </span><span class="n">item</span><span class="p">.</span><span class="n">DumpInfo</span><span class="p">()</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="n">IVMD_STRUCT</span><span class="p">(</span><span class="n">REMAPPING_STRUCT_HEADER</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="nl">cspell</span><span class="p">:</span><span class="n">disable</span><span class="o">-</span><span class="k">next</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="n">spell</span><span class="w"> </span><span class="n">checker</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">thinking</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">word</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">struct_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;=BBHHHQQQ&#39;</span><span class="w"></span>
 
@@ -5229,7 +5147,7 @@
 
 <span class="w">                </span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">UID</span><span class="p">,)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span><span class="ss">&quot;=Q&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">header_byte_array</span><span class="o">[</span><span class="n">IVRS_TABLE.DEVICE_TABLE_ENTRY.dte_var_len:</span>
 
-<span class="n">                                                                    self.Length</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+<span class="n">                                            self.Length</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">UIDFormat</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
 
@@ -5628,7 +5546,7 @@
 
         <span class="k">self</span><span class="p">.</span><span class="n">SubStructs</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span>
 
-        <span class="k">self</span><span class="p">.</span><span class="n">IVMD_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span>
+        <span class="k">self</span><span class="p">.</span><span class="n">IVMDlist</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ivmd</span><span class="p">)</span>
 
         <span class="k">self</span><span class="p">.</span><span class="n">updateACPISum</span><span class="p">()</span>
 </code></pre></div>
