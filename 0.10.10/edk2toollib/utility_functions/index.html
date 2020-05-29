@@ -13,7 +13,7 @@
         <meta name="description" content="Project Mu Documentation">
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/edk2toollib/utility_functions/">
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/utility_functions/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Utility functions - Project Mu</title>
+        <title>Utility functions - EDK2 Pytool Library</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://microsoft.github.io/mu/" title="Project Mu" aria-label="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Project Mu
+              EDK2 Pytool Library
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    Project Mu
+    EDK2 Pytool Library
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -369,18 +369,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../gitignore_parser/" title="Gitignore parser" class="md-nav__link">
-      Gitignore parser
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../" title="Index" class="md-nav__link">
       Index
     </a>
@@ -437,13 +425,6 @@
           <li class="md-nav__item">
   <a href="#detachedsignwithsigntool" class="md-nav__link">
     DetachedSignWithSignTool
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum" class="md-nav__link">
-    Enum
   </a>
   
 </li>
@@ -525,8 +506,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#propagatingthread" class="md-nav__link">
-    PropagatingThread
+  <a href="#enum" class="md-nav__link">
+    Enum
   </a>
   
     <nav class="md-nav">
@@ -540,6 +521,47 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagatingthread" class="md-nav__link">
+    PropagatingThread
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_1" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#instance-variables" class="md-nav__link">
     Instance variables
   </a>
@@ -547,7 +569,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#methods_1" class="md-nav__link">
     Methods
   </a>
   
@@ -644,13 +666,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-4" type="checkbox" id="nav-6-4">
     
-    <label class="md-nav__link" for="nav-6-5">
+    <label class="md-nav__link" for="nav-6-4">
       Acpi
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-5">
+      <label class="md-nav__title" for="nav-6-4">
         Acpi
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -680,18 +702,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../acpi/ivrs_parser/" title="Ivrs parser" class="md-nav__link">
-      Ivrs parser
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -704,13 +714,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
     
-    <label class="md-nav__link" for="nav-6-6">
+    <label class="md-nav__link" for="nav-6-5">
       Log
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-6">
+      <label class="md-nav__title" for="nav-6-5">
         Log
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -800,13 +810,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
     
-    <label class="md-nav__link" for="nav-6-7">
+    <label class="md-nav__link" for="nav-6-6">
       Tpm
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-7">
+      <label class="md-nav__title" for="nav-6-6">
         Tpm
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -884,13 +894,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
     
-    <label class="md-nav__link" for="nav-6-8">
+    <label class="md-nav__link" for="nav-6-7">
       Uefi
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-8">
+      <label class="md-nav__title" for="nav-6-7">
         Uefi
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -916,30 +926,6 @@
   <li class="md-nav__item">
     <a href="../uefi/bmp_object/" title="Bmp object" class="md-nav__link">
       Bmp object
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uefi/fmp_auth_header/" title="Fmp auth header" class="md-nav__link">
-      Fmp auth header
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uefi/fmp_capsule_header/" title="Fmp capsule header" class="md-nav__link">
-      Fmp capsule header
     </a>
   </li>
 
@@ -998,18 +984,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../uefi/uefi_capsule_header/" title="Uefi capsule header" class="md-nav__link">
-      Uefi capsule header
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../uefi/uefi_multi_phase/" title="Uefi multi phase" class="md-nav__link">
       Uefi multi phase
     </a>
@@ -1035,13 +1009,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12" type="checkbox" id="nav-6-8-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7-9" type="checkbox" id="nav-6-7-9">
     
-    <label class="md-nav__link" for="nav-6-8-12">
+    <label class="md-nav__link" for="nav-6-7-9">
       Edk2
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-8-12">
+      <label class="md-nav__title" for="nav-6-7-9">
         Edk2
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1053,32 +1027,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uefi/edk2/fmp_payload_header/" title="Fmp payload header" class="md-nav__link">
-      Fmp payload header
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../uefi/edk2/ftw_working_block_format/" title="Ftw working block format" class="md-nav__link">
       Ftw working block format
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uefi/edk2/guid_list/" title="Guid list" class="md-nav__link">
-      Guid list
     </a>
   </li>
 
@@ -1138,13 +1088,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-8" type="checkbox" id="nav-6-8-12-8">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7-9-6" type="checkbox" id="nav-6-7-9-6">
     
-    <label class="md-nav__link" for="nav-6-8-12-8">
+    <label class="md-nav__link" for="nav-6-7-9-6">
       Build objects
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-6-8-12-8">
+      <label class="md-nav__title" for="nav-6-7-9-6">
         Build objects
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1156,32 +1106,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../uefi/edk2/build_objects/dsc/" title="Dsc" class="md-nav__link">
-      Dsc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uefi/edk2/build_objects/dsc_translator/" title="Dsc translator" class="md-nav__link">
-      Dsc translator
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uefi/edk2/build_objects/" title="Index" class="md-nav__link">
-      Index
+    <a href="../uefi/edk2/build_objects/readme/" title="Readme" class="md-nav__link">
+      Readme
     </a>
   </li>
 
@@ -1198,13 +1124,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-9" type="checkbox" id="nav-6-8-12-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7-9-7" type="checkbox" id="nav-6-7-9-7">
     
-    <label class="md-nav__link" for="nav-6-8-12-9">
+    <label class="md-nav__link" for="nav-6-7-9-7">
       Parsers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
-      <label class="md-nav__title" for="nav-6-8-12-9">
+      <label class="md-nav__title" for="nav-6-7-9-7">
         Parsers
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1266,18 +1192,6 @@
   <li class="md-nav__item">
     <a href="../uefi/edk2/parsers/fdf_parser/" title="Fdf parser" class="md-nav__link">
       Fdf parser
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../uefi/edk2/parsers/guid_parser/" title="Guid parser" class="md-nav__link">
-      Guid parser
     </a>
   </li>
 
@@ -1352,13 +1266,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
     
-    <label class="md-nav__link" for="nav-6-9">
+    <label class="md-nav__link" for="nav-6-8">
       Windows
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-9">
+      <label class="md-nav__title" for="nav-6-8">
         Windows
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1395,13 +1309,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-3" type="checkbox" id="nav-6-9-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-3" type="checkbox" id="nav-6-8-3">
     
-    <label class="md-nav__link" for="nav-6-9-3">
+    <label class="md-nav__link" for="nav-6-8-3">
       Capsule
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-9-3">
+      <label class="md-nav__title" for="nav-6-8-3">
         Capsule
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1439,54 +1353,6 @@
   <li class="md-nav__item">
     <a href="../windows/capsule/inf_generator/" title="Inf generator" class="md-nav__link">
       Inf generator
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-4" type="checkbox" id="nav-6-9-4">
-    
-    <label class="md-nav__link" for="nav-6-9-4">
-      Policy
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-6-9-4">
-        Policy
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../windows/policy/firmware_policy/" title="Firmware policy" class="md-nav__link">
-      Firmware policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../windows/policy/" title="Index" class="md-nav__link">
-      Index
     </a>
   </li>
 
@@ -1544,13 +1410,6 @@
           <li class="md-nav__item">
   <a href="#detachedsignwithsigntool" class="md-nav__link">
     DetachedSignWithSignTool
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enum" class="md-nav__link">
-    Enum
   </a>
   
 </li>
@@ -1632,8 +1491,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#propagatingthread" class="md-nav__link">
-    PropagatingThread
+  <a href="#enum" class="md-nav__link">
+    Enum
   </a>
   
     <nav class="md-nav">
@@ -1647,6 +1506,47 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagatingthread" class="md-nav__link">
+    PropagatingThread
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_1" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#instance-variables" class="md-nav__link">
     Instance variables
   </a>
@@ -1654,7 +1554,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
+  <a href="#methods_1" class="md-nav__link">
     Methods
   </a>
   
@@ -1749,7 +1649,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/microsoft/mu/edit/master/docs/edk2toollib/utility_functions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/utility_functions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="module-edk2toollibutility_functions">Module edk2toollib.utility_functions</h1>
@@ -1795,45 +1695,19 @@
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
 
-<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span> <span class="k">as</span> <span class="n">StdEnum</span>
+<span class="c1">####</span>
 
-<span class="k">def</span> <span class="nf">Enum</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="c1"># Helper to allow Enum type to be used which allows better code readability</span>
 
-    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1">#</span>
 
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="c1"># ref: http://stackoverflow.com/questions/36932/how-can-i-represent-an-enum-in-python</span>
 
-        <span class="n">item</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1">####</span>
 
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Enum</span><span class="p">(</span><span class="nb">tuple</span><span class="p">):</span>
 
-            <span class="n">items</span> <span class="o">=</span> <span class="n">item</span>
-
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
-
-            <span class="n">items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-
-        <span class="k">else</span><span class="p">:</span>
-
-            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-
-    <span class="k">else</span><span class="p">:</span>
-
-        <span class="n">items</span> <span class="o">=</span> <span class="n">args</span>
-
-    <span class="n">calling_frame</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">stack</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="n">calling_mod</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">calling_frame</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-    <span class="n">calling_func</span> <span class="o">=</span> <span class="n">calling_frame</span><span class="o">.</span><span class="n">function</span>
-
-    <span class="n">calling_line</span> <span class="o">=</span> <span class="n">calling_frame</span><span class="o">.</span><span class="n">lineno</span>
-
-    <span class="n">enum_name</span> <span class="o">=</span> <span class="n">calling_func</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">calling_line</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Enum is deprecated! Please fix it in {calling_mod}:{calling_func}&quot;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">StdEnum</span><span class="p">(</span><span class="n">enum_name</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="n">calling_mod</span><span class="p">)</span>
+    <span class="fm">__getattr__</span> <span class="o">=</span> <span class="nb">tuple</span><span class="o">.</span><span class="n">index</span>
 
 <span class="c1">####</span>
 
@@ -1957,15 +1831,17 @@
 
     <span class="n">processor_info</span> <span class="o">=</span> <span class="n">host_info</span><span class="o">.</span><span class="n">machine</span>
 
+    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Getting host info for host: {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">host_info</span><span class="p">)))</span>
+
     <span class="n">arch</span> <span class="o">=</span> <span class="bp">None</span>
 
     <span class="n">bit</span> <span class="o">=</span> <span class="bp">None</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;x86&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;AMD&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;INTEL&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;x86&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;AMD&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;Intel&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">):</span>
 
         <span class="n">arch</span> <span class="o">=</span> <span class="s2">&quot;x86&quot;</span>
 
-    <span class="k">elif</span> <span class="p">(</span><span class="s2">&quot;ARM&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;AARCH&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">()):</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="s2">&quot;ARM&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;AARCH&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">):</span>
 
         <span class="n">arch</span> <span class="o">=</span> <span class="s2">&quot;ARM&quot;</span>
 
@@ -2015,7 +1891,7 @@
 
 <span class="c1">####</span>
 
-<span class="c1"># Run a shell command and print the output to the log file</span>
+<span class="c1"># Run a shell commmand and print the output to the log file</span>
 
 <span class="c1"># This is the public function that should be used to run commands from the shell in python environment</span>
 
@@ -2077,13 +1953,13 @@
 
     <span class="k">if</span><span class="p">(</span><span class="n">capture</span><span class="p">):</span>
 
-        <span class="n">thread</span> <span class="o">=</span> <span class="n">PropagatingThread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">logging_level</span><span class="p">))</span>
+        <span class="n">outr</span> <span class="o">=</span> <span class="n">PropagatingThread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">logging_level</span><span class="p">))</span>
 
-        <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+        <span class="n">outr</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
         <span class="n">c</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
-        <span class="n">thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+        <span class="n">outr</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
 
     <span class="k">else</span><span class="p">:</span>
 
@@ -2095,21 +1971,17 @@
 
     <span class="n">endtime_str</span> <span class="o">=</span> <span class="s2">&quot;{0[0]:02}:{0[1]:02}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">divmod</span><span class="p">(</span><span class="n">delta</span><span class="o">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
 
-    <span class="n">returncode_str</span> <span class="o">=</span> <span class="s2">&quot;{0:#010x}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">returncode</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------------Cmd Output Finished---------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------- Running Time (mm:ss): &quot;</span> <span class="o">+</span> <span class="n">endtime_str</span> <span class="o">+</span> <span class="s2">&quot; ----------&quot;</span><span class="p">)</span>
 
-    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;----------- Return Code: &quot;</span> <span class="o">+</span> <span class="n">returncode_str</span> <span class="o">+</span> <span class="s2">&quot; ------------&quot;</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">raise_exception_on_nonzero</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
 
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;{0} failed with Return Code: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">returncode_str</span><span class="p">))</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;{0} failed with error code: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span>
 
@@ -2191,7 +2063,7 @@
 
                   <span class="n">outstream</span><span class="o">=</span><span class="n">outstream</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="n">environ</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging_level</span><span class="p">,</span>
 
-                  <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="n">raise_exception_on_nonzero</span><span class="p">)</span>
+                  <span class="n">xraise_exception_on_nonzero</span><span class="o">=</span><span class="n">raise_exception_on_nonzero</span><span class="p">)</span>
 
 <span class="c1">####</span>
 
@@ -2263,7 +2135,7 @@
 
     <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">signedfile</span><span class="p">)):</span>
 
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Output file doesn&#39;t exist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">signedfile</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Output file doesn&#39;t eixst </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">signedfile</span><span class="p">)</span>
 
     <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">signedfile</span><span class="p">,</span> <span class="n">SignatureOutputFile</span><span class="p">)</span>
 
@@ -2393,7 +2265,7 @@
 
                 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;     &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
-                <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">7</span><span class="p">):</span>  <span class="c1"># account for the - symbol in the hex dump</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">7</span><span class="p">):</span>  <span class="c1"># acount for the - symbol in the hex dump</span>
 
                     <span class="k">if</span><span class="p">(</span><span class="n">IncludeOffset</span><span class="p">):</span>
 
@@ -2449,21 +2321,9 @@
 
     <span class="sd">&#39;&#39;&#39;</span>
 
-<span class="sd">    Given a module and a class, this function will return the subclass of DesiredClass found in Module.</span>
+<span class="sd">    Given a module and a class, this function will return the subclass of DesiredClass in Module.</span>
 
-<span class="sd">    It gives preference to classes that are defined in the module itself.</span>
-
-<span class="sd">    This means that if you have an import that subclasses DesiredClass, it will be picked unless</span>
-
-<span class="sd">    there is a class defined in the module that subclasses DesiredClass.</span>
-
-<span class="sd">    In this hypothetical class hierarchy, GrandChildClass would be picked</span>
-
-<span class="sd">    --------------      ------------      -----------------</span>
-
-<span class="sd">    |DesiredClass|  -&gt;  |ChildClass|  -&gt;  |GrandChildClass|</span>
-
-<span class="sd">    --------------      ------------      -----------------</span>
+<span class="sd">    Throws exception if two classes are found that fit the same criterea.</span>
 
 <span class="sd">    &#39;&#39;&#39;</span>
 
@@ -2485,21 +2345,13 @@
 
         <span class="c1"># to make sure it&#39;s an INSTANCE of DesiredClass, not DesiredClass itself!</span>
 
-        <span class="c1"># if multiple instances are found in the same class hierarchy, pick the</span>
-
-        <span class="c1"># most specific one. If multiple instances are found belonging to different</span>
-
-        <span class="c1"># class hierarchies, raise an error.</span>
-
         <span class="k">if</span> <span class="n">_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">DesiredClass</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">_class</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">DesiredClassInstance</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">_class</span><span class="p">,</span> <span class="n">DesiredClassInstance</span><span class="p">):</span>
-
-                <span class="n">DesiredClassInstance</span> <span class="o">=</span> <span class="n">_class</span>
-
-            <span class="k">elif</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">DesiredClassInstance</span><span class="p">,</span> <span class="n">_class</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">DesiredClassInstance</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
 
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Multiple instances were found:</span><span class="se">\n\t</span><span class="s2">{DesiredClassInstance}</span><span class="se">\n\t</span><span class="s2">{_class}&quot;</span><span class="p">)</span>
+
+            <span class="n">DesiredClassInstance</span> <span class="o">=</span> <span class="n">_class</span>
 
     <span class="k">return</span> <span class="n">DesiredClassInstance</span>
 
@@ -2647,59 +2499,11 @@
 
     <span class="k">if</span><span class="p">(</span><span class="k">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">signedfile</span><span class="p">)):</span>
 
-        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Output file doesn&#39;t exist %s&quot;</span> <span class="o">%</span> <span class="n">signedfile</span><span class="p">)</span>
+        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Output file doesn&#39;t eixst %s&quot;</span> <span class="o">%</span> <span class="n">signedfile</span><span class="p">)</span>
 
     <span class="n">shutil</span><span class="p">.</span><span class="k">move</span><span class="p">(</span><span class="n">signedfile</span><span class="p">,</span> <span class="n">SignatureOutputFile</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ret</span>
-</code></pre></div>
-
-
-</details>
-<h4 id="enum">Enum</h4>
-<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">Enum</span><span class="p">(</span>
-    <span class="o">*</span><span class="n">args</span>
-<span class="p">)</span>
-</code></pre></div>
-
-
-<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">Enum</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
-
-    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
-
-    <span class="k">if</span> <span class="n">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-
-        <span class="n">item</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-        <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">list</span><span class="p">):</span>
-
-            <span class="n">items</span> <span class="o">=</span> <span class="n">item</span>
-
-        <span class="n">elif</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">tuple</span><span class="p">):</span>
-
-            <span class="n">items</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-
-        <span class="k">else</span><span class="p">:</span>
-
-            <span class="n">items</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-
-    <span class="k">else</span><span class="p">:</span>
-
-        <span class="n">items</span> <span class="o">=</span> <span class="n">args</span>
-
-    <span class="n">calling_frame</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">.</span><span class="n">stack</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span>
-
-    <span class="n">calling_mod</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">.</span><span class="n">getmodule</span><span class="p">(</span><span class="n">calling_frame</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-    <span class="n">calling_func</span> <span class="o">=</span> <span class="n">calling_frame</span><span class="p">.</span><span class="k">function</span>
-
-    <span class="n">calling_line</span> <span class="o">=</span> <span class="n">calling_frame</span><span class="p">.</span><span class="n">lineno</span>
-
-    <span class="n">enum_name</span> <span class="o">=</span> <span class="n">calling_func</span> <span class="o">+</span> <span class="ss">&quot;:&quot;</span> <span class="o">+</span> <span class="n">str</span><span class="p">(</span><span class="n">calling_line</span><span class="p">)</span>
-
-    <span class="n">logging</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Enum is deprecated! Please fix it in {calling_mod}:{calling_func}&quot;</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">StdEnum</span><span class="p">(</span><span class="n">enum_name</span><span class="p">,</span> <span class="n">items</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="n">calling_mod</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -2721,15 +2525,17 @@
 
     <span class="n">processor_info</span> <span class="o">=</span> <span class="n">host_info</span><span class="p">.</span><span class="n">machine</span>
 
+    <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Getting host info for host: {0}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">str</span><span class="p">(</span><span class="n">host_info</span><span class="p">)))</span>
+
     <span class="n">arch</span> <span class="o">=</span> <span class="k">None</span>
 
     <span class="nb">bit</span> <span class="o">=</span> <span class="k">None</span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="ss">&quot;x86&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">lower</span><span class="p">())</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;AMD&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">())</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;INTEL&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">()):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="ss">&quot;x86&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">)</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;AMD&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">)</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;Intel&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">):</span>
 
         <span class="n">arch</span> <span class="o">=</span> <span class="ss">&quot;x86&quot;</span>
 
-    <span class="n">elif</span> <span class="p">(</span><span class="ss">&quot;ARM&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">())</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;AARCH&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">()):</span>
+    <span class="n">elif</span> <span class="p">(</span><span class="ss">&quot;ARM&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">)</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;AARCH&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">):</span>
 
         <span class="n">arch</span> <span class="o">=</span> <span class="ss">&quot;ARM&quot;</span>
 
@@ -2823,7 +2629,7 @@
 
 <span class="w">                </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;     &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="err">:</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">hex</span><span class="w"> </span><span class="k">dump</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="err">:</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">acount</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">hex</span><span class="w"> </span><span class="k">dump</span><span class="w"></span>
 
 <span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">IncludeOffset</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
@@ -2887,13 +2693,13 @@
 
     <span class="k">if</span><span class="p">(</span><span class="n">capture</span><span class="p">):</span>
 
-        <span class="n">thread</span> <span class="o">=</span> <span class="n">PropagatingThread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="k">stdout</span><span class="p">,</span> <span class="n">logging_level</span><span class="p">))</span>
+        <span class="n">outr</span> <span class="o">=</span> <span class="n">PropagatingThread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="k">stdout</span><span class="p">,</span> <span class="n">logging_level</span><span class="p">))</span>
 
-        <span class="n">thread</span><span class="p">.</span><span class="k">start</span><span class="p">()</span>
+        <span class="n">outr</span><span class="p">.</span><span class="k">start</span><span class="p">()</span>
 
         <span class="k">c</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
 
-        <span class="n">thread</span><span class="p">.</span><span class="k">join</span><span class="p">()</span>
+        <span class="n">outr</span><span class="p">.</span><span class="k">join</span><span class="p">()</span>
 
     <span class="k">else</span><span class="p">:</span>
 
@@ -2905,21 +2711,17 @@
 
     <span class="n">endtime_str</span> <span class="o">=</span> <span class="ss">&quot;{0[0]:02}:{0[1]:02}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">divmod</span><span class="p">(</span><span class="n">delta</span><span class="p">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
 
-    <span class="n">returncode_str</span> <span class="o">=</span> <span class="ss">&quot;{0:#010x}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="k">c</span><span class="p">.</span><span class="n">returncode</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------------Cmd Output Finished---------------&quot;</span><span class="p">)</span>
 
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------- Running Time (mm:ss): &quot;</span> <span class="o">+</span> <span class="n">endtime_str</span> <span class="o">+</span> <span class="ss">&quot; ----------&quot;</span><span class="p">)</span>
 
-    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;----------- Return Code: &quot;</span> <span class="o">+</span> <span class="n">returncode_str</span> <span class="o">+</span> <span class="ss">&quot; ------------&quot;</span><span class="p">)</span>
-
     <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">raise_exception_on_nonzero</span> <span class="k">and</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
 
-        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;{0} failed with Return Code: {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">returncode_str</span><span class="p">))</span>
+        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;{0} failed with error code: {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span>
 </code></pre></div>
@@ -2989,7 +2791,7 @@
 
                   <span class="n">outstream</span><span class="o">=</span><span class="n">outstream</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="n">environ</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging_level</span><span class="p">,</span>
 
-                  <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="n">raise_exception_on_nonzero</span><span class="p">)</span>
+                  <span class="n">xraise_exception_on_nonzero</span><span class="o">=</span><span class="n">raise_exception_on_nonzero</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -3031,33 +2833,15 @@
 </code></pre></div>
 
 
-<p>Given a module and a class, this function will return the subclass of DesiredClass found in Module.
-It gives preference to classes that are defined in the module itself.
-This means that if you have an import that subclasses DesiredClass, it will be picked unless
-there is a class defined in the module that subclasses DesiredClass.</p>
-<p>In this hypothetical class hierarchy, GrandChildClass would be picked
---------------      ------------      -----------------
-|DesiredClass|  -&gt;  |ChildClass|  -&gt;  |GrandChildClass|
---------------      ------------      -----------------</p>
+<p>Given a module and a class, this function will return the subclass of DesiredClass in Module.
+Throws exception if two classes are found that fit the same criterea.</p>
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">locate_class_in_module</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
 
     <span class="sd">&#39;&#39;&#39;</span>
 
-<span class="sd">    Given a module and a class, this function will return the subclass of DesiredClass found in Module.</span>
+<span class="sd">    Given a module and a class, this function will return the subclass of DesiredClass in Module.</span>
 
-<span class="sd">    It gives preference to classes that are defined in the module itself.</span>
-
-<span class="sd">    This means that if you have an import that subclasses DesiredClass, it will be picked unless</span>
-
-<span class="sd">    there is a class defined in the module that subclasses DesiredClass.</span>
-
-<span class="sd">    In this hypothetical class hierarchy, GrandChildClass would be picked</span>
-
-<span class="sd">    --------------      ------------      -----------------</span>
-
-<span class="sd">    |DesiredClass|  -&gt;  |ChildClass|  -&gt;  |GrandChildClass|</span>
-
-<span class="sd">    --------------      ------------      -----------------</span>
+<span class="sd">    Throws exception if two classes are found that fit the same criterea.</span>
 
 <span class="sd">    &#39;&#39;&#39;</span>
 
@@ -3079,21 +2863,13 @@ there is a class defined in the module that subclasses DesiredClass.</p>
 
         <span class="c1"># to make sure it&#39;s an INSTANCE of DesiredClass, not DesiredClass itself!</span>
 
-        <span class="c1"># if multiple instances are found in the same class hierarchy, pick the</span>
-
-        <span class="c1"># most specific one. If multiple instances are found belonging to different</span>
-
-        <span class="c1"># class hierarchies, raise an error.</span>
-
         <span class="k">if</span> <span class="n">_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">DesiredClass</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">_class</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
 
-            <span class="k">if</span> <span class="p">(</span><span class="n">DesiredClassInstance</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">_class</span><span class="p">,</span> <span class="n">DesiredClassInstance</span><span class="p">):</span>
-
-                <span class="n">DesiredClassInstance</span> <span class="o">=</span> <span class="n">_class</span>
-
-            <span class="k">elif</span> <span class="ow">not</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">DesiredClassInstance</span><span class="p">,</span> <span class="n">_class</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">DesiredClassInstance</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
 
                 <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Multiple instances were found:</span><span class="se">\n\t</span><span class="s2">{DesiredClassInstance}</span><span class="se">\n\t</span><span class="s2">{_class}&quot;</span><span class="p">)</span>
+
+            <span class="n">DesiredClassInstance</span> <span class="o">=</span> <span class="n">_class</span>
 
     <span class="k">return</span> <span class="n">DesiredClassInstance</span>
 </code></pre></div>
@@ -3199,6 +2975,55 @@ there is a class defined in the module that subclasses DesiredClass.</p>
 
 </details>
 <h2 id="classes">Classes</h2>
+<h3 id="enum">Enum</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Enum</span><span class="p">(</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable&rsquo;s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Enum</span>(<span class="n">tuple</span>):
+
+    <span class="n">__getattr__</span> = <span class="n">tuple</span>.<span class="nb">index</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<ul>
+<li>builtins.tuple</li>
+</ul>
+<h4 id="methods">Methods</h4>
+<h4 id="count">count</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">count</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">,</span>
+    <span class="o">/</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Return number of occurrences of value.</p>
+<h4 id="index">index</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">index</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">,</span>
+    <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">stop</span><span class="o">=</span><span class="mi">9223372036854775807</span><span class="p">,</span>
+    <span class="o">/</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Return first index of value.</p>
+<p>Raises ValueError if the value is not present.</p>
 <h3 id="propagatingthread">PropagatingThread</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">PropagatingThread</span><span class="p">(</span>
     <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -3252,7 +3077,7 @@ by overriding the run() method in a subclass.</p>
 
 </details>
 <hr />
-<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<h4 id="ancestors-in-mro_1">Ancestors (in MRO)</h4>
 <ul>
 <li>threading.Thread</li>
 </ul>
@@ -3282,7 +3107,7 @@ created. The identifier is available even after the thread has exited.</p>
 <p>A string used for identification purposes only.</p>
 <p>It has no semantics. Multiple threads may be given the same name. The
 initial name is set by the constructor.</p>
-<h4 id="methods">Methods</h4>
+<h4 id="methods_1">Methods</h4>
 <h4 id="getname">getName</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">getName</span><span class="p">(</span>
     <span class="bp">self</span>
