@@ -13,7 +13,7 @@
         <meta name="description" content="Project Mu Documentation">
       
       
-        <link rel="canonical" href="https://microsoft.github.io/mu/edk2toollib/uefi/edk2/parsers/base_parser/">
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/parsers/base_parser/">
       
       
       
@@ -40,7 +40,7 @@
     
     
       
-        <title>Base parser - Project Mu</title>
+        <title>Base parser - EDK2 Pytool Library</title>
       
     
     
@@ -100,7 +100,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://microsoft.github.io/mu/" title="Project Mu" aria-label="Project Mu" class="md-header-nav__button md-logo">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -113,7 +113,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Project Mu
+              EDK2 Pytool Library
             </span>
             <span class="md-header-nav__topic">
               
@@ -159,7 +159,7 @@
 
   
 
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -192,12 +192,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="https://microsoft.github.io/mu/" title="Project Mu" class="md-nav__button md-logo">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    Project Mu
+    EDK2 Pytool Library
   </label>
   
     <div class="md-nav__source">
@@ -206,7 +206,7 @@
 
   
 
-<a href="https://github.com/microsoft/mu/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -1034,6 +1034,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
     Methods
   </a>
@@ -1175,6 +1182,13 @@
           <li class="md-nav__item">
   <a href="#descendants_1" class="md-nav__link">
     Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_1" class="md-nav__link">
+    Class variables
   </a>
   
 </li>
@@ -1661,6 +1675,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#methods" class="md-nav__link">
     Methods
   </a>
@@ -1802,6 +1823,13 @@
           <li class="md-nav__item">
   <a href="#descendants_1" class="md-nav__link">
     Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_1" class="md-nav__link">
+    Class variables
   </a>
   
 </li>
@@ -1965,7 +1993,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/microsoft/mu/edit/master/docs/edk2toollib/uefi/edk2/parsers/base_parser.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/uefi/edk2/parsers/base_parser.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="module-edk2toollibuefiedk2parsersbase_parser">Module edk2toollib.uefi.edk2.parsers.base_parser</h1>
@@ -1990,6 +2018,8 @@
 <span class="k">class</span> <span class="nc">BaseParser</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 
     <span class="sd">&quot;&quot;&quot; &quot;&quot;&quot;</span>
+
+    <span class="n">operators</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;OR&quot;</span><span class="p">,</span> <span class="s2">&quot;AND&quot;</span><span class="p">,</span> <span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="s2">&quot;==&quot;</span><span class="p">,</span> <span class="s2">&quot;!=&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;=&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;=&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">):</span>
 
@@ -2557,11 +2587,117 @@
 
         <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span>
 
         <span class="n">text</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ReplaceVariables</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span>
+
+        <span class="n">tokens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_TokenizeConditional</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 3: {tokens}&quot;</span><span class="p">)</span>
+
+        <span class="n">expression</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ConvertTokensToPostFix</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 4: {expression}&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Now we evaluate the post fix expression</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Malformed !if conditional expression {text} {expression}&quot;</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+
+            <span class="n">first_operand_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+            <span class="c1"># find the first operator</span>
+
+            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">expression</span><span class="p">):</span>
+
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_IsOperator</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+
+                    <span class="n">first_operand_index</span> <span class="o">=</span> <span class="n">index</span>
+
+                    <span class="k">break</span>
+
+            <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+
+                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;We didn&#39;t find an operator to execute in {expression}: {text}&quot;</span><span class="p">)</span>
+
+            <span class="n">operand</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">operand</span> <span class="o">==</span> <span class="s2">&quot;NOT&quot;</span><span class="p">:</span>
+
+                <span class="c1"># Special logic for handling the not</span>
+
+                <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span>
+
+                <span class="c1"># grab the operand right before the NOT and invert it</span>
+
+                <span class="n">operator1_raw</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+                <span class="n">operator1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">operator1_raw</span><span class="p">)</span>
+
+                <span class="n">result</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">operator1</span>
+
+                <span class="c1"># grab what was before the operator and the operand, then squish it all together</span>
+
+                <span class="n">new_expression</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[:</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="p">[]</span>
+
+                <span class="n">new_expression</span> <span class="o">+=</span> <span class="p">[</span><span class="n">result</span><span class="p">,</span> <span class="p">]</span> <span class="o">+</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+
+                <span class="n">expression</span> <span class="o">=</span> <span class="n">new_expression</span>
+
+            <span class="k">else</span><span class="p">:</span>
+
+                <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span>
+
+                <span class="n">operator1</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span>
+
+                <span class="n">operator2</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+                <span class="n">do_invert</span> <span class="o">=</span> <span class="bp">False</span>
+
+                <span class="c1"># check if we have a special operator that has a combined not on it</span>
+
+                <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">operand</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;!+&quot;</span><span class="p">):</span>
+
+                    <span class="n">operand</span> <span class="o">=</span> <span class="n">operand</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+
+                    <span class="n">do_invert</span> <span class="o">=</span> <span class="bp">True</span>
+
+                <span class="c1"># compute the result now that we have the three things we need</span>
+
+                <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span> <span class="n">operand</span><span class="p">,</span> <span class="n">operator2</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">do_invert</span><span class="p">:</span>
+
+                    <span class="n">result</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">result</span>
+
+                <span class="c1"># grab what was before the operator and the operand, then smoosh it all together</span>
+
+                <span class="n">new_expression</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[:</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="p">[]</span>
+
+                <span class="n">new_expression</span> <span class="o">+=</span> <span class="p">[</span><span class="n">result</span><span class="p">,</span> <span class="p">]</span> <span class="o">+</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
+
+                <span class="n">expression</span> <span class="o">=</span> <span class="n">new_expression</span>
+
+        <span class="n">final</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">expression</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">final</span><span class="p">)</span>
+
+    <span class="nd">@classmethod</span>
+
+    <span class="k">def</span> <span class="nf">_TokenizeConditional</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+
+        <span class="sd">&#39;&#39;&#39; takes in a string that has macros replaced &#39;&#39;&#39;</span>
 
         <span class="c1"># TOKENIZER</span>
 
@@ -2641,10 +2777,6 @@
 
             <span class="n">tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 3: {&#39; &#39;.join(tokens)}&quot;</span><span class="p">)</span>
-
-        <span class="n">operators</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;OR&quot;</span><span class="p">,</span> <span class="s2">&quot;AND&quot;</span><span class="p">,</span> <span class="s2">&quot;IN&quot;</span><span class="p">,</span> <span class="s2">&quot;==&quot;</span><span class="p">,</span> <span class="s2">&quot;!=&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;&quot;</span><span class="p">,</span> <span class="s2">&quot;&lt;=&quot;</span><span class="p">,</span> <span class="s2">&quot;&gt;=&quot;</span><span class="p">]</span>
-
         <span class="c1"># then we do the lexer and convert operands as necessary</span>
 
         <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)):</span>
@@ -2653,7 +2785,7 @@
 
             <span class="n">token_upper</span> <span class="o">=</span> <span class="n">token</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 
-            <span class="k">if</span> <span class="n">token_upper</span> <span class="ow">in</span> <span class="n">operators</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">token_upper</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">operators</span><span class="p">:</span>
 
                 <span class="n">token</span> <span class="o">=</span> <span class="n">token_upper</span>
 
@@ -2673,11 +2805,51 @@
 
                 <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;!=&quot;</span>
 
+            <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;!&quot;</span><span class="p">:</span>
+
+                <span class="n">token</span> <span class="o">=</span> <span class="s2">&quot;NOT&quot;</span>
+
             <span class="n">tokens</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">=</span> <span class="n">token</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 4: {tokens}&quot;</span><span class="p">)</span>
+        <span class="c1"># collapse the not</span>
 
-        <span class="c1"># now we convert in fix into post fix?</span>
+        <span class="n">collapsed_tokens</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">found_not</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;NOT&quot;</span><span class="p">:</span>
+
+                <span class="n">found_not</span> <span class="o">=</span> <span class="bp">True</span>
+
+                <span class="k">continue</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">found_not</span><span class="p">:</span>
+
+                <span class="n">collapsed_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="k">elif</span> <span class="n">token</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">operators</span><span class="p">:</span>
+
+                <span class="n">collapsed_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;!+&quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">)</span>
+
+                <span class="n">found_not</span> <span class="o">=</span> <span class="bp">False</span>
+
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># add the not back</span>
+
+                <span class="n">found_not</span> <span class="o">=</span> <span class="bp">False</span>
+
+                <span class="n">collapsed_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;NOT&quot;</span><span class="p">)</span>
+
+                <span class="n">collapsed_tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">collapsed_tokens</span>
+
+    <span class="nd">@classmethod</span>
+
+    <span class="k">def</span> <span class="nf">_ConvertTokensToPostFix</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tokens</span><span class="p">):</span>
+
+        <span class="c1"># convert infix into post fix</span>
 
         <span class="n">stack</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;(&quot;</span><span class="p">]</span>
 
@@ -2687,9 +2859,17 @@
 
         <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">tokens</span><span class="p">:</span>
 
+            <span class="c1"># If the incoming symbol is a left parenthesis, push it on the stack.</span>
+
             <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;(&quot;</span><span class="p">:</span>
 
                 <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="c1"># If the incoming symbol is a right parenthesis,</span>
+
+            <span class="c1"># pop the stack and print the operators until you see a left parenthesis.</span>
+
+            <span class="c1"># Discard the pair of parentheses.</span>
 
             <span class="k">elif</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;)&quot;</span><span class="p">:</span>
 
@@ -2697,11 +2877,47 @@
 
                     <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 
-            <span class="k">elif</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">operators</span><span class="p">:</span>
+                <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>  <span class="c1"># pop the last (</span>
 
-                <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+            <span class="c1"># If this isn&#39;t a operator ignore it</span>
 
-                    <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="k">elif</span> <span class="ow">not</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_IsOperator</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+
+                <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="c1"># If the stack is empty or contains a left parenthesis on top, push the incoming operator onto the stack.</span>
+
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="c1"># If the incoming symbol has higher precedence than the top of the stack, push it on the stack.</span>
+
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">&gt;</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="c1"># If the incoming symbol has equal precedence with the top of the stack, use association.</span>
+
+            <span class="c1"># If the association is left to right, pop and print the top of the stack and</span>
+
+            <span class="c1"># then push the incoming operator. If the association is right to left, push the incoming operator.</span>
+
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">==</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+
+                <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
+
+                <span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+
+            <span class="c1"># If the incoming symbol has lower precedence than the symbol on the top of the stack,</span>
+
+            <span class="c1"># pop the stack and print the top operator.</span>
+
+            <span class="c1"># Then test the incoming operator against the new top of stack.</span>
+
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+
+                <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_GetOperatorPrecedence</span><span class="p">(</span><span class="n">stack</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
 
                     <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">())</span>
 
@@ -2709,67 +2925,55 @@
 
             <span class="k">else</span><span class="p">:</span>
 
-                <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;We don&#39;t know what to do with &quot;</span> <span class="o">+</span> <span class="n">token</span><span class="p">)</span>
 
         <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 
             <span class="n">val</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 
-            <span class="k">if</span> <span class="n">val</span> <span class="o">!=</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+            <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
 
-                <span class="n">expression</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">expression</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;STAGE 5: {expression}&quot;</span><span class="p">)</span>
+    <span class="nd">@classmethod</span>
 
-        <span class="c1"># Now we evaluate the post fix expression</span>
+    <span class="k">def</span> <span class="nf">_IsOperator</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
 
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">token</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">:</span>
 
-            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Malformed !if conditional expression {text} {expression}&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
 
-        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;!+&quot;</span><span class="p">):</span>
 
-            <span class="n">first_operand_index</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">token</span> <span class="o">=</span> <span class="n">token</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
 
-            <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">expression</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;NOT&quot;</span><span class="p">:</span>  <span class="c1"># technically an operator</span>
 
-                <span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">operators</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
 
-                    <span class="n">first_operand_index</span> <span class="o">=</span> <span class="n">index</span>
+        <span class="k">return</span> <span class="n">token</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">operators</span>
 
-                    <span class="k">break</span>
+    <span class="nd">@classmethod</span>
 
-            <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_GetOperatorPrecedence</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
 
-                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;We didn&#39;t find an operator to execute in {expression}: {text}&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_IsOperator</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
 
-            <span class="n">operand</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span><span class="p">]</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
 
-            <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;(&quot;</span> <span class="ow">or</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;)&quot;</span><span class="p">:</span>
 
-                <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">100</span>
 
-            <span class="n">operator1</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;NOT&quot;</span><span class="p">:</span>  <span class="c1"># not is the lowest</span>
 
-            <span class="n">operator2</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">2</span>
 
-            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span> <span class="n">operand</span><span class="p">,</span> <span class="n">operator2</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">token</span> <span class="o">==</span> <span class="s2">&quot;IN&quot;</span><span class="p">:</span>
 
-            <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{operator1} {operand} {operator2} = {result} @ {first_operand_index}&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">1</span>
 
-            <span class="n">new_expression</span> <span class="o">=</span> <span class="n">expression</span><span class="p">[:</span><span class="n">first_operand_index</span> <span class="o">-</span> <span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="n">first_operand_index</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="k">else</span> <span class="p">[]</span>
-
-            <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">new_expression</span><span class="p">)</span>
-
-            <span class="n">new_expression</span> <span class="o">+=</span> <span class="p">[</span><span class="n">result</span><span class="p">,</span> <span class="p">]</span> <span class="o">+</span> <span class="n">expression</span><span class="p">[</span><span class="n">first_operand_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]</span>
-
-            <span class="n">expression</span> <span class="o">=</span> <span class="n">new_expression</span>
-
-        <span class="n">final</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">expression</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">final</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span>
 
     <span class="c1">#</span>
 
@@ -3015,6 +3219,8 @@
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">BaseParser</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
 <span class="w">    </span><span class="ss">&quot;&quot;&quot; &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">operators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;OR&quot;, &quot;AND&quot;, &quot;IN&quot;, &quot;==&quot;, &quot;!=&quot;, &quot;&gt;&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;</span><span class="o">]</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nf">log</span><span class="o">=</span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
@@ -3582,169 +3788,19 @@
 
 <span class="s1">        text = text[3:].strip()</span>
 
-<span class="s1">        self.Logger.debug(f&quot;STAGE 1: {text}&quot;)</span>
+<span class="s1">        logging.debug(f&quot;STAGE 1: {text}&quot;)</span>
 
 <span class="s1">        text = self.ReplaceVariables(text)</span>
 
-<span class="s1">        self.Logger.debug(f&quot;STAGE 2: {text}&quot;)</span>
+<span class="s1">        logging.debug(f&quot;STAGE 2: {text}&quot;)</span>
 
-<span class="s1">        # TOKENIZER</span>
+<span class="s1">        tokens = self._TokenizeConditional(text)</span>
 
-<span class="s1">        # first we create tokens</span>
+<span class="s1">        logging.debug(f&quot;STAGE 3: {tokens}&quot;)</span>
 
-<span class="s1">        TEXT_MODE = 0</span>
+<span class="s1">        expression = self._ConvertTokensToPostFix(tokens)</span>
 
-<span class="s1">        QUOTE_MODE = 1</span>
-
-<span class="s1">        MACRO_MODE = 2</span>
-
-<span class="s1">        token = &quot;&quot;</span>
-
-<span class="s1">        mode = 0</span>
-
-<span class="s1">        tokens = []</span>
-
-<span class="s1">        for character in text:</span>
-
-<span class="s1">            if character == &quot;\&quot;&quot; and len(token) == 0:</span>
-
-<span class="s1">                mode = QUOTE_MODE</span>
-
-<span class="s1">            elif character == &quot;\&quot;&quot; and mode == QUOTE_MODE:</span>
-
-<span class="s1">                if len(token) &gt; 0:</span>
-
-<span class="s1">                    tokens.append(f&quot;\&quot;{token}\&quot;&quot;)</span>
-
-<span class="s1">                    token = &quot;&quot;</span>
-
-<span class="s1">                mode = TEXT_MODE</span>
-
-<span class="s1">            elif character == &quot;$&quot; and len(token) == 0:</span>
-
-<span class="s1">                token += character</span>
-
-<span class="s1">                mode = MACRO_MODE</span>
-
-<span class="s1">            elif character == &#39;</span><span class="p">)</span><span class="s1">&#39; and mode == MACRO_MODE:</span>
-
-<span class="s1">                token += character</span>
-
-<span class="s1">                tokens.append(token)</span>
-
-<span class="s1">                token = &quot;&quot;</span>
-
-<span class="s1">                mode = TEXT_MODE</span>
-
-<span class="s1">            elif mode == TEXT_MODE and (character == &quot;(&quot; or character == &quot;)&quot;):</span>
-
-<span class="s1">                if len(token) &gt; 0:</span>
-
-<span class="s1">                    tokens.append(token)</span>
-
-<span class="s1">                    token = &quot;&quot;</span>
-
-<span class="s1">                tokens.append(character)</span>
-
-<span class="s1">            elif character == &quot; &quot; and (mode == TEXT_MODE or mode == MACRO_MODE):</span>
-
-<span class="s1">                if len(token) &gt; 0:</span>
-
-<span class="s1">                    tokens.append(token)</span>
-
-<span class="s1">                    token = &quot;&quot;</span>
-
-<span class="s1">                    mode = TEXT_MODE</span>
-
-<span class="s1">            else:</span>
-
-<span class="s1">                token += character</span>
-
-<span class="s1">        # make sure to add in the last token just in case</span>
-
-<span class="s1">        if len(token) &gt; 0:</span>
-
-<span class="s1">            tokens.append(token)</span>
-
-<span class="s1">        self.Logger.debug(f&quot;STAGE 3: {&#39;</span><span class="w"> </span><span class="s1">&#39;.join(tokens)}&quot;)</span>
-
-<span class="s1">        operators = [&quot;OR&quot;, &quot;AND&quot;, &quot;IN&quot;, &quot;==&quot;, &quot;!=&quot;, &quot;&gt;&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;]</span>
-
-<span class="s1">        # then we do the lexer and convert operands as necessary</span>
-
-<span class="s1">        for index in range(len(tokens)):</span>
-
-<span class="s1">            token = tokens[index]</span>
-
-<span class="s1">            token_upper = token.upper()</span>
-
-<span class="s1">            if token_upper in operators:</span>
-
-<span class="s1">                token = token_upper</span>
-
-<span class="s1">            elif token_upper == &quot;||&quot;:</span>
-
-<span class="s1">                token = &quot;OR&quot;</span>
-
-<span class="s1">            elif token_upper == &quot;&amp;&amp;&quot;:</span>
-
-<span class="s1">                token = &quot;AND&quot;</span>
-
-<span class="s1">            elif token_upper == &quot;EQ&quot;:</span>
-
-<span class="s1">                token = &quot;==&quot;</span>
-
-<span class="s1">            elif token_upper == &quot;NE&quot;:</span>
-
-<span class="s1">                token = &quot;!=&quot;</span>
-
-<span class="s1">            tokens[index] = token</span>
-
-<span class="s1">        self.Logger.debug(f&quot;STAGE 4: {tokens}&quot;)</span>
-
-<span class="s1">        # now we convert in fix into post fix?</span>
-
-<span class="s1">        stack = [&quot;(&quot;]</span>
-
-<span class="s1">        tokens.append(&quot;)&quot;)  # add an extra parathesis</span>
-
-<span class="s1">        expression = []</span>
-
-<span class="s1">        for token in tokens:</span>
-
-<span class="s1">            if token == &quot;(&quot;:</span>
-
-<span class="s1">                stack.append(token)</span>
-
-<span class="s1">            elif token == &quot;)&quot;:</span>
-
-<span class="s1">                while len(stack) &gt; 0 and stack[-1] != &#39;</span><span class="p">(</span><span class="s1">&#39;:</span>
-
-<span class="s1">                    expression.append(stack.pop())</span>
-
-<span class="s1">            elif token in operators:</span>
-
-<span class="s1">                while len(stack) &gt; 0 and stack[-1] != &#39;</span><span class="p">(</span><span class="s1">&#39;:</span>
-
-<span class="s1">                    self.Logger.debug(stack[-1])</span>
-
-<span class="s1">                    expression.append(stack.pop())</span>
-
-<span class="s1">                stack.append(token)</span>
-
-<span class="s1">            else:</span>
-
-<span class="s1">                expression.append(token)</span>
-
-<span class="s1">        while len(stack) &gt; 0:</span>
-
-<span class="s1">            val = stack.pop()</span>
-
-<span class="s1">            if val != &#39;</span><span class="p">(</span><span class="s1">&#39;:</span>
-
-<span class="s1">                expression.append(val)</span>
-
-<span class="s1">        self.Logger.debug(f&quot;STAGE 5: {expression}&quot;)</span>
+<span class="s1">        logging.debug(f&quot;STAGE 4: {expression}&quot;)</span>
 
 <span class="s1">        # Now we evaluate the post fix expression</span>
 
@@ -3756,9 +3812,11 @@
 
 <span class="s1">            first_operand_index = -1</span>
 
+<span class="s1">            # find the first operator</span>
+
 <span class="s1">            for index, item in enumerate(expression):</span>
 
-<span class="s1">                if item in operators:</span>
+<span class="s1">                if self._IsOperator(item):</span>
 
 <span class="s1">                    first_operand_index = index</span>
 
@@ -3770,209 +3828,531 @@
 
 <span class="ss">            operand = expression[first_operand_index]</span>
 
-<span class="ss">            if first_operand_index &lt; 2:</span>
+<span class="ss">            if operand == &quot;</span><span class="ow">NOT</span><span class="ss">&quot;:</span>
 
-<span class="ss">                raise RuntimeError(f&quot;</span><span class="n">We</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">stray</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="err">{</span><span class="n">operand</span><span class="err">}</span><span class="ss">&quot;)</span>
+<span class="ss">                # Special logic for handling the not</span>
 
-<span class="ss">            operator1 = expression[first_operand_index - 2]</span>
+<span class="ss">                if first_operand_index &lt; 1:</span>
 
-<span class="ss">            operator2 = expression[first_operand_index - 1]</span>
+<span class="ss">                    raise RuntimeError(f&quot;</span><span class="n">We</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">stray</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="err">{</span><span class="n">operand</span><span class="err">}</span><span class="ss">&quot;)</span>
 
-<span class="ss">            result = self.ComputeResult(operator1, operand, operator2)</span>
+<span class="ss">                # grab the operand right before the NOT and invert it</span>
 
-<span class="ss">            self.Logger.debug(f&quot;</span><span class="err">{</span><span class="n">operator1</span><span class="err">}</span><span class="w"> </span><span class="err">{</span><span class="n">operand</span><span class="err">}</span><span class="w"> </span><span class="err">{</span><span class="n">operator2</span><span class="err">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="k">result</span><span class="err">}</span><span class="w"> </span><span class="err">@</span><span class="w"> </span><span class="err">{</span><span class="n">first_operand_index</span><span class="err">}</span><span class="ss">&quot;)</span>
+<span class="ss">                operator1_raw = expression[first_operand_index - 1]</span>
 
-<span class="ss">            new_expression = expression[:first_operand_index - 2] if first_operand_index &gt; 2 else []</span>
+<span class="ss">                operator1 = self.ConvertToInt(operator1_raw)</span>
 
-<span class="ss">            self.Logger.debug(new_expression)</span>
+<span class="ss">                result = not operator1</span>
 
-<span class="ss">            new_expression += [result, ] + expression[first_operand_index + 1:]</span>
+<span class="ss">                # grab what was before the operator and the operand, then squish it all together</span>
 
-<span class="ss">            expression = new_expression</span>
+<span class="ss">                new_expression = expression[:first_operand_index - 1] if first_operand_index &gt; 1 else []</span>
+
+<span class="ss">                new_expression += [result, ] + expression[first_operand_index + 1:]</span>
+
+<span class="ss">                expression = new_expression</span>
+
+<span class="ss">            else:</span>
+
+<span class="ss">                if first_operand_index &lt; 2:</span>
+
+<span class="ss">                    raise RuntimeError(f&quot;</span><span class="n">We</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">stray</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="err">{</span><span class="n">operand</span><span class="err">}</span><span class="ss">&quot;)</span>
+
+<span class="ss">                operator1 = expression[first_operand_index - 2]</span>
+
+<span class="ss">                operator2 = expression[first_operand_index - 1]</span>
+
+<span class="ss">                do_invert = False</span>
+
+<span class="ss">                # check if we have a special operator that has a combined not on it</span>
+
+<span class="ss">                if str(operand).startswith(&quot;</span><span class="err">!</span><span class="o">+</span><span class="ss">&quot;):</span>
+
+<span class="ss">                    operand = operand[2:]</span>
+
+<span class="ss">                    do_invert = True</span>
+
+<span class="ss">                # compute the result now that we have the three things we need</span>
+
+<span class="ss">                result = self.ComputeResult(operator1, operand, operator2)</span>
+
+<span class="ss">                if do_invert:</span>
+
+<span class="ss">                    result = not result</span>
+
+<span class="ss">                # grab what was before the operator and the operand, then smoosh it all together</span>
+
+<span class="ss">                new_expression = expression[:first_operand_index - 2] if first_operand_index &gt; 2 else []</span>
+
+<span class="ss">                new_expression += [result, ] + expression[first_operand_index + 1:]</span>
+
+<span class="ss">                expression = new_expression</span>
 
 <span class="ss">        final = self.ConvertToInt(expression[0])</span>
 
-<span class="ss">        self.Logger.debug(f&quot;</span><span class="w"> </span><span class="n">FINAL</span><span class="w"> </span><span class="err">{</span><span class="n">expression</span><span class="err">}</span><span class="w"> </span><span class="err">{</span><span class="n">final</span><span class="err">}</span><span class="ss">&quot;)</span>
+<span class="ss">        logging.debug(f&quot;</span><span class="w"> </span><span class="n">FINAL</span><span class="w"> </span><span class="err">{</span><span class="n">expression</span><span class="err">}</span><span class="w"> </span><span class="err">{</span><span class="n">final</span><span class="err">}</span><span class="ss">&quot;)</span>
 
 <span class="ss">        return bool(final)</span>
 
-<span class="ss">    #</span>
+<span class="ss">    @classmethod</span>
 
-<span class="ss">    # returns true or false depending on what state of conditional you are currently in</span>
+<span class="ss">    def _TokenizeConditional(cls, text):</span>
 
-<span class="ss">    #</span>
+<span class="ss">        &#39;&#39;&#39; takes in a string that has macros replaced &#39;&#39;&#39;</span>
 
-<span class="ss">    def InActiveCode(self):</span>
+<span class="ss">        # TOKENIZER</span>
 
-<span class="ss">        &quot;&quot;&quot;</span><span class="w"> </span><span class="ss">&quot;&quot;&quot;</span>
+<span class="ss">        # first we create tokens</span>
 
-<span class="ss">        ret = True</span>
+<span class="ss">        TEXT_MODE = 0</span>
 
-<span class="ss">        for a in self.ConditionalStack:</span>
+<span class="ss">        QUOTE_MODE = 1</span>
 
-<span class="ss">            if not a:</span>
+<span class="ss">        MACRO_MODE = 2</span>
 
-<span class="ss">                ret = False</span>
+<span class="ss">        token = &quot;&quot;</span>
 
-<span class="ss">                break</span>
+<span class="ss">        mode = 0</span>
 
-<span class="ss">        return ret</span>
+<span class="ss">        tokens = []</span>
 
-<span class="ss">    def IsGuidString(self, l):</span>
+<span class="ss">        for character in text:</span>
 
-<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+<span class="ss">            if character == &quot;</span><span class="err">\</span><span class="ss">&quot;&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">will</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="n">has</span><span class="w"></span>
+<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">QUOTE_MODE</span><span class="w"></span>
 
-<span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="mh">0xD3B36F2C</span><span class="p">,</span><span class="w"> </span><span class="mh">0xD551</span><span class="p">,</span><span class="w"> </span><span class="mh">0x11D4</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="mh">0x9A</span><span class="p">,</span><span class="w"> </span><span class="mh">0x46</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x90</span><span class="p">,</span><span class="w"> </span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3F</span><span class="p">,</span><span class="w"> </span><span class="mh">0xC1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4D</span><span class="w"> </span><span class="err">}}</span><span class="w"></span>
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;\&quot;&quot; and mode == QUOTE_MODE:</span>
 
-<span class="w">        </span><span class="nl">Args</span><span class="p">:</span><span class="w"></span>
+<span class="ss">                if len(token) &gt; 0:</span>
 
-<span class="w">          </span><span class="nl">l</span><span class="p">:</span><span class="w"></span>
+<span class="ss">                    tokens.append(f&quot;</span><span class="err">\</span><span class="ss">&quot;{token}\&quot;&quot;)</span>
 
-<span class="w">        </span><span class="k">Returns</span><span class="err">:</span><span class="w"></span>
+<span class="ss">                    token = &quot;&quot;</span>
 
-<span class="w">        </span><span class="ss">&quot;&quot;&quot;</span>
+<span class="ss">                mode = TEXT_MODE</span>
 
-<span class="ss">        if(l.count(&quot;</span><span class="err">{</span><span class="ss">&quot;) == 2 and l.count(&quot;</span><span class="err">}</span><span class="ss">&quot;) == 2 and l.count(&quot;</span><span class="p">,</span><span class="ss">&quot;) == 10 and l.count(&quot;</span><span class="o">=</span><span class="ss">&quot;) == 1):</span>
+<span class="ss">            elif character == &quot;</span><span class="err">$</span><span class="ss">&quot; and len(token) == 0:</span>
 
-<span class="ss">            return True</span>
+<span class="ss">                token += character</span>
 
-<span class="ss">        return False</span>
+<span class="ss">                mode = MACRO_MODE</span>
 
-<span class="ss">    def ParseGuid(self, l):</span>
+<span class="ss">            elif character == &#39;)&#39; and mode == MACRO_MODE:</span>
 
-<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+<span class="ss">                token += character</span>
 
-<span class="w">        </span><span class="nf">parse</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">guid</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="nf">format</span><span class="w"></span>
+<span class="ss">                tokens.append(token)</span>
 
-<span class="w">        </span><span class="n">Will</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="k">exception</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="n">parts</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">isn</span><span class="s1">&#39;t long enough</span>
+<span class="ss">                token = &quot;&quot;</span>
 
-<span class="s1">        Args:</span>
+<span class="ss">                mode = TEXT_MODE</span>
 
-<span class="s1">          l: the guid to parse ex: { 0xD3B36F2C, 0xD551, 0x11D4, { 0x9A, 0x46, 0x00, 0x90, 0x27, 0x3F, 0xC1, 0x4D }}</span>
+<span class="ss">            elif mode == TEXT_MODE and (character == &quot;</span><span class="p">(</span><span class="ss">&quot; or character == &quot;</span><span class="p">)</span><span class="ss">&quot;):</span>
 
-<span class="s1">        Returns: a string of the guid. ex: D3B36F2C-D551-11D4-9A46-0090273FC14D</span>
+<span class="ss">                if len(token) &gt; 0:</span>
 
-<span class="s1">        &quot;&quot;&quot;</span>
+<span class="ss">                    tokens.append(token)</span>
 
-<span class="s1">        entries = l.lstrip(&#39;</span><span class="w"> </span><span class="err">{</span><span class="s1">&#39;).rstrip(&#39;</span><span class="w"> </span><span class="err">}</span><span class="s1">&#39;).split(&#39;</span><span class="p">,</span><span class="s1">&#39;)</span>
+<span class="ss">                    token = &quot;&quot;</span>
 
-<span class="s1">        if len(entries) != 11:</span>
+<span class="ss">                tokens.append(character)</span>
 
-<span class="s1">            raise RuntimeError(f&quot;Invalid GUID found {l}. We are missing some parts since we only found: {len(entries)}&quot;)</span>
+<span class="ss">            elif character == &quot;</span><span class="w"> </span><span class="ss">&quot; and (mode == TEXT_MODE or mode == MACRO_MODE):</span>
 
-<span class="s1">        gu = entries[0].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">                if len(token) &gt; 0:</span>
 
-<span class="s1">        # pad front until 8 chars</span>
+<span class="ss">                    tokens.append(token)</span>
 
-<span class="s1">        while(len(gu) &lt; 8):</span>
+<span class="ss">                    token = &quot;&quot;</span>
 
-<span class="s1">            gu = &quot;0&quot; + gu</span>
+<span class="ss">                    mode = TEXT_MODE</span>
 
-<span class="s1">        gut = entries[1].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            else:</span>
 
-<span class="s1">        while(len(gut) &lt; 4):</span>
+<span class="ss">                token += character</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">        # make sure to add in the last token just in case</span>
 
-<span class="s1">        gu = gu + &quot;-&quot; + gut</span>
+<span class="ss">        if len(token) &gt; 0:</span>
 
-<span class="s1">        gut = entries[2].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            tokens.append(token)</span>
 
-<span class="s1">        while(len(gut) &lt; 4):</span>
+<span class="ss">        # then we do the lexer and convert operands as necessary</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">        for index in range(len(tokens)):</span>
 
-<span class="s1">        gu = gu + &quot;-&quot; + gut</span>
+<span class="ss">            token = tokens[index]</span>
 
-<span class="s1">        # strip off extra {</span>
+<span class="ss">            token_upper = token.upper()</span>
 
-<span class="s1">        gut = entries[3].lstrip(&#39;</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            if token_upper in cls.operators:</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">                token = token_upper</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">            elif token_upper == &quot;</span><span class="o">||</span><span class="ss">&quot;:</span>
 
-<span class="s1">        gu = gu + &quot;-&quot; + gut</span>
+<span class="ss">                token = &quot;</span><span class="ow">OR</span><span class="ss">&quot;</span>
 
-<span class="s1">        gut = entries[4].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            elif token_upper == &quot;</span><span class="o">&amp;&amp;</span><span class="ss">&quot;:</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">                token = &quot;</span><span class="ow">AND</span><span class="ss">&quot;</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">            elif token_upper == &quot;</span><span class="n">EQ</span><span class="ss">&quot;:</span>
 
-<span class="s1">        gu = gu + gut</span>
+<span class="ss">                token = &quot;</span><span class="o">==</span><span class="ss">&quot;</span>
 
-<span class="s1">        gut = entries[5].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            elif token_upper == &quot;</span><span class="n">NE</span><span class="ss">&quot;:</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">                token = &quot;</span><span class="o">!=</span><span class="ss">&quot;</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">            elif token == &quot;</span><span class="err">!</span><span class="ss">&quot;:</span>
 
-<span class="s1">        gu = gu + &quot;-&quot; + gut</span>
+<span class="ss">                token = &quot;</span><span class="ow">NOT</span><span class="ss">&quot;</span>
 
-<span class="s1">        gut = entries[6].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            tokens[index] = token</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">        # collapse the not</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">        collapsed_tokens = []</span>
 
-<span class="s1">        gu = gu + gut</span>
+<span class="ss">        found_not = False</span>
 
-<span class="s1">        gut = entries[7].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">        for token in tokens:</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">            if str(token).upper() == &quot;</span><span class="ow">NOT</span><span class="ss">&quot;:</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">                found_not = True</span>
 
-<span class="s1">        gu = gu + gut</span>
+<span class="ss">                continue</span>
 
-<span class="s1">        gut = entries[8].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">            if not found_not:</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">                collapsed_tokens.append(token)</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">            elif token in cls.operators:</span>
 
-<span class="s1">        gu = gu + gut</span>
+<span class="ss">                collapsed_tokens.append(&quot;</span><span class="err">!</span><span class="o">+</span><span class="ss">&quot; + token)</span>
 
-<span class="s1">        gut = entries[9].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).strip()</span>
+<span class="ss">                found_not = False</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">            else:  # add the not back</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">                found_not = False</span>
 
-<span class="s1">        gu = gu + gut</span>
+<span class="ss">                collapsed_tokens.append(&quot;</span><span class="ow">NOT</span><span class="ss">&quot;)</span>
 
-<span class="s1">        gut = entries[10].split()[0].lstrip(&#39;</span><span class="w"> </span><span class="mi">0</span><span class="s1">&#39;).lstrip(&#39;</span><span class="n">x</span><span class="s1">&#39;).rstrip(&#39;</span><span class="w"> </span><span class="err">}</span><span class="w"> </span><span class="s1">&#39;).strip()</span>
+<span class="ss">                collapsed_tokens.append(token)</span>
 
-<span class="s1">        while(len(gut) &lt; 2):</span>
+<span class="ss">        return collapsed_tokens</span>
 
-<span class="s1">            gut = &quot;0&quot; + gut</span>
+<span class="ss">    @classmethod</span>
 
-<span class="s1">        gu = gu + gut</span>
+<span class="ss">    def _ConvertTokensToPostFix(cls, tokens):</span>
 
-<span class="s1">        proper_guid_length = 36</span>
+<span class="ss">        # convert infix into post fix</span>
 
-<span class="s1">        if len(gu) &gt; proper_guid_length:</span>
+<span class="ss">        stack = [&quot;</span><span class="p">(</span><span class="ss">&quot;]</span>
 
-<span class="s1">            raise RuntimeError(f&quot;The guid we parsed was too long: {gu}&quot;)</span>
+<span class="ss">        tokens.append(&quot;</span><span class="p">)</span><span class="ss">&quot;)  # add an extra parathesis</span>
 
-<span class="s1">        if len(gu) &lt; proper_guid_length:</span>
+<span class="ss">        expression = []</span>
 
-<span class="s1">            raise RuntimeError(f&quot;The guid we parsed was too short: {gu}&quot;)</span>
+<span class="ss">        for token in tokens:</span>
 
-<span class="s1">        return gu.upper()</span>
+<span class="ss">            # If the incoming symbol is a left parenthesis, push it on the stack.</span>
 
-<span class="s1">    def ResetParserState(self):</span>
+<span class="ss">            if token == &quot;</span><span class="p">(</span><span class="ss">&quot;:</span>
+
+<span class="ss">                stack.append(token)</span>
+
+<span class="ss">            # If the incoming symbol is a right parenthesis,</span>
+
+<span class="ss">            # pop the stack and print the operators until you see a left parenthesis.</span>
+
+<span class="ss">            # Discard the pair of parentheses.</span>
+
+<span class="ss">            elif token == &quot;</span><span class="p">)</span><span class="ss">&quot;:</span>
+
+<span class="ss">                while len(stack) &gt; 0 and stack[-1] != &#39;(&#39;:</span>
+
+<span class="ss">                    expression.append(stack.pop())</span>
+
+<span class="ss">                stack.pop()  # pop the last (</span>
+
+<span class="ss">            # If this isn&#39;t a operator ignore it</span>
+
+<span class="ss">            elif not cls._IsOperator(token):</span>
+
+<span class="ss">                expression.append(token)</span>
+
+<span class="ss">            # If the stack is empty or contains a left parenthesis on top, push the incoming operator onto the stack.</span>
+
+<span class="ss">            elif len(stack) == 0 or stack[-1] == &#39;(&#39;:</span>
+
+<span class="ss">                stack.append(token)</span>
+
+<span class="ss">            # If the incoming symbol has higher precedence than the top of the stack, push it on the stack.</span>
+
+<span class="ss">            elif len(stack) == 0 or cls._GetOperatorPrecedence(token) &gt; cls._GetOperatorPrecedence(stack[-1]):</span>
+
+<span class="ss">                stack.append(token)</span>
+
+<span class="ss">            # If the incoming symbol has equal precedence with the top of the stack, use association.</span>
+
+<span class="ss">            # If the association is left to right, pop and print the top of the stack and</span>
+
+<span class="ss">            # then push the incoming operator. If the association is right to left, push the incoming operator.</span>
+
+<span class="ss">            elif len(stack) != 0 and cls._GetOperatorPrecedence(token) == cls._GetOperatorPrecedence(stack[-1]):</span>
+
+<span class="ss">                expression.append(stack.pop())</span>
+
+<span class="ss">                stack.append(token)</span>
+
+<span class="ss">            # If the incoming symbol has lower precedence than the symbol on the top of the stack,</span>
+
+<span class="ss">            # pop the stack and print the top operator.</span>
+
+<span class="ss">            # Then test the incoming operator against the new top of stack.</span>
+
+<span class="ss">            elif len(stack) != 0 and cls._GetOperatorPrecedence(token) &lt; cls._GetOperatorPrecedence(stack[-1]):</span>
+
+<span class="ss">                while len(stack) &gt; 0 and cls._GetOperatorPrecedence(token) &lt;= cls._GetOperatorPrecedence(stack[-1]):</span>
+
+<span class="ss">                    expression.append(stack.pop())</span>
+
+<span class="ss">                stack.append(token)</span>
+
+<span class="ss">            else:</span>
+
+<span class="ss">                logging.error(&quot;</span><span class="n">We</span><span class="w"> </span><span class="n">don</span><span class="s1">&#39;t know what to do with &quot; + token)</span>
+
+<span class="s1">        while len(stack) &gt; 0:</span>
+
+<span class="s1">            val = stack.pop()</span>
+
+<span class="s1">            expression.append(val)</span>
+
+<span class="s1">        return expression</span>
+
+<span class="s1">    @classmethod</span>
+
+<span class="s1">    def _IsOperator(cls, token):</span>
+
+<span class="s1">        if type(token) is not str:</span>
+
+<span class="s1">            return False</span>
+
+<span class="s1">        if token.startswith(&quot;!+&quot;):</span>
+
+<span class="s1">            token = token[2:]</span>
+
+<span class="s1">        if token == &quot;NOT&quot;:  # technically an operator</span>
+
+<span class="s1">            return True</span>
+
+<span class="s1">        return token in cls.operators</span>
+
+<span class="s1">    @classmethod</span>
+
+<span class="s1">    def _GetOperatorPrecedence(cls, token):</span>
+
+<span class="s1">        if not cls._IsOperator(token):</span>
+
+<span class="s1">            return -1</span>
+
+<span class="s1">        if token == &quot;(&quot; or token == &quot;)&quot;:</span>
+
+<span class="s1">            return 100</span>
+
+<span class="s1">        if token == &quot;NOT&quot;:  # not is the lowest</span>
+
+<span class="s1">            return -2</span>
+
+<span class="s1">        if token == &quot;IN&quot;:</span>
+
+<span class="s1">            return 1</span>
+
+<span class="s1">        return 0</span>
+
+<span class="s1">    #</span>
+
+<span class="s1">    # returns true or false depending on what state of conditional you are currently in</span>
+
+<span class="s1">    #</span>
+
+<span class="s1">    def InActiveCode(self):</span>
 
 <span class="s1">        &quot;&quot;&quot; &quot;&quot;&quot;</span>
 
-<span class="s1">        self.ConditionalStack = []</span>
+<span class="s1">        ret = True</span>
 
-<span class="s1">        self.CurrentSection = &#39;&#39;</span>
+<span class="s1">        for a in self.ConditionalStack:</span>
 
-<span class="s1">        self.CurrentFullSection = &#39;</span><span class="err">&#39;</span><span class="w"></span>
+<span class="s1">            if not a:</span>
+
+<span class="s1">                ret = False</span>
+
+<span class="s1">                break</span>
+
+<span class="s1">        return ret</span>
+
+<span class="s1">    def IsGuidString(self, l):</span>
+
+<span class="s1">        &quot;&quot;&quot;</span>
+
+<span class="s1">        will return true if the the line has</span>
+
+<span class="s1">        = { 0xD3B36F2C, 0xD551, 0x11D4, { 0x9A, 0x46, 0x00, 0x90, 0x27, 0x3F, 0xC1, 0x4D }}</span>
+
+<span class="s1">        Args:</span>
+
+<span class="s1">          l:</span>
+
+<span class="s1">        Returns:</span>
+
+<span class="s1">        &quot;&quot;&quot;</span>
+
+<span class="s1">        if(l.count(&quot;{&quot;) == 2 and l.count(&quot;}&quot;) == 2 and l.count(&quot;,&quot;) == 10 and l.count(&quot;=&quot;) == 1):</span>
+
+<span class="s1">            return True</span>
+
+<span class="s1">        return False</span>
+
+<span class="s1">    def ParseGuid(self, l):</span>
+
+<span class="s1">        &quot;&quot;&quot;</span>
+
+<span class="s1">        parse a guid into a different format</span>
+
+<span class="s1">        Will throw exception if missing any of the 11 parts of isn&#39;</span><span class="n">t</span><span class="w"> </span><span class="n">long</span><span class="w"> </span><span class="n">enough</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">Args</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">          </span><span class="nl">l</span><span class="p">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">guid</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nf">parse</span><span class="w"> </span><span class="nl">ex</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="mh">0xD3B36F2C</span><span class="p">,</span><span class="w"> </span><span class="mh">0xD551</span><span class="p">,</span><span class="w"> </span><span class="mh">0x11D4</span><span class="p">,</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="mh">0x9A</span><span class="p">,</span><span class="w"> </span><span class="mh">0x46</span><span class="p">,</span><span class="w"> </span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x90</span><span class="p">,</span><span class="w"> </span><span class="mh">0x27</span><span class="p">,</span><span class="w"> </span><span class="mh">0x3F</span><span class="p">,</span><span class="w"> </span><span class="mh">0xC1</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4D</span><span class="w"> </span><span class="err">}}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">Returns</span><span class="err">:</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">guid</span><span class="p">.</span><span class="w"> </span><span class="nl">ex</span><span class="p">:</span><span class="w"> </span><span class="n">D3B36F2C</span><span class="o">-</span><span class="n">D551</span><span class="o">-</span><span class="mi">11</span><span class="n">D4</span><span class="o">-</span><span class="mi">9</span><span class="n">A46</span><span class="o">-</span><span class="mi">0090273</span><span class="n">FC14D</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">        entries = l.lstrip(&#39; {&#39;).rstrip(&#39; }&#39;).split(&#39;,&#39;)</span>
+
+<span class="ss">        if len(entries) != 11:</span>
+
+<span class="ss">            raise RuntimeError(f&quot;</span><span class="n">Invalid</span><span class="w"> </span><span class="n">GUID</span><span class="w"> </span><span class="k">found</span><span class="w"> </span><span class="err">{</span><span class="n">l</span><span class="err">}</span><span class="p">.</span><span class="w"> </span><span class="n">We</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">missing</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">parts</span><span class="w"> </span><span class="n">since</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="k">found</span><span class="err">:</span><span class="w"> </span><span class="err">{</span><span class="nf">len</span><span class="p">(</span><span class="n">entries</span><span class="p">)</span><span class="err">}</span><span class="ss">&quot;)</span>
+
+<span class="ss">        gu = entries[0].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        # pad front until 8 chars</span>
+
+<span class="ss">        while(len(gu) &lt; 8):</span>
+
+<span class="ss">            gu = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gu</span>
+
+<span class="ss">        gut = entries[1].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 4):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + &quot;</span><span class="o">-</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gut = entries[2].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 4):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + &quot;</span><span class="o">-</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        # strip off extra {</span>
+
+<span class="ss">        gut = entries[3].lstrip(&#39; { 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + &quot;</span><span class="o">-</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gut = entries[4].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + gut</span>
+
+<span class="ss">        gut = entries[5].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + &quot;</span><span class="o">-</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gut = entries[6].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + gut</span>
+
+<span class="ss">        gut = entries[7].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + gut</span>
+
+<span class="ss">        gut = entries[8].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + gut</span>
+
+<span class="ss">        gut = entries[9].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + gut</span>
+
+<span class="ss">        gut = entries[10].split()[0].lstrip(&#39; 0&#39;).lstrip(&#39;x&#39;).rstrip(&#39; } &#39;).strip()</span>
+
+<span class="ss">        while(len(gut) &lt; 2):</span>
+
+<span class="ss">            gut = &quot;</span><span class="mi">0</span><span class="ss">&quot; + gut</span>
+
+<span class="ss">        gu = gu + gut</span>
+
+<span class="ss">        proper_guid_length = 36</span>
+
+<span class="ss">        if len(gu) &gt; proper_guid_length:</span>
+
+<span class="ss">            raise RuntimeError(f&quot;</span><span class="n">The</span><span class="w"> </span><span class="n">guid</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">parsed</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="nl">long</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="n">gu</span><span class="err">}</span><span class="ss">&quot;)</span>
+
+<span class="ss">        if len(gu) &lt; proper_guid_length:</span>
+
+<span class="ss">            raise RuntimeError(f&quot;</span><span class="n">The</span><span class="w"> </span><span class="n">guid</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">parsed</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="nl">short</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="n">gu</span><span class="err">}</span><span class="ss">&quot;)</span>
+
+<span class="ss">        return gu.upper()</span>
+
+<span class="ss">    def ResetParserState(self):</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="err">&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">ConditionalStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">CurrentSection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">CurrentFullSection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Parsed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="w"></span>
 </code></pre></div>
@@ -3984,6 +4364,11 @@
 <ul>
 <li>edk2toollib.uefi.edk2.parsers.base_parser.HashFileParser</li>
 </ul>
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">operators</span>
+</code></pre></div>
+
+
 <h4 id="methods">Methods</h4>
 <h4 id="computeresult">ComputeResult</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">ComputeResult</span><span class="p">(</span>
@@ -4194,169 +4579,19 @@
 
 <span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">text</span><span class="o">[</span><span class="n">3:</span><span class="o">]</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ReplaceVariables</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">TOKENIZER</span><span class="w"></span>
+<span class="w">        </span><span class="n">tokens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_TokenizeConditional</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">tokens</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 3: {tokens}&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">        </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_ConvertTokensToPostFix</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">QUOTE_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">MACRO_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">tokens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">text</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;\&quot;&quot; and len(token) == 0:</span>
-
-<span class="ss">                mode = QUOTE_MODE</span>
-
-<span class="ss">            elif character == &quot;</span><span class="err">\</span><span class="ss">&quot;&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">QUOTE_MODE</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;\&quot;</span><span class="err">{</span><span class="n">token</span><span class="err">}\</span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;$&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MACRO_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;)&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">MACRO_MODE</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;(&quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;)&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="k">character</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot; &quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MACRO_MODE</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">case</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 3: {&#39; &#39;.join(tokens)}&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">operators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;OR&quot;, &quot;AND&quot;, &quot;IN&quot;, &quot;==&quot;, &quot;!=&quot;, &quot;&gt;&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">lexer</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">convert</span><span class="w"> </span><span class="n">operands</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">necessary</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tokens</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">token_upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token_upper</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;||&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;OR&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;&amp;&amp;&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AND&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;EQ&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;==&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;NE&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;!=&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">tokens</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 4: {tokens}&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="nf">convert</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">fix</span><span class="vm">?</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;(&quot;</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="ss">&quot;)&quot;</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">extra</span><span class="w"> </span><span class="n">parathesis</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">tokens</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;(&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;)&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 5: {expression}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 4: {expression}&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">expression</span><span class="w"></span>
 
@@ -4368,9 +4603,11 @@
 
 <span class="w">            </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
 
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">operator</span><span class="w"></span>
+
 <span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_IsOperator</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
 <span class="w">                    </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">index</span><span class="w"></span>
 
@@ -4382,29 +4619,69 @@
 
 <span class="w">            </span><span class="n">operand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index</span><span class="o">]</span><span class="w"></span>
 
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;NOT&quot;</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">                </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">Special</span><span class="w"> </span><span class="n">logic</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">handling</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="ow">not</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 2</span><span class="o">]</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">operator2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
+<span class="w">                    </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">            </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="n">operator2</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">grab</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="nf">right</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="ow">NOT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">invert</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{operator1} {operand} {operator2} = {result} @ {first_operand_index}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">operator1_raw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 2</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+<span class="w">                </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">operator1_raw</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">new_expression</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">operator1</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">grab</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">squish</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">together</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 1</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 2</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">operator2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">do_invert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">combined</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">operand</span><span class="p">).</span><span class="n">startswith</span><span class="p">(</span><span class="ss">&quot;!+&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">operand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">operand</span><span class="o">[</span><span class="n">2:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">do_invert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="k">compute</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">three</span><span class="w"> </span><span class="n">things</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">need</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="n">operator2</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nl">do_invert</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">result</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">grab</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">smoosh</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">together</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 2</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">expression</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">bool</span><span class="p">(</span><span class="n">final</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
@@ -5122,6 +5399,11 @@ Args:
 <li>edk2toollib.uefi.edk2.parsers.fdf_parser.FdfParser</li>
 <li>edk2toollib.uefi.edk2.parsers.targettxt_parser.TargetTxtParser</li>
 </ul>
+<h4 id="class-variables_1">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">operators</span>
+</code></pre></div>
+
+
 <h4 id="methods_1">Methods</h4>
 <h4 id="computeresult_1">ComputeResult</h4>
 <div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">ComputeResult</span><span class="p">(</span>
@@ -5332,169 +5614,19 @@ Args:
 
 <span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">text</span><span class="o">[</span><span class="n">3:</span><span class="o">]</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ReplaceVariables</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">TOKENIZER</span><span class="w"></span>
+<span class="w">        </span><span class="n">tokens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_TokenizeConditional</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">tokens</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 3: {tokens}&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">        </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_ConvertTokensToPostFix</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">QUOTE_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">MACRO_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">tokens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">text</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;\&quot;&quot; and len(token) == 0:</span>
-
-<span class="ss">                mode = QUOTE_MODE</span>
-
-<span class="ss">            elif character == &quot;</span><span class="err">\</span><span class="ss">&quot;&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">QUOTE_MODE</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;\&quot;</span><span class="err">{</span><span class="n">token</span><span class="err">}\</span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;$&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MACRO_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;)&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">MACRO_MODE</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;(&quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;)&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="k">character</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot; &quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MACRO_MODE</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">case</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 3: {&#39; &#39;.join(tokens)}&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">operators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;OR&quot;, &quot;AND&quot;, &quot;IN&quot;, &quot;==&quot;, &quot;!=&quot;, &quot;&gt;&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">lexer</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">convert</span><span class="w"> </span><span class="n">operands</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">necessary</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tokens</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">token_upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token_upper</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;||&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;OR&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;&amp;&amp;&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AND&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;EQ&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;==&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;NE&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;!=&quot;</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">tokens</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 4: {tokens}&quot;</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="nf">convert</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">fix</span><span class="vm">?</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;(&quot;</span><span class="o">]</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="ss">&quot;)&quot;</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">extra</span><span class="w"> </span><span class="n">parathesis</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">tokens</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;(&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;)&quot;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">                    </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span><span class="w"></span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
-
-<span class="w">                </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="w"></span>
-
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 5: {expression}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 4: {expression}&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">expression</span><span class="w"></span>
 
@@ -5506,9 +5638,11 @@ Args:
 
 <span class="w">            </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
 
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="n">find</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">operator</span><span class="w"></span>
+
 <span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_IsOperator</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
 
 <span class="w">                    </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">index</span><span class="w"></span>
 
@@ -5520,29 +5654,69 @@ Args:
 
 <span class="w">            </span><span class="n">operand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index</span><span class="o">]</span><span class="w"></span>
 
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;NOT&quot;</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">                </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">Special</span><span class="w"> </span><span class="n">logic</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">handling</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="ow">not</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 2</span><span class="o">]</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">operator2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
+<span class="w">                    </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">            </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="n">operator2</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">grab</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operand</span><span class="w"> </span><span class="nf">right</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="ow">NOT</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">invert</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{operator1} {operand} {operator2} = {result} @ {first_operand_index}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="n">operator1_raw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 2</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+<span class="w">                </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">operator1_raw</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">new_expression</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">operator1</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">grab</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">squish</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">together</span><span class="w"></span>
 
-<span class="w">            </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 1</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 2</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">operator2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">do_invert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">combined</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">operand</span><span class="p">).</span><span class="n">startswith</span><span class="p">(</span><span class="ss">&quot;!+&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">operand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">operand</span><span class="o">[</span><span class="n">2:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">do_invert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="k">compute</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">three</span><span class="w"> </span><span class="n">things</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">need</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="n">operator2</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nl">do_invert</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">result</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">#</span><span class="w"> </span><span class="n">grab</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operator</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">smoosh</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">all</span><span class="w"> </span><span class="n">together</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 2</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
 
 <span class="w">        </span><span class="n">final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">expression</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
 
-<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span><span class="w"></span>
 
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">bool</span><span class="p">(</span><span class="n">final</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
