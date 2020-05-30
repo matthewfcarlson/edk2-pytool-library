@@ -922,8 +922,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../../build_objects/readme/" title="Readme" class="md-nav__link">
-      Readme
+    <a href="../../build_objects/dsc/" title="Dsc" class="md-nav__link">
+      Dsc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build_objects/dsc_translator/" title="Dsc translator" class="md-nav__link">
+      Dsc translator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build_objects/" title="Index" class="md-nav__link">
+      Index
     </a>
   </li>
 
@@ -1050,6 +1074,13 @@
           <li class="md-nav__item">
   <a href="#converttoint" class="md-nav__link">
     ConvertToInt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluateconditional" class="md-nav__link">
+    EvaluateConditional
   </a>
   
 </li>
@@ -1518,6 +1549,54 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-4" type="checkbox" id="nav-6-9-4">
+    
+    <label class="md-nav__link" for="nav-6-9-4">
+      Policy
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-9-4">
+        Policy
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/policy/firmware_policy/" title="Firmware policy" class="md-nav__link">
+      Firmware policy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/policy/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1588,6 +1667,13 @@
           <li class="md-nav__item">
   <a href="#converttoint" class="md-nav__link">
     ConvertToInt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluateconditional" class="md-nav__link">
+    EvaluateConditional
   </a>
   
 </li>
@@ -2644,7 +2730,23 @@
 
         <span class="n">ivalue2</span> <span class="o">=</span> <span class="n">value2</span>
 
+        <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">str</span><span class="p">):</span>
+
+            <span class="n">ivalue</span> <span class="o">=</span> <span class="n">value</span><span class="p">.</span><span class="n">strip</span><span class="p">(</span><span class="ss">&quot;\&quot;&quot;)</span>
+
+<span class="ss">        if isinstance(value2, str):</span>
+
+<span class="ss">            ivalue2 = value2.strip(&quot;</span><span class="err">\</span><span class="ss">&quot;&quot;</span><span class="p">)</span>
+
         <span class="o">#</span> <span class="k">convert</span> <span class="n">it</span> <span class="k">to</span> <span class="n">interpretted</span> <span class="n">value</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">cond</span><span class="p">.</span><span class="k">upper</span><span class="p">()</span> <span class="o">==</span> <span class="ss">&quot;IN&quot;</span><span class="p">):</span>
+
+            <span class="o">#</span> <span class="n">strip</span> <span class="n">quotes</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{ivalue} in {ivalue2}&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">ivalue</span> <span class="k">in</span> <span class="n">ivalue2</span>
 
         <span class="n">try</span><span class="p">:</span>
 
@@ -2668,6 +2770,16 @@
 
             <span class="n">pass</span>
 
+        <span class="o">#</span> <span class="k">First</span> <span class="k">check</span> <span class="n">our</span> <span class="nb">boolean</span> <span class="n">operators</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">cond</span><span class="p">.</span><span class="k">upper</span><span class="p">()</span> <span class="o">==</span> <span class="ss">&quot;OR&quot;</span><span class="p">):</span>
+
+            <span class="k">return</span> <span class="n">ivalue</span> <span class="k">or</span> <span class="n">ivalue2</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">cond</span><span class="p">.</span><span class="k">upper</span><span class="p">()</span> <span class="o">==</span> <span class="ss">&quot;AND&quot;</span><span class="p">):</span>
+
+            <span class="k">return</span> <span class="n">ivalue</span> <span class="k">and</span> <span class="n">ivalue2</span>
+
         <span class="o">#</span> <span class="k">check</span> <span class="n">our</span> <span class="n">truthyness</span>
 
         <span class="k">if</span><span class="p">(</span><span class="n">cond</span> <span class="o">==</span> <span class="ss">&quot;==&quot;</span><span class="p">):</span>
@@ -2682,15 +2794,9 @@
 
             <span class="k">return</span> <span class="p">(</span><span class="n">ivalue</span> <span class="o">!=</span> <span class="n">ivalue2</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">value</span> <span class="o">!=</span> <span class="n">value2</span><span class="p">)</span>
 
-        <span class="n">elif</span> <span class="p">(</span><span class="n">cond</span><span class="p">.</span><span class="k">lower</span><span class="p">()</span> <span class="o">==</span> <span class="ss">&quot;in&quot;</span><span class="p">):</span>
-
-            <span class="o">#</span> <span class="k">contains</span>
-
-            <span class="k">return</span> <span class="n">value</span> <span class="k">in</span> <span class="n">value2</span>
-
         <span class="o">#</span> <span class="k">check</span> <span class="k">to</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">we</span> <span class="k">only</span> <span class="n">have</span> <span class="n">digits</span> <span class="k">from</span> <span class="n">here</span> <span class="k">on</span> <span class="k">out</span>
 
-        <span class="k">if</span> <span class="k">not</span> <span class="n">str</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="k">not</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">and</span> <span class="k">not</span> <span class="n">str</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
 
             <span class="k">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{self.__class__}: Unknown value: {value} {ivalue.__class__}&quot;</span><span class="p">)</span>
 
@@ -2698,7 +2804,7 @@
 
             <span class="n">raise</span> <span class="n">ValueError</span><span class="p">(</span><span class="ss">&quot;Unknown value&quot;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="k">not</span> <span class="n">str</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(</span><span class="n">value2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="k">not</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">value2</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span> <span class="k">and</span> <span class="k">not</span> <span class="n">str</span><span class="p">.</span><span class="n">isdigit</span><span class="p">(</span><span class="n">value2</span><span class="p">):</span>
 
             <span class="k">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{self.__class__}: Unknown value: {value2} {ivalue2}&quot;</span><span class="p">)</span>
 
@@ -2754,6 +2860,10 @@
 
 <span class="ss">        &quot;&quot;&quot;</span>
 
+        <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+
+            <span class="k">return</span> <span class="n">value</span>
+
         <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">str</span><span class="p">)</span> <span class="k">and</span> <span class="n">value</span><span class="p">.</span><span class="k">upper</span><span class="p">()</span> <span class="o">==</span> <span class="ss">&quot;TRUE&quot;</span><span class="p">:</span>
 
             <span class="k">return</span> <span class="mi">1</span>
@@ -2769,6 +2879,244 @@
         <span class="k">else</span><span class="p">:</span>
 
             <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="evaluateconditional">EvaluateConditional</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">EvaluateConditional</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">text</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Uses a pushdown resolver </p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">EvaluateConditional</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nc">text</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="s1">&#39;&#39;&#39; Uses a pushdown resolver &#39;&#39;&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="nc">text</span><span class="p">).</span><span class="n">strip</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nc">text</span><span class="p">.</span><span class="nf">lower</span><span class="p">().</span><span class="n">startswith</span><span class="p">(</span><span class="ss">&quot;!if &quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Invalid conditional cannot be validated: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">text</span><span class="o">[</span><span class="n">3:</span><span class="o">]</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 1: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ReplaceVariables</span><span class="p">(</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 2: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">TOKENIZER</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">tokens</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">QUOTE_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">MACRO_MODE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">tokens</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nc">text</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;\&quot;&quot; and len(token) == 0:</span>
+
+<span class="ss">                mode = QUOTE_MODE</span>
+
+<span class="ss">            elif character == &quot;</span><span class="err">\</span><span class="ss">&quot;&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">QUOTE_MODE</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;\&quot;</span><span class="err">{</span><span class="n">token</span><span class="err">}\</span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;$&quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MACRO_MODE</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;)&#39;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">MACRO_MODE</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;(&quot;</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;)&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="k">character</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="k">character</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot; &quot;</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MACRO_MODE</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEXT_MODE</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">character</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">last</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">case</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 3: {&#39; &#39;.join(tokens)}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">operators</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;OR&quot;, &quot;AND&quot;, &quot;IN&quot;, &quot;==&quot;, &quot;!=&quot;, &quot;&gt;&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;=&quot;</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">lexer</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="nf">convert</span><span class="w"> </span><span class="n">operands</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">necessary</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tokens</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">token_upper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="p">.</span><span class="nf">upper</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token_upper</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;||&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;OR&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;&amp;&amp;&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;AND&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;EQ&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;==&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token_upper</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;NE&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;!=&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">tokens</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">token</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 4: {tokens}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="nf">convert</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">fix</span><span class="vm">?</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">stack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;(&quot;</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">tokens</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="ss">&quot;)&quot;</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">extra</span><span class="w"> </span><span class="n">parathesis</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">tokens</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;(&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;)&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">elif</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">stack</span><span class="o">[</span><span class="n">-1</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">stack</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;(&#39;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">expression</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;STAGE 5: {expression}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">evaluate</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">post</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">expression</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Malformed !if conditional expression {text} {expression}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="p">,</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">enumerate</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">operators</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">index</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">break</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We didn&#39;t find an operator to execute in {expression}: {text}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">operand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;We have a stray operand {operand}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">operator1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 2</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">operator2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index - 1</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">operator1</span><span class="p">,</span><span class="w"> </span><span class="n">operand</span><span class="p">,</span><span class="w"> </span><span class="n">operator2</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{operator1} {operand} {operator2} = {result} @ {first_operand_index}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">new_expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">:first_operand_index - 2</span><span class="o">]</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">first_operand_index</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">new_expression</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">new_expression</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">[</span><span class="n">result, </span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">expression</span><span class="o">[</span><span class="n">first_operand_index + 1:</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_expression</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">final</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">expression</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot; FINAL {expression} {final}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">bool</span><span class="p">(</span><span class="n">final</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
 
 
@@ -3231,27 +3579,7 @@ Args:
 
         <span class="k">if</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="k">lower</span><span class="p">()</span> <span class="o">==</span> <span class="ss">&quot;!if&quot;</span><span class="p">):</span>
 
-            <span class="o">#</span> <span class="n">need</span> <span class="k">to</span> <span class="k">add</span> <span class="n">support</span> <span class="k">for</span> <span class="k">OR</span><span class="o">/</span><span class="k">AND</span>
-
-            <span class="k">if</span> <span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
-
-                <span class="n">value</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">ConvertToInt</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">strip</span><span class="p">())</span>
-
-                <span class="k">self</span><span class="p">.</span><span class="n">PushConditional</span><span class="p">(</span><span class="n">value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>  <span class="o">#</span> <span class="k">if</span> <span class="n">the</span> <span class="n">value</span> <span class="k">is</span> <span class="k">true</span>
-
-            <span class="o">#</span> <span class="n">we</span> <span class="n">can</span> <span class="n">have</span> <span class="n">tokens</span> <span class="k">in</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span> <span class="n">etc</span>
-
-            <span class="n">elif</span> <span class="n">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4</span> <span class="k">and</span> <span class="n">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-
-                <span class="n">con</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">ComputeResult</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">strip</span><span class="p">(),</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">strip</span><span class="p">(),</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">strip</span><span class="p">())</span>
-
-                <span class="k">self</span><span class="p">.</span><span class="n">PushConditional</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
-
-            <span class="k">else</span><span class="p">:</span>
-
-                <span class="k">self</span><span class="p">.</span><span class="n">Logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="ss">&quot;!if conditionals need to be formatted correctly (spaces between each token)&quot;</span><span class="p">)</span>
-
-                <span class="n">raise</span> <span class="n">RuntimeError</span><span class="p">(</span><span class="ss">&quot;Invalid conditional&quot;</span><span class="p">,</span> <span class="nb">text</span><span class="p">)</span>
+            <span class="k">self</span><span class="p">.</span><span class="n">PushConditional</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">EvaluateConditional</span><span class="p">(</span><span class="nb">text</span><span class="p">))</span>
 
             <span class="k">return</span> <span class="k">True</span>
 
