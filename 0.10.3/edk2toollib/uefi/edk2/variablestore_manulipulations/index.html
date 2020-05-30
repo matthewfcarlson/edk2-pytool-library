@@ -1,0 +1,1885 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/variablestore_manulipulations/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Variablestore manulipulations - EDK2 Pytool Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/version-select.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#module-edk2toollibuefiedk2variablestore_manulipulations" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              EDK2 Pytool Library
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Variablestore manulipulations
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    EDK2 Pytool Library
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../developing/" title="Developing" class="md-nav__link">
+      Developing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../publishing/" title="Publishing" class="md-nav__link">
+      Publishing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../using/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../features/logging.ansi_handler/" title="Logging.ansi handler" class="md-nav__link">
+      Logging.ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../features/utility_functions.GetHostInfo/" title="Utility functions.get host info" class="md-nav__link">
+      Utility functions.get host info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../features/windows_firmware_policy/" title="Windows firmware policy" class="md-nav__link">
+      Windows firmware policy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bin/" title="Bin" class="md-nav__link">
+      Bin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../gitignore_parser/" title="Gitignore parser" class="md-nav__link">
+      Gitignore parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../utility_functions/" title="Utility functions" class="md-nav__link">
+      Utility functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Acpi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Acpi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/dmar_parser/" title="Dmar parser" class="md-nav__link">
+      Dmar parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      Log
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        Log
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/ansi_handler/" title="Ansi handler" class="md-nav__link">
+      Ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/file_handler/" title="File handler" class="md-nav__link">
+      File handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/junit_report_format/" title="Junit report format" class="md-nav__link">
+      Junit report format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/markdown_handler/" title="Markdown handler" class="md-nav__link">
+      Markdown handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/string_handler/" title="String handler" class="md-nav__link">
+      String handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      Tpm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-7">
+        Tpm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_defs/" title="Tpm2 defs" class="md-nav__link">
+      Tpm2 defs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_policy_calc/" title="Tpm2 policy calc" class="md-nav__link">
+      Tpm2 policy calc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_simulator/" title="Tpm2 simulator" class="md-nav__link">
+      Tpm2 simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_stream/" title="Tpm2 stream" class="md-nav__link">
+      Tpm2 stream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8" checked>
+    
+    <label class="md-nav__link" for="nav-6-8">
+      Uefi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        Uefi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../authenticated_variables_structure_support/" title="Authenticated variables structure support" class="md-nav__link">
+      Authenticated variables structure support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bmp_object/" title="Bmp object" class="md-nav__link">
+      Bmp object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_auth_header/" title="Fmp auth header" class="md-nav__link">
+      Fmp auth header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_capsule_header/" title="Fmp capsule header" class="md-nav__link">
+      Fmp capsule header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pi_firmware_file/" title="Pi firmware file" class="md-nav__link">
+      Pi firmware file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pi_firmware_volume/" title="Pi firmware volume" class="md-nav__link">
+      Pi firmware volume
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../status_codes/" title="Status codes" class="md-nav__link">
+      Status codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uefi_capsule_header/" title="Uefi capsule header" class="md-nav__link">
+      Uefi capsule header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uefi_multi_phase/" title="Uefi multi phase" class="md-nav__link">
+      Uefi multi phase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wincert/" title="Wincert" class="md-nav__link">
+      Wincert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12" type="checkbox" id="nav-6-8-12" checked>
+    
+    <label class="md-nav__link" for="nav-6-8-12">
+      Edk2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-8-12">
+        Edk2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fmp_payload_header/" title="Fmp payload header" class="md-nav__link">
+      Fmp payload header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ftw_working_block_format/" title="Ftw working block format" class="md-nav__link">
+      Ftw working block format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guid_list/" title="Guid list" class="md-nav__link">
+      Guid list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../path_utilities/" title="Path utilities" class="md-nav__link">
+      Path utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Variablestore manulipulations
+      </label>
+    
+    <a href="./" title="Variablestore manulipulations" class="md-nav__link md-nav__link--active">
+      Variablestore manulipulations
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variablestore" class="md-nav__link">
+    VariableStore
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_variable" class="md-nav__link">
+    add_variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush_to_file" class="md-nav__link">
+    flush_to_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_new_var_class" class="md-nav__link">
+    get_new_var_class
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variable_format/" title="Variable format" class="md-nav__link">
+      Variable format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-8" type="checkbox" id="nav-6-8-12-8">
+    
+    <label class="md-nav__link" for="nav-6-8-12-8">
+      Build objects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-12-8">
+        Build objects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-9" type="checkbox" id="nav-6-8-12-9">
+    
+    <label class="md-nav__link" for="nav-6-8-12-9">
+      Parsers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-12-9">
+        Parsers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/base_parser/" title="Base parser" class="md-nav__link">
+      Base parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/buildreport_parser/" title="Buildreport parser" class="md-nav__link">
+      Buildreport parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dec_parser/" title="Dec parser" class="md-nav__link">
+      Dec parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dsc_parser/" title="Dsc parser" class="md-nav__link">
+      Dsc parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/fdf_parser/" title="Fdf parser" class="md-nav__link">
+      Fdf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/guid_parser/" title="Guid parser" class="md-nav__link">
+      Guid parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/inf_parser/" title="Inf parser" class="md-nav__link">
+      Inf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/override_parser/" title="Override parser" class="md-nav__link">
+      Override parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/targettxt_parser/" title="Targettxt parser" class="md-nav__link">
+      Targettxt parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+    
+    <label class="md-nav__link" for="nav-6-9">
+      Windows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-9">
+        Windows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/locate_tools/" title="Locate tools" class="md-nav__link">
+      Locate tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-3" type="checkbox" id="nav-6-9-3">
+    
+    <label class="md-nav__link" for="nav-6-9-3">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-9-3">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/cat_generator/" title="Cat generator" class="md-nav__link">
+      Cat generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/inf_generator/" title="Inf generator" class="md-nav__link">
+      Inf generator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variablestore" class="md-nav__link">
+    VariableStore
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add_variable" class="md-nav__link">
+    add_variable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flush_to_file" class="md-nav__link">
+    flush_to_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_new_var_class" class="md-nav__link">
+    get_new_var_class
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/uefi/edk2/variablestore_manulipulations.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="module-edk2toollibuefiedk2variablestore_manulipulations">Module edk2toollib.uefi.edk2.variablestore_manulipulations</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="c1"># @file</span>
+
+<span class="c1"># Contains classes and helper functions to modify variables in a UEFI ROM image.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># Copyright (c) Microsoft Corporation</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># SPDX-License-Identifier: BSD-2-Clause-Patent</span>
+
+<span class="c1">##</span>
+
+<span class="kn">import</span> <span class="nn">edk2toollib.uefi.pi_firmware_volume</span> <span class="kn">as</span> <span class="nn">PiFV</span>
+
+<span class="kn">import</span> <span class="nn">edk2toollib.uefi.edk2.variable_format</span> <span class="kn">as</span> <span class="nn">VF</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">mmap</span>
+
+<span class="k">class</span> <span class="nc">VariableStore</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">romfile</span><span class="p">,</span> <span class="n">store_base</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">store_size</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_path</span> <span class="o">=</span> <span class="n">romfile</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">store_base</span> <span class="o">=</span> <span class="n">store_base</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">store_size</span> <span class="o">=</span> <span class="n">store_size</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rom_file_path</span><span class="p">):</span>
+
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;&#39;</span><span class="si">%s</span><span class="s2">&#39; is not the path to a file!&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rom_file_path</span><span class="p">,</span> <span class="s1">&#39;r+b&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span> <span class="o">=</span> <span class="n">mmap</span><span class="o">.</span><span class="n">mmap</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">fileno</span><span class="p">(),</span> <span class="mi">0</span><span class="p">)</span>
+
+        <span class="c1"># Sanity check some things.</span>
+
+        <span class="n">file_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span><span class="o">.</span><span class="n">size</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">store_base</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">store_size</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="p">(</span><span class="n">store_base</span> <span class="o">+</span> <span class="n">store_size</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">file_size</span><span class="p">):</span>
+
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;ROM file is </span><span class="si">%d</span><span class="s2"> bytes. Cannot seek to </span><span class="si">%d</span><span class="s2">+</span><span class="si">%d</span><span class="s2"> bytes!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">file_size</span><span class="p">,</span> <span class="n">store_base</span><span class="p">,</span> <span class="n">store_size</span><span class="p">))</span>
+
+        <span class="c1"># Go ahead and advance the file cursor and load the FV header.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">store_base</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">fv_header</span> <span class="o">=</span> <span class="n">PiFV</span><span class="o">.</span><span class="n">EfiFirmwareVolumeHeader</span><span class="p">()</span><span class="o">.</span><span class="n">load_from_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fv_header</span><span class="o">.</span><span class="n">FileSystemGuid</span> <span class="o">!=</span> <span class="n">PiFV</span><span class="o">.</span><span class="n">EfiSystemNvDataFvGuid</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Store_base is not pointing at a valid SystemNvData FV!&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fv_header</span><span class="o">.</span><span class="n">FvLength</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">store_size</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Store_size </span><span class="si">%d</span><span class="s2"> does not match FV size </span><span class="si">%d</span><span class="s2">!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">store_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fv_header</span><span class="o">.</span><span class="n">FvLength</span><span class="p">))</span>
+
+        <span class="c1"># Advance the file cursor and load the VarStore header.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fv_header</span><span class="o">.</span><span class="n">HeaderLength</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">SEEK_CUR</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span> <span class="o">=</span> <span class="n">VF</span><span class="o">.</span><span class="n">VariableStoreHeader</span><span class="p">()</span><span class="o">.</span><span class="n">load_from_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">Format</span> <span class="o">!=</span> <span class="n">VF</span><span class="o">.</span><span class="n">VARIABLE_STORE_FORMATTED</span> <span class="ow">or</span> \
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">State</span> <span class="o">!=</span> <span class="n">VF</span><span class="o">.</span><span class="n">VARIABLE_STORE_HEALTHY</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;VarStore is invalid or cannot be processed with this helper!&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Now we&#39;re finally ready to read some variables.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">StructSize</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">SEEK_CUR</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+                <span class="n">new_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_new_var_class</span><span class="p">()</span><span class="o">.</span><span class="n">load_from_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="p">)</span>
+
+                <span class="c1"># Seek past the current variable in the store.</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">new_var</span><span class="o">.</span><span class="n">get_buffer_size</span><span class="p">(),</span> <span class="n">os</span><span class="o">.</span><span class="n">SEEK_CUR</span><span class="p">)</span>
+
+                <span class="c1"># Add the variable to the array.</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_var</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">EOFError</span><span class="p">:</span>
+
+            <span class="k">pass</span>
+
+        <span class="k">except</span><span class="p">:</span>
+
+            <span class="k">raise</span>
+
+        <span class="c1"># Finally, reset the file cursor to the beginning of the VarStore FV.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">store_base</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">rom_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_new_var_class</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">Type</span> <span class="o">==</span> <span class="s1">&#39;Var&#39;</span><span class="p">:</span>
+
+            <span class="n">new_var</span> <span class="o">=</span> <span class="n">VF</span><span class="o">.</span><span class="n">VariableHeader</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">new_var</span> <span class="o">=</span> <span class="n">VF</span><span class="o">.</span><span class="n">AuthenticatedVariableHeader</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">new_var</span>
+
+    <span class="k">def</span> <span class="nf">add_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_var</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_var</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">flush_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># First, we need to make sure that our variables will fit in the VarStore.</span>
+
+        <span class="n">var_size</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">var</span><span class="o">.</span><span class="n">get_buffer_size</span><span class="p">()</span> <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="p">])</span>
+
+        <span class="c1"># Add the terminating var header.</span>
+
+        <span class="n">dummy_var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_new_var_class</span><span class="p">()</span>
+
+        <span class="n">var_size</span> <span class="o">+=</span> <span class="n">dummy_var</span><span class="o">.</span><span class="n">StructSize</span>
+
+        <span class="k">if</span> <span class="n">var_size</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">Size</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Total variable size </span><span class="si">%d</span><span class="s2"> is too large to fit in VarStore </span><span class="si">%d</span><span class="s2">!&quot;</span> <span class="o">%</span>
+
+                            <span class="p">(</span><span class="n">var_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">Size</span><span class="p">))</span>
+
+        <span class="c1"># Now, we just have to serialize each variable in turn and write them to the mmap buffer.</span>
+
+        <span class="n">var_offset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">store_base</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">fv_header</span><span class="o">.</span><span class="n">HeaderLength</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">var_store_header</span><span class="o">.</span><span class="n">StructSize</span>
+
+        <span class="k">for</span> <span class="n">var</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="p">:</span>
+
+            <span class="n">var_buffer_size</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">get_buffer_size</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span><span class="p">[</span><span class="n">var_offset</span><span class="p">:(</span><span class="n">var_offset</span> <span class="o">+</span> <span class="n">var_buffer_size</span><span class="p">)]</span> <span class="o">=</span> <span class="n">var</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+
+            <span class="n">var_offset</span> <span class="o">+=</span> <span class="n">var_buffer_size</span>
+
+        <span class="c1"># Add a terminating Variable Header.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span><span class="p">[</span><span class="n">var_offset</span><span class="p">:(</span><span class="n">var_offset</span> <span class="o">+</span> <span class="n">dummy_var</span><span class="o">.</span><span class="n">StructSize</span><span class="p">)]</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;</span><span class="se">\xFF</span><span class="s1">&#39;</span> <span class="o">*</span> <span class="n">dummy_var</span><span class="o">.</span><span class="n">StructSize</span>
+
+        <span class="c1"># Now we have to flush the mmap to the file.</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rom_file_map</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="variablestore">VariableStore</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">VariableStore</span><span class="p">(</span>
+    <span class="n">romfile</span><span class="p">,</span>
+    <span class="n">store_base</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">store_size</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">VariableStore</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">romfile</span><span class="p">,</span><span class="w"> </span><span class="n">store_base</span><span class="o">=</span><span class="k">None</span><span class="p">,</span><span class="w"> </span><span class="n">store_size</span><span class="o">=</span><span class="k">None</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">romfile</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">store_base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">store_base</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">store_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">store_size</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_path</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;&#39;%s&#39; is not the path to a file!&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_path</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">open</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_path</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r+b&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mmap</span><span class="p">.</span><span class="n">mmap</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="p">.</span><span class="n">fileno</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Sanity</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="n">things</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">file_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="p">.</span><span class="k">size</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">store_base</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">store_size</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="n">store_base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">store_size</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">file_size</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;ROM file is %d bytes. Cannot seek to %d+%d bytes!&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">file_size</span><span class="p">,</span><span class="w"> </span><span class="n">store_base</span><span class="p">,</span><span class="w"> </span><span class="n">store_size</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Go</span><span class="w"> </span><span class="n">ahead</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">advance</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="nc">cursor</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">FV</span><span class="w"> </span><span class="n">header</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">store_base</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">fv_header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PiFV</span><span class="p">.</span><span class="n">EfiFirmwareVolumeHeader</span><span class="p">().</span><span class="n">load_from_file</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">fv_header</span><span class="p">.</span><span class="n">FileSystemGuid</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">PiFV</span><span class="p">.</span><span class="nl">EfiSystemNvDataFvGuid</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Store_base is not pointing at a valid SystemNvData FV!&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">fv_header</span><span class="p">.</span><span class="n">FvLength</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="nl">store_size</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Store_size %d does not match FV size %d!&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">store_size</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">fv_header</span><span class="p">.</span><span class="n">FvLength</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Advance</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="nc">cursor</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">load</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">VarStore</span><span class="w"> </span><span class="n">header</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">fv_header</span><span class="p">.</span><span class="n">HeaderLength</span><span class="p">,</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="n">SEEK_CUR</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">VF</span><span class="p">.</span><span class="n">VariableStoreHeader</span><span class="p">().</span><span class="n">load_from_file</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">rom_file</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="p">.</span><span class="nf">Format</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VF</span><span class="p">.</span><span class="n">VARIABLE_STORE_FORMATTED</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="err">\</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="p">.</span><span class="k">State</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">VF</span><span class="p">.</span><span class="nl">VARIABLE_STORE_HEALTHY</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;VarStore is invalid or cannot be processed with this helper!&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Now</span><span class="w"> </span><span class="n">we</span><span class="s1">&#39;re finally ready to read some variables.</span>
+
+<span class="s1">        self.variables = []</span>
+
+<span class="s1">        self.rom_file.seek(self.var_store_header.StructSize, os.SEEK_CUR)</span>
+
+<span class="s1">        try:</span>
+
+<span class="s1">            while True:</span>
+
+<span class="s1">                new_var = self.get_new_var_class().load_from_file(self.rom_file)</span>
+
+<span class="s1">                # Seek past the current variable in the store.</span>
+
+<span class="s1">                self.rom_file.seek(new_var.get_buffer_size(), os.SEEK_CUR)</span>
+
+<span class="s1">                # Add the variable to the array.</span>
+
+<span class="s1">                self.variables.append(new_var)</span>
+
+<span class="s1">        except EOFError:</span>
+
+<span class="s1">            pass</span>
+
+<span class="s1">        except:</span>
+
+<span class="s1">            raise</span>
+
+<span class="s1">        # Finally, reset the file cursor to the beginning of the VarStore FV.</span>
+
+<span class="s1">        self.rom_file.seek(self.store_base)</span>
+
+<span class="s1">    def __del__(self):</span>
+
+<span class="s1">        if self.rom_file_map is not None:</span>
+
+<span class="s1">            self.rom_file_map.flush()</span>
+
+<span class="s1">            self.rom_file_map.close()</span>
+
+<span class="s1">        if self.rom_file is not None:</span>
+
+<span class="s1">            self.rom_file.close()</span>
+
+<span class="s1">    def get_new_var_class(self):</span>
+
+<span class="s1">        if self.var_store_header.Type == &#39;</span><span class="nf">Var</span><span class="s1">&#39;:</span>
+
+<span class="s1">            new_var = VF.VariableHeader()</span>
+
+<span class="s1">        else:</span>
+
+<span class="s1">            new_var = VF.AuthenticatedVariableHeader()</span>
+
+<span class="s1">        return new_var</span>
+
+<span class="s1">    def add_variable(self, new_var):</span>
+
+<span class="s1">        self.variables.append(new_var)</span>
+
+<span class="s1">    def flush_to_file(self):</span>
+
+<span class="s1">        # First, we need to make sure that our variables will fit in the VarStore.</span>
+
+<span class="s1">        var_size = sum([var.get_buffer_size() for var in self.variables])</span>
+
+<span class="s1">        # Add the terminating var header.</span>
+
+<span class="s1">        dummy_var = self.get_new_var_class()</span>
+
+<span class="s1">        var_size += dummy_var.StructSize</span>
+
+<span class="s1">        if var_size &gt; self.var_store_header.Size:</span>
+
+<span class="s1">            raise Exception(&quot;Total variable size %d is too large to fit in VarStore %d!&quot; %</span>
+
+<span class="s1">                            (var_size, self.var_store_header.Size))</span>
+
+<span class="s1">        # Now, we just have to serialize each variable in turn and write them to the mmap buffer.</span>
+
+<span class="s1">        var_offset = self.store_base + self.fv_header.HeaderLength + self.var_store_header.StructSize</span>
+
+<span class="s1">        for var in self.variables:</span>
+
+<span class="s1">            var_buffer_size = var.get_buffer_size()</span>
+
+<span class="s1">            self.rom_file_map[var_offset:(var_offset + var_buffer_size)] = var.serialize(True)</span>
+
+<span class="s1">            var_offset += var_buffer_size</span>
+
+<span class="s1">        # Add a terminating Variable Header.</span>
+
+<span class="s1">        self.rom_file_map[var_offset:(var_offset + dummy_var.StructSize)] = b&#39;</span><span class="err">\</span><span class="n">xFF</span><span class="err">&#39;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dummy_var</span><span class="p">.</span><span class="n">StructSize</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Now</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">flush</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">mmap</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">file</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="methods">Methods</h4>
+<h4 id="add_variable">add_variable</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">add_variable</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">new_var</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">add_variable</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">new_var</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">variables</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_var</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="flush_to_file">flush_to_file</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">flush_to_file</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">flush_to_file</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="o">#</span> <span class="k">First</span><span class="p">,</span> <span class="n">we</span> <span class="n">need</span> <span class="k">to</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">our</span> <span class="n">variables</span> <span class="n">will</span> <span class="n">fit</span> <span class="k">in</span> <span class="n">the</span> <span class="n">VarStore</span><span class="p">.</span>
+
+        <span class="n">var_size</span> <span class="o">=</span> <span class="k">sum</span><span class="p">([</span><span class="n">var</span><span class="p">.</span><span class="n">get_buffer_size</span><span class="p">()</span> <span class="k">for</span> <span class="n">var</span> <span class="k">in</span> <span class="k">self</span><span class="p">.</span><span class="n">variables</span><span class="p">])</span>
+
+        <span class="o">#</span> <span class="k">Add</span> <span class="n">the</span> <span class="n">terminating</span> <span class="n">var</span> <span class="n">header</span><span class="p">.</span>
+
+        <span class="n">dummy_var</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">get_new_var_class</span><span class="p">()</span>
+
+        <span class="n">var_size</span> <span class="o">+=</span> <span class="n">dummy_var</span><span class="p">.</span><span class="n">StructSize</span>
+
+        <span class="k">if</span> <span class="n">var_size</span> <span class="o">&gt;</span> <span class="k">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="p">.</span><span class="k">Size</span><span class="p">:</span>
+
+            <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Total variable size %d is too large to fit in VarStore %d!&quot;</span> <span class="o">%</span>
+
+                            <span class="p">(</span><span class="n">var_size</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="p">.</span><span class="k">Size</span><span class="p">))</span>
+
+        <span class="o">#</span> <span class="n">Now</span><span class="p">,</span> <span class="n">we</span> <span class="n">just</span> <span class="n">have</span> <span class="k">to</span> <span class="n">serialize</span> <span class="k">each</span> <span class="k">variable</span> <span class="k">in</span> <span class="n">turn</span> <span class="k">and</span> <span class="k">write</span> <span class="n">them</span> <span class="k">to</span> <span class="n">the</span> <span class="n">mmap</span> <span class="n">buffer</span><span class="p">.</span>
+
+        <span class="n">var_offset</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">store_base</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">fv_header</span><span class="p">.</span><span class="n">HeaderLength</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="p">.</span><span class="n">StructSize</span>
+
+        <span class="k">for</span> <span class="n">var</span> <span class="k">in</span> <span class="k">self</span><span class="p">.</span><span class="n">variables</span><span class="p">:</span>
+
+            <span class="n">var_buffer_size</span> <span class="o">=</span> <span class="n">var</span><span class="p">.</span><span class="n">get_buffer_size</span><span class="p">()</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="p">[</span><span class="n">var_offset</span><span class="p">:(</span><span class="n">var_offset</span> <span class="o">+</span> <span class="n">var_buffer_size</span><span class="p">)]</span> <span class="o">=</span> <span class="n">var</span><span class="p">.</span><span class="n">serialize</span><span class="p">(</span><span class="k">True</span><span class="p">)</span>
+
+            <span class="n">var_offset</span> <span class="o">+=</span> <span class="n">var_buffer_size</span>
+
+        <span class="o">#</span> <span class="k">Add</span> <span class="n">a</span> <span class="n">terminating</span> <span class="k">Variable</span> <span class="n">Header</span><span class="p">.</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="p">[</span><span class="n">var_offset</span><span class="p">:(</span><span class="n">var_offset</span> <span class="o">+</span> <span class="n">dummy_var</span><span class="p">.</span><span class="n">StructSize</span><span class="p">)]</span> <span class="o">=</span> <span class="n">b</span><span class="s1">&#39;\xFF&#39;</span> <span class="o">*</span> <span class="n">dummy_var</span><span class="p">.</span><span class="n">StructSize</span>
+
+        <span class="o">#</span> <span class="n">Now</span> <span class="n">we</span> <span class="n">have</span> <span class="k">to</span> <span class="n">flush</span> <span class="n">the</span> <span class="n">mmap</span> <span class="k">to</span> <span class="n">the</span> <span class="n">file</span><span class="p">.</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">rom_file_map</span><span class="p">.</span><span class="n">flush</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_new_var_class">get_new_var_class</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_new_var_class</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_new_var_class</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">var_store_header</span><span class="p">.</span><span class="k">Type</span> <span class="o">==</span> <span class="s1">&#39;Var&#39;</span><span class="p">:</span>
+
+            <span class="n">new_var</span> <span class="o">=</span> <span class="n">VF</span><span class="p">.</span><span class="n">VariableHeader</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">new_var</span> <span class="o">=</span> <span class="n">VF</span><span class="p">.</span><span class="n">AuthenticatedVariableHeader</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">new_var</span>
+</code></pre></div>
+
+
+</details>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../path_utilities/" title="Path utilities" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Path utilities
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../variable_format/" title="Variable format" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Variable format
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../js/version-select.js"></script>
+      
+    
+  </body>
+</html>

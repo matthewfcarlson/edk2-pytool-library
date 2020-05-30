@@ -1,0 +1,3576 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/utility_functions/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Utility functions - EDK2 Pytool Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/version-select.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#module-edk2toollibutility_functions" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              EDK2 Pytool Library
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Utility functions
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    EDK2 Pytool Library
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../developing/" title="Developing" class="md-nav__link">
+      Developing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../publishing/" title="Publishing" class="md-nav__link">
+      Publishing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../using/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../features/logging.ansi_handler/" title="Logging.ansi handler" class="md-nav__link">
+      Logging.ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../features/utility_functions.GetHostInfo/" title="Utility functions.get host info" class="md-nav__link">
+      Utility functions.get host info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../features/windows_firmware_policy/" title="Windows firmware policy" class="md-nav__link">
+      Windows firmware policy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../bin/" title="Bin" class="md-nav__link">
+      Bin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gitignore_parser/" title="Gitignore parser" class="md-nav__link">
+      Gitignore parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Utility functions
+      </label>
+    
+    <a href="./" title="Utility functions" class="md-nav__link md-nav__link--active">
+      Utility functions
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catalogsignwithsigntool" class="md-nav__link">
+    CatalogSignWithSignTool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detachedsignwithsigntool" class="md-nav__link">
+    DetachedSignWithSignTool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethostinfo" class="md-nav__link">
+    GetHostInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printbytelist" class="md-nav__link">
+    PrintByteList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runcmd" class="md-nav__link">
+    RunCmd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runpythonscript" class="md-nav__link">
+    RunPythonScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_module_by_file_name" class="md-nav__link">
+    import_module_by_file_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locate_class_in_module" class="md-nav__link">
+    locate_class_in_module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reader" class="md-nav__link">
+    reader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing" class="md-nav__link">
+    timing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version_compare" class="md-nav__link">
+    version_compare
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    Enum
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagatingthread" class="md-nav__link">
+    PropagatingThread
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_1" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    Instance variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getname" class="md-nav__link">
+    getName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isalive" class="md-nav__link">
+    isAlive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdaemon" class="md-nav__link">
+    isDaemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_alive" class="md-nav__link">
+    is_alive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    join
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdaemon" class="md-nav__link">
+    setDaemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setname" class="md-nav__link">
+    setName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    start
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Acpi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Acpi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../acpi/dmar_parser/" title="Dmar parser" class="md-nav__link">
+      Dmar parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../acpi/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      Log
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        Log
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log/ansi_handler/" title="Ansi handler" class="md-nav__link">
+      Ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log/file_handler/" title="File handler" class="md-nav__link">
+      File handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log/junit_report_format/" title="Junit report format" class="md-nav__link">
+      Junit report format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log/markdown_handler/" title="Markdown handler" class="md-nav__link">
+      Markdown handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../log/string_handler/" title="String handler" class="md-nav__link">
+      String handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      Tpm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-7">
+        Tpm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tpm/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tpm/tpm2_defs/" title="Tpm2 defs" class="md-nav__link">
+      Tpm2 defs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tpm/tpm2_policy_calc/" title="Tpm2 policy calc" class="md-nav__link">
+      Tpm2 policy calc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tpm/tpm2_simulator/" title="Tpm2 simulator" class="md-nav__link">
+      Tpm2 simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tpm/tpm2_stream/" title="Tpm2 stream" class="md-nav__link">
+      Tpm2 stream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8">
+    
+    <label class="md-nav__link" for="nav-6-8">
+      Uefi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        Uefi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/authenticated_variables_structure_support/" title="Authenticated variables structure support" class="md-nav__link">
+      Authenticated variables structure support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/bmp_object/" title="Bmp object" class="md-nav__link">
+      Bmp object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/fmp_auth_header/" title="Fmp auth header" class="md-nav__link">
+      Fmp auth header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/fmp_capsule_header/" title="Fmp capsule header" class="md-nav__link">
+      Fmp capsule header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/pi_firmware_file/" title="Pi firmware file" class="md-nav__link">
+      Pi firmware file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/pi_firmware_volume/" title="Pi firmware volume" class="md-nav__link">
+      Pi firmware volume
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/status_codes/" title="Status codes" class="md-nav__link">
+      Status codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/uefi_capsule_header/" title="Uefi capsule header" class="md-nav__link">
+      Uefi capsule header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/uefi_multi_phase/" title="Uefi multi phase" class="md-nav__link">
+      Uefi multi phase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/wincert/" title="Wincert" class="md-nav__link">
+      Wincert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12" type="checkbox" id="nav-6-8-12">
+    
+    <label class="md-nav__link" for="nav-6-8-12">
+      Edk2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-8-12">
+        Edk2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/fmp_payload_header/" title="Fmp payload header" class="md-nav__link">
+      Fmp payload header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/ftw_working_block_format/" title="Ftw working block format" class="md-nav__link">
+      Ftw working block format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/guid_list/" title="Guid list" class="md-nav__link">
+      Guid list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/path_utilities/" title="Path utilities" class="md-nav__link">
+      Path utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/variablestore_manulipulations/" title="Variablestore manulipulations" class="md-nav__link">
+      Variablestore manulipulations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/variable_format/" title="Variable format" class="md-nav__link">
+      Variable format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-8" type="checkbox" id="nav-6-8-12-8">
+    
+    <label class="md-nav__link" for="nav-6-8-12-8">
+      Build objects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-12-8">
+        Build objects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/build_objects/readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-9" type="checkbox" id="nav-6-8-12-9">
+    
+    <label class="md-nav__link" for="nav-6-8-12-9">
+      Parsers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-12-9">
+        Parsers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/base_parser/" title="Base parser" class="md-nav__link">
+      Base parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/buildreport_parser/" title="Buildreport parser" class="md-nav__link">
+      Buildreport parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/dec_parser/" title="Dec parser" class="md-nav__link">
+      Dec parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/dsc_parser/" title="Dsc parser" class="md-nav__link">
+      Dsc parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/fdf_parser/" title="Fdf parser" class="md-nav__link">
+      Fdf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/guid_parser/" title="Guid parser" class="md-nav__link">
+      Guid parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/inf_parser/" title="Inf parser" class="md-nav__link">
+      Inf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/override_parser/" title="Override parser" class="md-nav__link">
+      Override parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../uefi/edk2/parsers/targettxt_parser/" title="Targettxt parser" class="md-nav__link">
+      Targettxt parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+    
+    <label class="md-nav__link" for="nav-6-9">
+      Windows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-9">
+        Windows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/locate_tools/" title="Locate tools" class="md-nav__link">
+      Locate tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-3" type="checkbox" id="nav-6-9-3">
+    
+    <label class="md-nav__link" for="nav-6-9-3">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-9-3">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/capsule/cat_generator/" title="Cat generator" class="md-nav__link">
+      Cat generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/capsule/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../windows/capsule/inf_generator/" title="Inf generator" class="md-nav__link">
+      Inf generator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catalogsignwithsigntool" class="md-nav__link">
+    CatalogSignWithSignTool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detachedsignwithsigntool" class="md-nav__link">
+    DetachedSignWithSignTool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gethostinfo" class="md-nav__link">
+    GetHostInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printbytelist" class="md-nav__link">
+    PrintByteList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runcmd" class="md-nav__link">
+    RunCmd
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runpythonscript" class="md-nav__link">
+    RunPythonScript
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import_module_by_file_name" class="md-nav__link">
+    import_module_by_file_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locate_class_in_module" class="md-nav__link">
+    locate_class_in_module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reader" class="md-nav__link">
+    reader
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing" class="md-nav__link">
+    timing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version_compare" class="md-nav__link">
+    version_compare
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    Enum
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#count" class="md-nav__link">
+    count
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    index
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagatingthread" class="md-nav__link">
+    PropagatingThread
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro_1" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    Instance variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getname" class="md-nav__link">
+    getName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isalive" class="md-nav__link">
+    isAlive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdaemon" class="md-nav__link">
+    isDaemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_alive" class="md-nav__link">
+    is_alive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    join
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run" class="md-nav__link">
+    run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setdaemon" class="md-nav__link">
+    setDaemon
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setname" class="md-nav__link">
+    setName
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    start
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/utility_functions.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="module-edk2toollibutility_functions">Module edk2toollib.utility_functions</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="c1">##</span>
+
+<span class="c1"># Utility Functions to support re-use in python scripts.</span>
+
+<span class="c1"># Includes functions for running external commands, etc</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># Copyright (c) Microsoft Corporation</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># SPDX-License-Identifier: BSD-2-Clause-Patent</span>
+
+<span class="c1">##</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">shutil</span>
+
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">inspect</span>
+
+<span class="kn">import</span> <span class="nn">platform</span>
+
+<span class="kn">import</span> <span class="nn">importlib</span>
+
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Helper to allow Enum type to be used which allows better code readability</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># ref: http://stackoverflow.com/questions/36932/how-can-i-represent-an-enum-in-python</span>
+
+<span class="c1">####</span>
+
+<span class="k">class</span> <span class="nc">Enum</span><span class="p">(</span><span class="nb">tuple</span><span class="p">):</span>
+
+    <span class="fm">__getattr__</span> <span class="o">=</span> <span class="nb">tuple</span><span class="o">.</span><span class="n">index</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Class to support running commands from the shell in a python environment.</span>
+
+<span class="c1"># Don&#39;t use directly.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># PropagatingThread copied from sample here:</span>
+
+<span class="c1"># https://stackoverflow.com/questions/2829329/catch-a-threads-exception-in-the-caller-thread-in-python</span>
+
+<span class="c1">####</span>
+
+<span class="k">class</span> <span class="nc">PropagatingThread</span><span class="p">(</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">exc</span> <span class="o">=</span> <span class="bp">None</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_Thread__target&#39;</span><span class="p">):</span>
+
+                <span class="c1"># Thread uses name mangling prior to Python 3.</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Thread__target</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_Thread__args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_Thread__kwargs</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_target</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_args</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_kwargs</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">exc</span> <span class="o">=</span> <span class="n">e</span>
+
+    <span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">PropagatingThread</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">exc</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">exc</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ret</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Helper functions for running commands from the shell in python environment</span>
+
+<span class="c1"># Don&#39;t use directly</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># process output stream and write to log.</span>
+
+<span class="c1"># part of the threading pattern.</span>
+
+<span class="c1">#</span>
+
+<span class="c1">#  http://stackoverflow.com/questions/19423008/logged-subprocess-communicate</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">reader</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">):</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="c1"># open file if caller provided path</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+        <span class="n">s</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span><span class="p">:</span>
+
+            <span class="k">break</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">):</span>
+
+            <span class="c1"># write to file if caller provided file</span>
+
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">outstream</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">):</span>
+
+            <span class="c1"># write to stream object if caller provided object</span>
+
+            <span class="n">outstream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+
+    <span class="n">stream</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">):</span>
+
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Returns a namedtuple containing information about host machine.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># @return namedtuple Host(os=OS Type, arch=System Architecture, bit=Highest Order Bit)</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">GetHostInfo</span><span class="p">():</span>
+
+    <span class="n">Host</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Host&#39;</span><span class="p">,</span> <span class="s1">&#39;os arch bit&#39;</span><span class="p">)</span>
+
+    <span class="n">host_info</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">uname</span><span class="p">()</span>
+
+    <span class="n">os</span> <span class="o">=</span> <span class="n">host_info</span><span class="o">.</span><span class="n">system</span>
+
+    <span class="n">processor_info</span> <span class="o">=</span> <span class="n">host_info</span><span class="o">.</span><span class="n">machine</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Getting host info for host: {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">host_info</span><span class="p">)))</span>
+
+    <span class="n">arch</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="n">bit</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;x86&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;AMD&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;INTEL&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">()):</span>
+
+        <span class="n">arch</span> <span class="o">=</span> <span class="s2">&quot;x86&quot;</span>
+
+    <span class="k">elif</span> <span class="p">(</span><span class="s2">&quot;ARM&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span> <span class="ow">or</span> <span class="p">(</span><span class="s2">&quot;AARCH&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="o">.</span><span class="n">upper</span><span class="p">()):</span>
+
+        <span class="n">arch</span> <span class="o">=</span> <span class="s2">&quot;ARM&quot;</span>
+
+    <span class="k">if</span> <span class="s2">&quot;32&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">:</span>
+
+        <span class="n">bit</span> <span class="o">=</span> <span class="s2">&quot;32&quot;</span>
+
+    <span class="k">elif</span> <span class="s2">&quot;64&quot;</span> <span class="ow">in</span> <span class="n">processor_info</span><span class="p">:</span>
+
+        <span class="n">bit</span> <span class="o">=</span> <span class="s2">&quot;64&quot;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">arch</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">bit</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">):</span>
+
+        <span class="k">raise</span> <span class="ne">EnvironmentError</span><span class="p">(</span><span class="s2">&quot;Host info could not be parsed: {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">host_info</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="n">Host</span><span class="p">(</span><span class="n">os</span><span class="o">=</span><span class="n">os</span><span class="p">,</span> <span class="n">arch</span><span class="o">=</span><span class="n">arch</span><span class="p">,</span> <span class="n">bit</span><span class="o">=</span><span class="n">bit</span><span class="p">)</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># This is a mixing to do timing on a function. Use it like this:</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># @timing</span>
+
+<span class="c1"># def function_i_want_to_time():</span>
+
+<span class="c1">#   ...</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">timing</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">wrap</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+        <span class="n">time1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+        <span class="n">time2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{:s} function took {:.3f} ms&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="p">(</span><span class="n">time2</span> <span class="o">-</span> <span class="n">time1</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1000.0</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">return</span> <span class="n">wrap</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Run a shell command and print the output to the log file</span>
+
+<span class="c1"># This is the public function that should be used to run commands from the shell in python environment</span>
+
+<span class="c1"># @param cmd - command being run, either quoted or not quoted</span>
+
+<span class="c1"># @param parameters - parameters string taken as is</span>
+
+<span class="c1"># @param capture - boolean to determine if caller wants the output captured in any format.</span>
+
+<span class="c1"># @param workingdir - path to set to the working directory before running the command.</span>
+
+<span class="c1"># @param outfile - capture output to file of given path.</span>
+
+<span class="c1"># @param outstream - capture output to a stream.</span>
+
+<span class="c1"># @param environ - shell environment variables dictionary that replaces the one inherited from the</span>
+
+<span class="c1">#                  current process.</span>
+
+<span class="c1"># @param logging_level - log level to log output at.  Default is INFO</span>
+
+<span class="c1"># @param raise_exception_on_nonzero - Setting to true causes exception to be raised if the cmd</span>
+
+<span class="c1">#                                     return code is not zero.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># @return returncode of called cmd</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">RunCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">outstream</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+
+           <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+
+    <span class="n">cmd</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">cmd</span><span class="p">:</span>
+
+        <span class="n">cmd</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">cmd</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+        <span class="n">parameters</span> <span class="o">=</span> <span class="n">parameters</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">cmd</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">parameters</span>
+
+    <span class="n">starttime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;Cmd to run is: &quot;</span> <span class="o">+</span> <span class="n">cmd</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------------Cmd Output Starting---------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="n">c</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">workingdir</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">environ</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">capture</span><span class="p">):</span>
+
+        <span class="n">thread</span> <span class="o">=</span> <span class="n">PropagatingThread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">stdout</span><span class="p">,</span> <span class="n">logging_level</span><span class="p">))</span>
+
+        <span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+        <span class="n">c</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+        <span class="n">thread</span><span class="o">.</span><span class="n">join</span><span class="p">()</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="n">c</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+    <span class="n">endtime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">endtime</span> <span class="o">-</span> <span class="n">starttime</span>
+
+    <span class="n">endtime_str</span> <span class="o">=</span> <span class="s2">&quot;{0[0]:02}:{0[1]:02}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">divmod</span><span class="p">(</span><span class="n">delta</span><span class="o">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------------Cmd Output Finished---------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;--------- Running Time (mm:ss): &quot;</span> <span class="o">+</span> <span class="n">endtime_str</span> <span class="o">+</span> <span class="s2">&quot; ----------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">raise_exception_on_nonzero</span> <span class="ow">and</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;{0} failed with error code: {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">returncode</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Run a python script and print the output to the log file</span>
+
+<span class="c1"># This is the public function that should be used to execute python scripts from the shell in python environment.</span>
+
+<span class="c1"># The python script will be located using the path as if it was an executable.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># @param cmd - cmd string to run including parameters</span>
+
+<span class="c1"># @param capture - boolean to determine if caller wants the output captured in any format.</span>
+
+<span class="c1"># @param workingdir - path to set to the working directory before running the command.</span>
+
+<span class="c1"># @param outfile - capture output to file of given path.</span>
+
+<span class="c1"># @param outstream - capture output to a stream.</span>
+
+<span class="c1"># @param environ - shell environment variables dictionary that replaces the one inherited from the</span>
+
+<span class="c1">#                  current process.</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># @return returncode of called cmd</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">RunPythonScript</span><span class="p">(</span><span class="n">pythonfile</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">outstream</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+
+                    <span class="n">environ</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+
+    <span class="c1"># locate python file on path</span>
+
+    <span class="n">pythonfile</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;</span><span class="se">\&#39;</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">pythonfile</span><span class="p">:</span>
+
+        <span class="n">pythonfile</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">pythonfile</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="n">params</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;RunPythonScript: {0} {1}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pythonfile</span><span class="p">,</span> <span class="n">params</span><span class="p">))</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isabs</span><span class="p">(</span><span class="n">pythonfile</span><span class="p">)):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Python Script was given as absolute path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+    <span class="k">elif</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">pythonfile</span><span class="p">))):</span>
+
+        <span class="n">pythonfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Python Script was given as relative path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="c1"># loop thru path environment variable</span>
+
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;PATH&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pathsep</span><span class="p">):</span>
+
+            <span class="n">a</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">pythonfile</span><span class="p">)):</span>
+
+                <span class="n">pythonfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+                <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Python Script was found on the path: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+                <span class="k">break</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">pythonfile</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">params</span>
+
+    <span class="k">return</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="n">capture</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="n">workingdir</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="n">outfile</span><span class="p">,</span>
+
+                  <span class="n">outstream</span><span class="o">=</span><span class="n">outstream</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="n">environ</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging_level</span><span class="p">,</span>
+
+                  <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="n">raise_exception_on_nonzero</span><span class="p">)</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Locally Sign input file using Windows SDK signtool.  This will use a local Pfx file.</span>
+
+<span class="c1"># WARNING!!! : This should not be used for production signing as that process should follow stronger</span>
+
+<span class="c1">#               security practices (HSM / smart cards / etc)</span>
+
+<span class="c1">#</span>
+
+<span class="c1">#  Signing is in format specified by UEFI authentacted variables</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">DetachedSignWithSignTool</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">ToSignFilePath</span><span class="p">,</span> <span class="n">SignatureOutputFile</span><span class="p">,</span> <span class="n">PfxFilePath</span><span class="p">,</span>
+
+                             <span class="n">PfxPass</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">Oid</span><span class="o">=</span><span class="s2">&quot;1.2.840.113549.1.7.2&quot;</span><span class="p">,</span> <span class="n">Eku</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+    <span class="c1"># check signtool path</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Path to signtool invalid.  </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SignToolPath</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="c1"># Adjust for spaces in the path (when calling the command).</span>
+
+    <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">SignToolPath</span><span class="p">:</span>
+
+        <span class="n">SignToolPath</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">SignToolPath</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">SignatureOutputFile</span><span class="p">)</span>
+
+    <span class="c1"># Signtool docs https://docs.microsoft.com/en-us/dotnet/framework/tools/signtool-exe</span>
+
+    <span class="c1"># Signtool parameters from</span>
+
+    <span class="c1">#   https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/secure-boot-key-generation-and-signing-using-hsm--example  # noqa: E501</span>
+
+    <span class="c1"># Search for &quot;Secure Boot Key Generation and Signing Using HSM&quot;</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="s1">&#39;sign /fd sha256 /p7ce DetachedSignedData /p7co &#39;</span> <span class="o">+</span> <span class="n">Oid</span> <span class="o">+</span> <span class="s1">&#39; /p7 &quot;&#39;</span> <span class="o">+</span> \
+
+             <span class="n">OutputDir</span> <span class="o">+</span> <span class="s1">&#39;&quot; /f &quot;&#39;</span> <span class="o">+</span> <span class="n">PfxFilePath</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="k">if</span> <span class="n">Eku</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+        <span class="n">params</span> <span class="o">+=</span> <span class="s1">&#39; /u &#39;</span> <span class="o">+</span> <span class="n">Eku</span>
+
+    <span class="k">if</span> <span class="n">PfxPass</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+        <span class="c1"># add password if set</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /p &#39;</span> <span class="o">+</span> <span class="n">PfxPass</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /debug /v &quot;&#39;</span> <span class="o">+</span> <span class="n">ToSignFilePath</span> <span class="o">+</span> <span class="s1">&#39;&quot; &#39;</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Signtool failed </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ret</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="n">signedfile</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">OutputDir</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">ToSignFilePath</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.p7&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">signedfile</span><span class="p">)):</span>
+
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Output file doesn&#39;t exist </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">signedfile</span><span class="p">)</span>
+
+    <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">signedfile</span><span class="p">,</span> <span class="n">SignatureOutputFile</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ret</span>
+
+<span class="c1">####</span>
+
+<span class="c1"># Locally Sign input file using Windows SDK signtool.  This will use a local Pfx file.</span>
+
+<span class="c1"># WARNING!!! : This should not be used for production signing as that process should follow</span>
+
+<span class="c1">#              stronger security practices (HSM / smart cards / etc)</span>
+
+<span class="c1">#</span>
+
+<span class="c1">#  Signing is catalog format which is an attached signature</span>
+
+<span class="c1">####</span>
+
+<span class="k">def</span> <span class="nf">CatalogSignWithSignTool</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">ToSignFilePath</span><span class="p">,</span> <span class="n">PfxFilePath</span><span class="p">,</span> <span class="n">PfxPass</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+    <span class="c1"># check signtool path</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Path to signtool invalid.  </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">SignToolPath</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="c1"># Adjust for spaces in the path (when calling the command).</span>
+
+    <span class="k">if</span> <span class="s2">&quot; &quot;</span> <span class="ow">in</span> <span class="n">SignToolPath</span><span class="p">:</span>
+
+        <span class="n">SignToolPath</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">SignToolPath</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ToSignFilePath</span><span class="p">)</span>
+
+    <span class="c1"># Signtool docs https://docs.microsoft.com/en-us/dotnet/framework/tools/signtool-exe</span>
+
+    <span class="c1"># todo: link to catalog signing documentation</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="s2">&quot;sign /a /fd SHA256 /f &quot;</span> <span class="o">+</span> <span class="n">PfxFilePath</span>
+
+    <span class="k">if</span> <span class="n">PfxPass</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+        <span class="c1"># add password if set</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /p &#39;</span> <span class="o">+</span> <span class="n">PfxPass</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /debug /v &quot;&#39;</span> <span class="o">+</span> <span class="n">ToSignFilePath</span> <span class="o">+</span> <span class="s1">&#39;&quot; &#39;</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="n">OutputDir</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Signtool failed </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ret</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ret</span>
+
+<span class="c1">###</span>
+
+<span class="c1"># Function to print a byte list as hex and optionally output ascii as well as</span>
+
+<span class="c1"># offset within the buffer</span>
+
+<span class="c1">###</span>
+
+<span class="k">def</span> <span class="nf">PrintByteList</span><span class="p">(</span><span class="n">ByteList</span><span class="p">,</span> <span class="n">IncludeAscii</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">IncludeOffset</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">IncludeHexSep</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">OffsetStart</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+
+    <span class="n">Ascii</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ByteList</span><span class="p">)):</span>
+
+        <span class="c1"># Start of New Line</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">IncludeOffset</span><span class="p">):</span>
+
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;0x</span><span class="si">%04X</span><span class="s2"> -&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">index</span> <span class="o">+</span> <span class="n">OffsetStart</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Midpoint of a Line</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">8</span><span class="p">):</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">IncludeHexSep</span><span class="p">):</span>
+
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot; -&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Print As Hex Byte</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot; 0x</span><span class="si">%02X</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ByteList</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Prepare to Print As Ascii</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">ByteList</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mh">0x20</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">ByteList</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mh">0x7E</span><span class="p">):</span>
+
+            <span class="n">Ascii</span> <span class="o">+=</span> <span class="s2">&quot;.&quot;</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">Ascii</span> <span class="o">+=</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">%c</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">ByteList</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+        <span class="c1"># End of Line</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">15</span><span class="p">):</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">IncludeAscii</span><span class="p">):</span>
+
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Ascii</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+            <span class="n">Ascii</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Done - Lets check if we have partial</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">!=</span> <span class="mi">15</span><span class="p">):</span>
+
+        <span class="c1"># Lets print any partial line of ascii</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">IncludeAscii</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">Ascii</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">):</span>
+
+            <span class="c1"># Pad out to the correct spot</span>
+
+            <span class="k">while</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">!=</span> <span class="mi">15</span><span class="p">):</span>
+
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;     &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+                <span class="k">if</span><span class="p">(</span><span class="n">index</span> <span class="o">%</span> <span class="mi">16</span> <span class="o">==</span> <span class="mi">7</span><span class="p">):</span>  <span class="c1"># account for the - symbol in the hex dump</span>
+
+                    <span class="k">if</span><span class="p">(</span><span class="n">IncludeOffset</span><span class="p">):</span>
+
+                        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;  &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+                <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># print the ascii partial line</span>
+
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot; </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">Ascii</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+            <span class="c1"># print a single newline so that next print will be on new line</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Simplified Comparison Function borrowed from StackOverflow...</span>
+
+<span class="c1"># https://stackoverflow.com/questions/1714027/version-number-comparison</span>
+
+<span class="c1"># With Python 3.0 help from:</span>
+
+<span class="c1"># https://docs.python.org/3.0/whatsnew/3.0.html#ordering-comparisons</span>
+
+<span class="k">def</span> <span class="nf">version_compare</span><span class="p">(</span><span class="n">version1</span><span class="p">,</span> <span class="n">version2</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(\.0+)*$&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)]</span>
+
+    <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">normalize</span><span class="p">(</span><span class="n">version1</span><span class="p">),</span> <span class="n">normalize</span><span class="p">(</span><span class="n">version2</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">import_module_by_file_name</span><span class="p">(</span><span class="n">module_file_path</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39; Standard method of importing a Python file. Expecting absolute path. &#39;&#39;&#39;</span>
+
+    <span class="n">module_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">module_file_path</span><span class="p">)</span>
+
+    <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">spec_from_file_location</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">module_file_path</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spec</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Expected module file named {module_file_path}&quot;</span><span class="p">)</span>
+
+    <span class="n">ImportedModule</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+
+    <span class="n">spec</span><span class="o">.</span><span class="n">loader</span><span class="o">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">ImportedModule</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ImportedModule</span>
+
+<span class="k">def</span> <span class="nf">locate_class_in_module</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">    Given a module and a class, this function will return the subclass of DesiredClass found in Module.</span>
+
+<span class="sd">    It gives preference to classes that are defined in the module itself.</span>
+
+<span class="sd">    This means that if you have an import that subclasses DesiredClass, it will be picked unless</span>
+
+<span class="sd">    there is a class defined in the module that subclasses DesiredClass.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">DesiredClassInstances</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># a list of all the matching classes that we find</span>
+
+    <span class="c1"># Pull out the contents of the module that was provided</span>
+
+    <span class="n">module_contents</span> <span class="o">=</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Module</span><span class="p">)</span>
+
+    <span class="n">module_file</span> <span class="o">=</span> <span class="n">Module</span><span class="o">.</span><span class="vm">__file__</span>
+
+    <span class="c1"># Filter through the Module, we&#39;re only looking for classes.</span>
+
+    <span class="n">classList</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">module_contents</span>
+
+                 <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">obj</span><span class="p">))]</span>
+
+    <span class="k">for</span> <span class="n">_class</span> <span class="ow">in</span> <span class="n">classList</span><span class="p">:</span>
+
+        <span class="c1"># Classes that the module import show up in this list too so we need</span>
+
+        <span class="c1"># to make sure it&#39;s an INSTANCE of DesiredClass, not DesiredClass itself!</span>
+
+        <span class="k">if</span> <span class="n">_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">DesiredClass</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">_class</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
+
+            <span class="k">try</span><span class="p">:</span>
+
+                <span class="n">_class_file</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">_class</span><span class="p">)</span>  <span class="c1"># get the file name of the class we care about</span>
+
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># we throw a type error if a builtin module? PlatformBuild is considered builtin?</span>
+
+                <span class="n">_class_file</span> <span class="o">=</span> <span class="n">module_file</span>
+
+            <span class="k">if</span> <span class="n">_class_file</span> <span class="o">==</span> <span class="n">module_file</span><span class="p">:</span>  <span class="c1"># if this is in the same file as the module</span>
+
+                <span class="n">DesiredClassInstances</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">_class</span><span class="p">)</span>  <span class="c1"># put it at the front of the list</span>
+
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># otherwise to the back of the list</span>
+
+                <span class="n">DesiredClassInstances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_class</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">DesiredClassInstances</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># we didn&#39;t find anything</span>
+
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">DesiredClassInstances</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># we can&#39;t log because logging isn&#39;t setup yet</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Multiple {DesiredClass.__name__} classes were found. Using {DesiredClassInstances[0].__name__}&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">DesiredClassInstances</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># return the first (highest priority class)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="k">pass</span>
+
+    <span class="c1"># Test code for printing a byte buffer</span>
+
+    <span class="c1"># a = [0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x3a, 0x3b, 0x3c, 0x3d]</span>
+
+    <span class="c1"># index = 0x55</span>
+
+    <span class="c1"># while(index &lt; 0x65):</span>
+
+    <span class="c1">#     a.append(index)</span>
+
+    <span class="c1">#     PrintByteList(a)</span>
+
+    <span class="c1">#     index += 1</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="functions">Functions</h2>
+<h4 id="catalogsignwithsigntool">CatalogSignWithSignTool</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">CatalogSignWithSignTool</span><span class="p">(</span>
+    <span class="n">SignToolPath</span><span class="p">,</span>
+    <span class="n">ToSignFilePath</span><span class="p">,</span>
+    <span class="n">PfxFilePath</span><span class="p">,</span>
+    <span class="n">PfxPass</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">CatalogSignWithSignTool</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">ToSignFilePath</span><span class="p">,</span> <span class="n">PfxFilePath</span><span class="p">,</span> <span class="n">PfxPass</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
+
+    <span class="o">#</span> <span class="k">check</span> <span class="n">signtool</span> <span class="n">path</span>
+
+    <span class="k">if</span> <span class="k">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">exists</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="ss">&quot;Path to signtool invalid.  %s&quot;</span> <span class="o">%</span> <span class="n">SignToolPath</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="o">#</span> <span class="n">Adjust</span> <span class="k">for</span> <span class="n">spaces</span> <span class="k">in</span> <span class="n">the</span> <span class="n">path</span> <span class="p">(</span><span class="k">when</span> <span class="n">calling</span> <span class="n">the</span> <span class="n">command</span><span class="p">).</span>
+
+    <span class="k">if</span> <span class="ss">&quot; &quot;</span> <span class="k">in</span> <span class="n">SignToolPath</span><span class="p">:</span>
+
+        <span class="n">SignToolPath</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">SignToolPath</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ToSignFilePath</span><span class="p">)</span>
+
+    <span class="o">#</span> <span class="n">Signtool</span> <span class="n">docs</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">microsoft</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">en</span><span class="o">-</span><span class="n">us</span><span class="o">/</span><span class="n">dotnet</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">signtool</span><span class="o">-</span><span class="n">exe</span>
+
+    <span class="o">#</span> <span class="n">todo</span><span class="p">:</span> <span class="n">link</span> <span class="k">to</span> <span class="k">catalog</span> <span class="n">signing</span> <span class="n">documentation</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="ss">&quot;sign /a /fd SHA256 /f &quot;</span> <span class="o">+</span> <span class="n">PfxFilePath</span>
+
+    <span class="k">if</span> <span class="n">PfxPass</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">:</span>
+
+        <span class="o">#</span> <span class="k">add</span> <span class="n">password</span> <span class="k">if</span> <span class="k">set</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /p &#39;</span> <span class="o">+</span> <span class="n">PfxPass</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /debug /v &quot;&#39;</span> <span class="o">+</span> <span class="n">ToSignFilePath</span> <span class="o">+</span> <span class="s1">&#39;&quot; &#39;</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="n">OutputDir</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="ss">&quot;Signtool failed %d&quot;</span> <span class="o">%</span> <span class="n">ret</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ret</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="detachedsignwithsigntool">DetachedSignWithSignTool</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">DetachedSignWithSignTool</span><span class="p">(</span>
+    <span class="n">SignToolPath</span><span class="p">,</span>
+    <span class="n">ToSignFilePath</span><span class="p">,</span>
+    <span class="n">SignatureOutputFile</span><span class="p">,</span>
+    <span class="n">PfxFilePath</span><span class="p">,</span>
+    <span class="n">PfxPass</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">Oid</span><span class="o">=</span><span class="s1">&#39;1.2.840.113549.1.7.2&#39;</span><span class="p">,</span>
+    <span class="n">Eku</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">DetachedSignWithSignTool</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">ToSignFilePath</span><span class="p">,</span> <span class="n">SignatureOutputFile</span><span class="p">,</span> <span class="n">PfxFilePath</span><span class="p">,</span>
+
+                             <span class="n">PfxPass</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">Oid</span><span class="o">=</span><span class="ss">&quot;1.2.840.113549.1.7.2&quot;</span><span class="p">,</span> <span class="n">Eku</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
+
+    <span class="o">#</span> <span class="k">check</span> <span class="n">signtool</span> <span class="n">path</span>
+
+    <span class="k">if</span> <span class="k">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">exists</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="ss">&quot;Path to signtool invalid.  %s&quot;</span> <span class="o">%</span> <span class="n">SignToolPath</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+    <span class="o">#</span> <span class="n">Adjust</span> <span class="k">for</span> <span class="n">spaces</span> <span class="k">in</span> <span class="n">the</span> <span class="n">path</span> <span class="p">(</span><span class="k">when</span> <span class="n">calling</span> <span class="n">the</span> <span class="n">command</span><span class="p">).</span>
+
+    <span class="k">if</span> <span class="ss">&quot; &quot;</span> <span class="k">in</span> <span class="n">SignToolPath</span><span class="p">:</span>
+
+        <span class="n">SignToolPath</span> <span class="o">=</span> <span class="s1">&#39;&quot;&#39;</span> <span class="o">+</span> <span class="n">SignToolPath</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="n">OutputDir</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">SignatureOutputFile</span><span class="p">)</span>
+
+    <span class="o">#</span> <span class="n">Signtool</span> <span class="n">docs</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">microsoft</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">en</span><span class="o">-</span><span class="n">us</span><span class="o">/</span><span class="n">dotnet</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">signtool</span><span class="o">-</span><span class="n">exe</span>
+
+    <span class="o">#</span> <span class="n">Signtool</span> <span class="k">parameters</span> <span class="k">from</span>
+
+    <span class="o">#</span>   <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">microsoft</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">en</span><span class="o">-</span><span class="n">us</span><span class="o">/</span><span class="n">windows</span><span class="o">-</span><span class="n">hardware</span><span class="o">/</span><span class="n">manufacture</span><span class="o">/</span><span class="n">desktop</span><span class="o">/</span><span class="n">secure</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="k">key</span><span class="o">-</span><span class="n">generation</span><span class="o">-</span><span class="k">and</span><span class="o">-</span><span class="n">signing</span><span class="o">-</span><span class="k">using</span><span class="o">-</span><span class="n">hsm</span><span class="c1">--example  # noqa: E501</span>
+
+    <span class="o">#</span> <span class="k">Search</span> <span class="k">for</span> <span class="ss">&quot;Secure Boot Key Generation and Signing Using HSM&quot;</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="s1">&#39;sign /fd sha256 /p7ce DetachedSignedData /p7co &#39;</span> <span class="o">+</span> <span class="n">Oid</span> <span class="o">+</span> <span class="s1">&#39; /p7 &quot;&#39;</span> <span class="o">+</span> <span class="err">\</span>
+
+             <span class="n">OutputDir</span> <span class="o">+</span> <span class="s1">&#39;&quot; /f &quot;&#39;</span> <span class="o">+</span> <span class="n">PfxFilePath</span> <span class="o">+</span> <span class="s1">&#39;&quot;&#39;</span>
+
+    <span class="k">if</span> <span class="n">Eku</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">:</span>
+
+        <span class="n">params</span> <span class="o">+=</span> <span class="s1">&#39; /u &#39;</span> <span class="o">+</span> <span class="n">Eku</span>
+
+    <span class="k">if</span> <span class="n">PfxPass</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">:</span>
+
+        <span class="o">#</span> <span class="k">add</span> <span class="n">password</span> <span class="k">if</span> <span class="k">set</span>
+
+        <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /p &#39;</span> <span class="o">+</span> <span class="n">PfxPass</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">params</span> <span class="o">+</span> <span class="s1">&#39; /debug /v &quot;&#39;</span> <span class="o">+</span> <span class="n">ToSignFilePath</span> <span class="o">+</span> <span class="s1">&#39;&quot; &#39;</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">SignToolPath</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">ret</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="ss">&quot;Signtool failed %d&quot;</span> <span class="o">%</span> <span class="n">ret</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="n">signedfile</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">OutputDir</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">basename</span><span class="p">(</span><span class="n">ToSignFilePath</span><span class="p">)</span> <span class="o">+</span> <span class="ss">&quot;.p7&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="k">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">signedfile</span><span class="p">)):</span>
+
+        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;Output file doesn&#39;t exist %s&quot;</span> <span class="o">%</span> <span class="n">signedfile</span><span class="p">)</span>
+
+    <span class="n">shutil</span><span class="p">.</span><span class="k">move</span><span class="p">(</span><span class="n">signedfile</span><span class="p">,</span> <span class="n">SignatureOutputFile</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ret</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="gethostinfo">GetHostInfo</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">GetHostInfo</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">GetHostInfo</span><span class="p">():</span>
+
+    <span class="k">Host</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Host&#39;</span><span class="p">,</span> <span class="s1">&#39;os arch bit&#39;</span><span class="p">)</span>
+
+    <span class="n">host_info</span> <span class="o">=</span> <span class="n">platform</span><span class="p">.</span><span class="n">uname</span><span class="p">()</span>
+
+    <span class="n">os</span> <span class="o">=</span> <span class="n">host_info</span><span class="p">.</span><span class="k">system</span>
+
+    <span class="n">processor_info</span> <span class="o">=</span> <span class="n">host_info</span><span class="p">.</span><span class="n">machine</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Getting host info for host: {0}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">str</span><span class="p">(</span><span class="n">host_info</span><span class="p">)))</span>
+
+    <span class="n">arch</span> <span class="o">=</span> <span class="k">None</span>
+
+    <span class="nb">bit</span> <span class="o">=</span> <span class="k">None</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="ss">&quot;x86&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">lower</span><span class="p">())</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;AMD&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">())</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;INTEL&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">()):</span>
+
+        <span class="n">arch</span> <span class="o">=</span> <span class="ss">&quot;x86&quot;</span>
+
+    <span class="n">elif</span> <span class="p">(</span><span class="ss">&quot;ARM&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">())</span> <span class="k">or</span> <span class="p">(</span><span class="ss">&quot;AARCH&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">.</span><span class="k">upper</span><span class="p">()):</span>
+
+        <span class="n">arch</span> <span class="o">=</span> <span class="ss">&quot;ARM&quot;</span>
+
+    <span class="k">if</span> <span class="ss">&quot;32&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">:</span>
+
+        <span class="nb">bit</span> <span class="o">=</span> <span class="ss">&quot;32&quot;</span>
+
+    <span class="n">elif</span> <span class="ss">&quot;64&quot;</span> <span class="k">in</span> <span class="n">processor_info</span><span class="p">:</span>
+
+        <span class="nb">bit</span> <span class="o">=</span> <span class="ss">&quot;64&quot;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">arch</span> <span class="k">is</span> <span class="k">None</span><span class="p">)</span> <span class="k">or</span> <span class="p">(</span><span class="nb">bit</span> <span class="k">is</span> <span class="k">None</span><span class="p">):</span>
+
+        <span class="n">raise</span> <span class="n">EnvironmentError</span><span class="p">(</span><span class="ss">&quot;Host info could not be parsed: {0}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">str</span><span class="p">(</span><span class="n">host_info</span><span class="p">)))</span>
+
+    <span class="k">return</span> <span class="k">Host</span><span class="p">(</span><span class="n">os</span><span class="o">=</span><span class="n">os</span><span class="p">,</span> <span class="n">arch</span><span class="o">=</span><span class="n">arch</span><span class="p">,</span> <span class="nb">bit</span><span class="o">=</span><span class="nb">bit</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="printbytelist">PrintByteList</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">PrintByteList</span><span class="p">(</span>
+    <span class="n">ByteList</span><span class="p">,</span>
+    <span class="n">IncludeAscii</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">IncludeOffset</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">IncludeHexSep</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">OffsetStart</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">PrintByteList</span><span class="p">(</span><span class="n">ByteList</span><span class="p">,</span><span class="w"> </span><span class="n">IncludeAscii</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="n">IncludeOffset</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="n">IncludeHexSep</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"> </span><span class="n">OffsetStart</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="nf">Ascii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="k">index</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">ByteList</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Start</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="k">New</span><span class="w"> </span><span class="n">Line</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">IncludeOffset</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;0x%04X -&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">OffsetStart</span><span class="p">),</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Midpoint</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Line</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">IncludeHexSep</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot; -&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Print</span><span class="w"> </span><span class="k">As</span><span class="w"> </span><span class="n">Hex</span><span class="w"> </span><span class="n">Byte</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot; 0x%02X&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">ByteList</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Prepare</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">Print</span><span class="w"> </span><span class="k">As</span><span class="w"> </span><span class="nf">Ascii</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">ByteList</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mh">0x20</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="p">(</span><span class="n">ByteList</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mh">0x7E</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="nf">Ascii</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;.&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="nf">Ascii</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;%c&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">ByteList</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">End</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">Line</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">IncludeAscii</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot; %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nf">Ascii</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="nf">Ascii</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="err">#</span><span class="w"> </span><span class="n">Done</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Lets</span><span class="w"> </span><span class="k">check</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="k">partial</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Lets</span><span class="w"> </span><span class="k">print</span><span class="w"> </span><span class="ow">any</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nf">ascii</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">IncludeAscii</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="nf">Ascii</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="k">Pad</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="n">spot</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">while</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;     &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="p">(</span><span class="k">index</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="err">:</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">symbol</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">hex</span><span class="w"> </span><span class="k">dump</span><span class="w"></span>
+
+<span class="w">                    </span><span class="k">if</span><span class="p">(</span><span class="n">IncludeOffset</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                        </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;  &quot;</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">index</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="k">print</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nf">ascii</span><span class="w"> </span><span class="k">partial</span><span class="w"> </span><span class="n">line</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot; %s&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="nf">Ascii</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">#</span><span class="w"> </span><span class="k">print</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">single</span><span class="w"> </span><span class="n">newline</span><span class="w"> </span><span class="n">so</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">next</span><span class="w"> </span><span class="k">print</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">line</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">print</span><span class="p">(</span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h4 id="runcmd">RunCmd</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">RunCmd</span><span class="p">(</span>
+    <span class="n">cmd</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="p">,</span>
+    <span class="n">capture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">workingdir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">outfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">outstream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">environ</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">logging_level</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="k">parameters</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">outstream</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="k">None</span><span class="p">,</span>
+
+           <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="p">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="k">False</span><span class="p">):</span>
+
+    <span class="n">cmd</span> <span class="o">=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;\&#39;&#39;)</span>
+
+<span class="s1">    if &quot; &quot; in cmd:</span>
+
+<span class="s1">        cmd = &#39;</span><span class="ss">&quot;&#39; + cmd + &#39;&quot;</span><span class="err">&#39;</span>
+
+    <span class="k">if</span> <span class="k">parameters</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">:</span>
+
+        <span class="k">parameters</span> <span class="o">=</span> <span class="k">parameters</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">cmd</span> <span class="o">+=</span> <span class="ss">&quot; &quot;</span> <span class="o">+</span> <span class="k">parameters</span>
+
+    <span class="n">starttime</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;Cmd to run is: &quot;</span> <span class="o">+</span> <span class="n">cmd</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------------Cmd Output Starting---------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="k">c</span> <span class="o">=</span> <span class="n">subprocess</span><span class="p">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="k">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="p">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="p">.</span><span class="k">STDOUT</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">workingdir</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="n">environ</span><span class="p">)</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">capture</span><span class="p">):</span>
+
+        <span class="n">thread</span> <span class="o">=</span> <span class="n">PropagatingThread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="k">stdout</span><span class="p">,</span> <span class="n">logging_level</span><span class="p">))</span>
+
+        <span class="n">thread</span><span class="p">.</span><span class="k">start</span><span class="p">()</span>
+
+        <span class="k">c</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+
+        <span class="n">thread</span><span class="p">.</span><span class="k">join</span><span class="p">()</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="k">c</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span>
+
+    <span class="n">endtime</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span>
+
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">endtime</span> <span class="o">-</span> <span class="n">starttime</span>
+
+    <span class="n">endtime_str</span> <span class="o">=</span> <span class="ss">&quot;{0[0]:02}:{0[1]:02}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">divmod</span><span class="p">(</span><span class="n">delta</span><span class="p">.</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------------Cmd Output Finished---------------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;--------- Running Time (mm:ss): &quot;</span> <span class="o">+</span> <span class="n">endtime_str</span> <span class="o">+</span> <span class="ss">&quot; ----------&quot;</span><span class="p">)</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="ss">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">raise_exception_on_nonzero</span> <span class="k">and</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+
+        <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;{0} failed with error code: {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="k">c</span><span class="p">.</span><span class="n">returncode</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="runpythonscript">RunPythonScript</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">RunPythonScript</span><span class="p">(</span>
+    <span class="n">pythonfile</span><span class="p">,</span>
+    <span class="n">params</span><span class="p">,</span>
+    <span class="n">capture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">workingdir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">outfile</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">outstream</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">environ</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">logging_level</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">RunPythonScript</span><span class="p">(</span><span class="n">pythonfile</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="k">True</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">outstream</span><span class="o">=</span><span class="k">None</span><span class="p">,</span>
+
+                    <span class="n">environ</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="p">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="k">False</span><span class="p">):</span>
+
+    <span class="o">#</span> <span class="n">locate</span> <span class="n">python</span> <span class="n">file</span> <span class="k">on</span> <span class="n">path</span>
+
+    <span class="n">pythonfile</span><span class="p">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;&quot;\&#39;&#39;)</span>
+
+<span class="s1">    if &quot; &quot; in pythonfile:</span>
+
+<span class="s1">        pythonfile = &#39;</span><span class="ss">&quot;&#39; + pythonfile + &#39;&quot;</span><span class="err">&#39;</span>
+
+    <span class="n">params</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;RunPythonScript: {0} {1}&quot;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">pythonfile</span><span class="p">,</span> <span class="n">params</span><span class="p">))</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isabs</span><span class="p">(</span><span class="n">pythonfile</span><span class="p">)):</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Python Script was given as absolute path: %s&quot;</span> <span class="o">%</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+    <span class="n">elif</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">pythonfile</span><span class="p">))):</span>
+
+        <span class="n">pythonfile</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Python Script was given as relative path: %s&quot;</span> <span class="o">%</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="o">#</span> <span class="n">loop</span> <span class="n">thru</span> <span class="n">path</span> <span class="n">environment</span> <span class="k">variable</span>
+
+        <span class="k">for</span> <span class="n">a</span> <span class="k">in</span> <span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="ss">&quot;PATH&quot;</span><span class="p">).</span><span class="n">split</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">pathsep</span><span class="p">):</span>
+
+            <span class="n">a</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">pythonfile</span><span class="p">)):</span>
+
+                <span class="n">pythonfile</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="k">join</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+                <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="ss">&quot;Python Script was found on the path: %s&quot;</span> <span class="o">%</span> <span class="n">pythonfile</span><span class="p">)</span>
+
+                <span class="n">break</span>
+
+    <span class="n">params</span> <span class="o">=</span> <span class="n">pythonfile</span> <span class="o">+</span> <span class="ss">&quot; &quot;</span> <span class="o">+</span> <span class="n">params</span>
+
+    <span class="k">return</span> <span class="n">RunCmd</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">executable</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">capture</span><span class="o">=</span><span class="n">capture</span><span class="p">,</span> <span class="n">workingdir</span><span class="o">=</span><span class="n">workingdir</span><span class="p">,</span> <span class="n">outfile</span><span class="o">=</span><span class="n">outfile</span><span class="p">,</span>
+
+                  <span class="n">outstream</span><span class="o">=</span><span class="n">outstream</span><span class="p">,</span> <span class="n">environ</span><span class="o">=</span><span class="n">environ</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging_level</span><span class="p">,</span>
+
+                  <span class="n">raise_exception_on_nonzero</span><span class="o">=</span><span class="n">raise_exception_on_nonzero</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="import_module_by_file_name">import_module_by_file_name</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">import_module_by_file_name</span><span class="p">(</span>
+    <span class="n">module_file_path</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Standard method of importing a Python file. Expecting absolute path. </p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">import_module_by_file_name</span><span class="p">(</span><span class="n">module_file_path</span><span class="p">):</span>
+
+    <span class="s1">&#39;&#39;&#39; Standard method of importing a Python file. Expecting absolute path. &#39;&#39;&#39;</span>
+
+    <span class="n">module_name</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">basename</span><span class="p">(</span><span class="n">module_file_path</span><span class="p">)</span>
+
+    <span class="n">spec</span> <span class="o">=</span> <span class="n">importlib</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">spec_from_file_location</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="n">module_file_path</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">spec</span> <span class="k">is</span> <span class="k">None</span><span class="p">:</span>
+
+        <span class="n">raise</span> <span class="n">RuntimeError</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Expected module file named {module_file_path}&quot;</span><span class="p">)</span>
+
+    <span class="n">ImportedModule</span> <span class="o">=</span> <span class="n">importlib</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+
+    <span class="n">spec</span><span class="p">.</span><span class="n">loader</span><span class="p">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">ImportedModule</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ImportedModule</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="locate_class_in_module">locate_class_in_module</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">locate_class_in_module</span><span class="p">(</span>
+    <span class="n">Module</span><span class="p">,</span>
+    <span class="n">DesiredClass</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Given a module and a class, this function will return the subclass of DesiredClass found in Module.
+It gives preference to classes that are defined in the module itself.
+This means that if you have an import that subclasses DesiredClass, it will be picked unless
+there is a class defined in the module that subclasses DesiredClass.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">locate_class_in_module</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">    Given a module and a class, this function will return the subclass of DesiredClass found in Module.</span>
+
+<span class="sd">    It gives preference to classes that are defined in the module itself.</span>
+
+<span class="sd">    This means that if you have an import that subclasses DesiredClass, it will be picked unless</span>
+
+<span class="sd">    there is a class defined in the module that subclasses DesiredClass.</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">DesiredClassInstances</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># a list of all the matching classes that we find</span>
+
+    <span class="c1"># Pull out the contents of the module that was provided</span>
+
+    <span class="n">module_contents</span> <span class="o">=</span> <span class="nb">dir</span><span class="p">(</span><span class="n">Module</span><span class="p">)</span>
+
+    <span class="n">module_file</span> <span class="o">=</span> <span class="n">Module</span><span class="o">.</span><span class="vm">__file__</span>
+
+    <span class="c1"># Filter through the Module, we&#39;re only looking for classes.</span>
+
+    <span class="n">classList</span> <span class="o">=</span> <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">module_contents</span>
+
+                 <span class="k">if</span> <span class="n">inspect</span><span class="o">.</span><span class="n">isclass</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">Module</span><span class="p">,</span> <span class="n">obj</span><span class="p">))]</span>
+
+    <span class="k">for</span> <span class="n">_class</span> <span class="ow">in</span> <span class="n">classList</span><span class="p">:</span>
+
+        <span class="c1"># Classes that the module import show up in this list too so we need</span>
+
+        <span class="c1"># to make sure it&#39;s an INSTANCE of DesiredClass, not DesiredClass itself!</span>
+
+        <span class="k">if</span> <span class="n">_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">DesiredClass</span> <span class="ow">and</span> <span class="nb">issubclass</span><span class="p">(</span><span class="n">_class</span><span class="p">,</span> <span class="n">DesiredClass</span><span class="p">):</span>
+
+            <span class="k">try</span><span class="p">:</span>
+
+                <span class="n">_class_file</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">_class</span><span class="p">)</span>  <span class="c1"># get the file name of the class we care about</span>
+
+            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>  <span class="c1"># we throw a type error if a builtin module? PlatformBuild is considered builtin?</span>
+
+                <span class="n">_class_file</span> <span class="o">=</span> <span class="n">module_file</span>
+
+            <span class="k">if</span> <span class="n">_class_file</span> <span class="o">==</span> <span class="n">module_file</span><span class="p">:</span>  <span class="c1"># if this is in the same file as the module</span>
+
+                <span class="n">DesiredClassInstances</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">_class</span><span class="p">)</span>  <span class="c1"># put it at the front of the list</span>
+
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># otherwise to the back of the list</span>
+
+                <span class="n">DesiredClassInstances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_class</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">DesiredClassInstances</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># we didn&#39;t find anything</span>
+
+        <span class="k">return</span> <span class="bp">None</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">DesiredClassInstances</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># we can&#39;t log because logging isn&#39;t setup yet</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Multiple {DesiredClass.__name__} classes were found. Using {DesiredClassInstances[0].__name__}&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">DesiredClassInstances</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># return the first (highest priority class)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="reader">reader</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">reader</span><span class="p">(</span>
+    <span class="n">filepath</span><span class="p">,</span>
+    <span class="n">outstream</span><span class="p">,</span>
+    <span class="n">stream</span><span class="p">,</span>
+    <span class="n">logging_level</span><span class="o">=</span><span class="mi">20</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">reader</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">outstream</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="p">.</span><span class="n">INFO</span><span class="p">):</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="k">None</span>
+
+    <span class="o">#</span> <span class="k">open</span> <span class="n">file</span> <span class="k">if</span> <span class="n">caller</span> <span class="n">provided</span> <span class="n">path</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+
+        <span class="n">f</span> <span class="o">=</span> <span class="k">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="ss">&quot;w&quot;</span><span class="p">)</span>
+
+    <span class="n">while</span> <span class="k">True</span><span class="p">:</span>
+
+        <span class="n">s</span> <span class="o">=</span> <span class="n">stream</span><span class="p">.</span><span class="n">readline</span><span class="p">().</span><span class="n">decode</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="k">not</span> <span class="n">s</span><span class="p">:</span>
+
+            <span class="n">break</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">):</span>
+
+            <span class="o">#</span> <span class="k">write</span> <span class="k">to</span> <span class="n">file</span> <span class="k">if</span> <span class="n">caller</span> <span class="n">provided</span> <span class="n">file</span>
+
+            <span class="n">f</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">outstream</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">):</span>
+
+            <span class="o">#</span> <span class="k">write</span> <span class="k">to</span> <span class="n">stream</span> <span class="k">object</span> <span class="k">if</span> <span class="n">caller</span> <span class="n">provided</span> <span class="k">object</span>
+
+            <span class="n">outstream</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">logging_level</span><span class="p">,</span> <span class="n">s</span><span class="p">.</span><span class="n">rstrip</span><span class="p">())</span>
+
+    <span class="n">stream</span><span class="p">.</span><span class="k">close</span><span class="p">()</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">f</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span><span class="p">):</span>
+
+        <span class="n">f</span><span class="p">.</span><span class="k">close</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="timing">timing</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">timing</span><span class="p">(</span>
+    <span class="n">f</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">timing</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+
+    <span class="n">def</span> <span class="n">wrap</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+
+        <span class="n">time1</span> <span class="o">=</span> <span class="k">time</span><span class="p">.</span><span class="k">time</span><span class="p">()</span>
+
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+        <span class="n">time2</span> <span class="o">=</span> <span class="k">time</span><span class="p">.</span><span class="k">time</span><span class="p">()</span>
+
+        <span class="n">logging</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;{:s} function took {:.3f} ms&#39;</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="p">(</span><span class="n">time2</span> <span class="o">-</span> <span class="n">time1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">.</span><span class="mi">0</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">return</span> <span class="n">wrap</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="version_compare">version_compare</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">version_compare</span><span class="p">(</span>
+    <span class="n">version1</span><span class="p">,</span>
+    <span class="n">version2</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">version_compare</span><span class="p">(</span><span class="n">version1</span><span class="p">,</span> <span class="n">version2</span><span class="p">):</span>
+
+    <span class="n">def</span> <span class="n">normalize</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="n">r</span><span class="s1">&#39;(\.0+)*$&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">v</span><span class="p">).</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;.&quot;</span><span class="p">)]</span>
+
+    <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">normalize</span><span class="p">(</span><span class="n">version1</span><span class="p">),</span> <span class="n">normalize</span><span class="p">(</span><span class="n">version2</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="enum">Enum</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Enum</span><span class="p">(</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable&rsquo;s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Enum</span>(<span class="n">tuple</span>):
+
+    <span class="n">__getattr__</span> = <span class="n">tuple</span>.<span class="nb">index</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<ul>
+<li>builtins.tuple</li>
+</ul>
+<h4 id="methods">Methods</h4>
+<h4 id="count">count</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">count</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">,</span>
+    <span class="o">/</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Return number of occurrences of value.</p>
+<h4 id="index">index</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">index</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">value</span><span class="p">,</span>
+    <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">stop</span><span class="o">=</span><span class="mi">9223372036854775807</span><span class="p">,</span>
+    <span class="o">/</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Return first index of value.</p>
+<p>Raises ValueError if the value is not present.</p>
+<h3 id="propagatingthread">PropagatingThread</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">PropagatingThread</span><span class="p">(</span>
+    <span class="n">group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">target</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">args</span><span class="o">=</span><span class="p">(),</span>
+    <span class="n">kwargs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">daemon</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>A class that represents a thread of control.</p>
+<p>This class can be safely subclassed in a limited fashion. There are two ways
+to specify the activity: by passing a callable object to the constructor, or
+by overriding the run() method in a subclass.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">PropagatingThread</span>(<span class="n">threading</span>.<span class="nb">Thread</span>):
+
+    <span class="n">def</span> <span class="nb">run</span>(<span class="nb">self</span>):
+
+        <span class="nb">self</span>.<span class="n">exc</span> = <span class="n">None</span>
+
+        <span class="n">try:</span>
+
+            <span class="k">if</span> <span class="n">hasattr</span>(<span class="nb">self</span>, <span class="s">&#39;_Thread__target&#39;</span>):
+
+                <span class="c1"># Thread uses name mangling prior to Python 3.</span>
+
+                <span class="nb">self</span>.<span class="n">ret</span> = <span class="nb">self</span>.<span class="n">_Thread__target</span>(*<span class="nb">self</span>.<span class="n">_Thread__args</span>, **<span class="nb">self</span>.<span class="n">_Thread__kwargs</span>)
+
+            <span class="n">else:</span>
+
+                <span class="nb">self</span>.<span class="n">ret</span> = <span class="nb">self</span>.<span class="n">_target</span>(*<span class="nb">self</span>.<span class="n">_args</span>, **<span class="nb">self</span>.<span class="n">_kwargs</span>)
+
+        <span class="n">except</span> <span class="n">BaseException</span> <span class="n">as</span> <span class="n">e:</span>
+
+            <span class="nb">self</span>.<span class="n">exc</span> = <span class="nb">e</span>
+
+    <span class="n">def</span> <span class="nb">join</span>(<span class="nb">self</span>, <span class="n">timeout</span>=<span class="n">None</span>):
+
+        <span class="n">super</span>(<span class="n">PropagatingThread</span>, <span class="nb">self</span>).<span class="nb">join</span>()
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="n">exc:</span>
+
+            <span class="n">raise</span> <span class="nb">self</span>.<span class="n">exc</span>
+
+        <span class="k">return</span> <span class="nb">self</span>.<span class="n">ret</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro_1">Ancestors (in MRO)</h4>
+<ul>
+<li>threading.Thread</li>
+</ul>
+<h4 id="instance-variables">Instance variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">daemon</span>
+</code></pre></div>
+
+
+<p>A boolean value indicating whether this thread is a daemon thread.</p>
+<p>This must be set before start() is called, otherwise RuntimeError is
+raised. Its initial value is inherited from the creating thread; the
+main thread is not a daemon thread and therefore all threads created in
+the main thread default to daemon = False.</p>
+<p>The entire Python program exits when only daemon threads are left.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">ident</span>
+</code></pre></div>
+
+
+<p>Thread identifier of this thread or None if it has not been started.</p>
+<p>This is a nonzero integer. See the get_ident() function. Thread
+identifiers may be recycled when a thread exits and another thread is
+created. The identifier is available even after the thread has exited.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">name</span>
+</code></pre></div>
+
+
+<p>A string used for identification purposes only.</p>
+<p>It has no semantics. Multiple threads may be given the same name. The
+initial name is set by the constructor.</p>
+<h4 id="methods_1">Methods</h4>
+<h4 id="getname">getName</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">getName</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">getName</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">name</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="isalive">isAlive</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">isAlive</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Return whether the thread is alive.</p>
+<p>This method is deprecated, use is_alive() instead.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="k">def</span> <span class="nf">isAlive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="sd">&quot;&quot;&quot;Return whether the thread is alive.</span>
+
+<span class="sd">        This method is deprecated, use is_alive() instead.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="kn">import</span> <span class="nn">warnings</span>
+
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;isAlive() is deprecated, use is_alive() instead&#39;</span><span class="p">,</span>
+
+                      <span class="ne">PendingDeprecationWarning</span><span class="p">,</span> <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_alive</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="isdaemon">isDaemon</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">isDaemon</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">isDaemon</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">daemon</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="is_alive">is_alive</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">is_alive</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Return whether the thread is alive.</p>
+<p>This method returns True just before the run() method starts until just
+after the run() method terminates. The module function enumerate()
+returns a list of all alive threads.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">is_alive</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="ss">&quot;&quot;&quot;Return whether the thread is alive.</span>
+
+<span class="ss">        This method returns True just before the run() method starts until just</span>
+
+<span class="ss">        after the run() method terminates. The module function enumerate()</span>
+
+<span class="ss">        returns a list of all alive threads.</span>
+
+<span class="ss">        &quot;&quot;&quot;</span>
+
+        <span class="n">assert</span> <span class="k">self</span><span class="p">.</span><span class="n">_initialized</span><span class="p">,</span> <span class="ss">&quot;Thread.__init__() not called&quot;</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">_is_stopped</span> <span class="k">or</span> <span class="k">not</span> <span class="k">self</span><span class="p">.</span><span class="n">_started</span><span class="p">.</span><span class="n">is_set</span><span class="p">():</span>
+
+            <span class="k">return</span> <span class="k">False</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">_wait_for_tstate_lock</span><span class="p">(</span><span class="k">False</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="k">not</span> <span class="k">self</span><span class="p">.</span><span class="n">_is_stopped</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="join">join</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">join</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Wait until the thread terminates.</p>
+<p>This blocks the calling thread until the thread whose join() method is
+called terminates &ndash; either normally or through an unhandled exception
+or until the optional timeout occurs.</p>
+<p>When the timeout argument is present and not None, it should be a
+floating point number specifying a timeout for the operation in seconds
+(or fractions thereof). As join() always returns None, you must call
+is_alive() after join() to decide whether a timeout happened &ndash; if the
+thread is still alive, the join() call timed out.</p>
+<p>When the timeout argument is not present or None, the operation will
+block until the thread terminates.</p>
+<p>A thread can be join()ed many times.</p>
+<p>join() raises a RuntimeError if an attempt is made to join the current
+thread as that would cause a deadlock. It is also an error to join() a
+thread before it has been started and attempts to do so raises the same
+exception.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="k">join</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="k">None</span><span class="p">):</span>
+
+        <span class="n">super</span><span class="p">(</span><span class="n">PropagatingThread</span><span class="p">,</span> <span class="k">self</span><span class="p">).</span><span class="k">join</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">exc</span><span class="p">:</span>
+
+            <span class="n">raise</span> <span class="k">self</span><span class="p">.</span><span class="n">exc</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">ret</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="run">run</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">run</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Method representing the thread&rsquo;s activity.</p>
+<p>You may override this method in a subclass. The standard run() method
+invokes the callable object passed to the object&rsquo;s constructor as the
+target argument, if any, with sequential and keyword arguments taken
+from the args and kwargs arguments, respectively.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">run</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">exc</span> <span class="o">=</span> <span class="k">None</span>
+
+        <span class="n">try</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="n">hasattr</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="s1">&#39;_Thread__target&#39;</span><span class="p">):</span>
+
+                <span class="o">#</span> <span class="n">Thread</span> <span class="n">uses</span> <span class="n">name</span> <span class="n">mangling</span> <span class="k">prior</span> <span class="k">to</span> <span class="n">Python</span> <span class="mi">3</span><span class="p">.</span>
+
+                <span class="k">self</span><span class="p">.</span><span class="n">ret</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">_Thread__target</span><span class="p">(</span><span class="o">*</span><span class="k">self</span><span class="p">.</span><span class="n">_Thread__args</span><span class="p">,</span> <span class="o">**</span><span class="k">self</span><span class="p">.</span><span class="n">_Thread__kwargs</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="p">:</span>
+
+                <span class="k">self</span><span class="p">.</span><span class="n">ret</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">_target</span><span class="p">(</span><span class="o">*</span><span class="k">self</span><span class="p">.</span><span class="n">_args</span><span class="p">,</span> <span class="o">**</span><span class="k">self</span><span class="p">.</span><span class="n">_kwargs</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="n">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">exc</span> <span class="o">=</span> <span class="n">e</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="setdaemon">setDaemon</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">setDaemon</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">daemonic</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">setDaemon</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">daemonic</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="n">daemonic</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="setname">setName</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">setName</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">name</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">setName</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="start">start</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">start</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Start the thread&rsquo;s activity.</p>
+<p>It must be called at most once per thread object. It arranges for the
+object&rsquo;s run() method to be invoked in a separate thread of control.</p>
+<p>This method will raise a RuntimeError if called more than once on the
+same thread object.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="k">start</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="ss">&quot;&quot;&quot;Start the thread&#39;s activity.</span>
+
+<span class="ss">        It must be called at most once per thread object. It arranges for the</span>
+
+<span class="ss">        object&#39;s run() method to be invoked in a separate thread of control.</span>
+
+<span class="ss">        This method will raise a RuntimeError if called more than once on the</span>
+
+<span class="ss">        same thread object.</span>
+
+<span class="ss">        &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="nl">_initialized</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="ss">&quot;thread.__init__() not called&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">_started</span><span class="p">.</span><span class="n">is_set</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">RuntimeError</span><span class="p">(</span><span class="ss">&quot;threads can only be started once&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">with</span><span class="w"> </span><span class="nl">_active_limbo_lock</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_limbo</span><span class="o">[</span><span class="n">self</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_start_new_thread</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">_bootstrap</span><span class="p">,</span><span class="w"> </span><span class="p">())</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="k">Exception</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">with</span><span class="w"> </span><span class="nl">_active_limbo_lock</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">del</span><span class="w"> </span><span class="n">_limbo</span><span class="o">[</span><span class="n">self</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">_started</span><span class="p">.</span><span class="n">wait</span><span class="p">()</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../acpi/dmar_parser/" title="Dmar parser" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Dmar parser
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
+      
+        <script src="../../js/version-select.js"></script>
+      
+    
+  </body>
+</html>
