@@ -32,6 +32,10 @@
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/gitignore_parser/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
@@ -45,6 +49,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/acpi/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/acpi/ivrs_parser/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -100,6 +108,14 @@
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/fmp_auth_header/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/fmp_capsule_header/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
@@ -116,6 +132,10 @@
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/uefi_capsule_header/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/uefi_multi_phase/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
@@ -124,7 +144,15 @@
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/fmp_payload_header/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/ftw_working_block_format/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/guid_list/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -144,7 +172,15 @@
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/build_objects/readme/</loc>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/build_objects/dsc/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/build_objects/dsc_translator/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/build_objects/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -165,6 +201,10 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/parsers/fdf_parser/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/parsers/guid_parser/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -201,6 +241,14 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/windows/capsule/inf_generator/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/windows/policy/firmware_policy/</loc>
+     <lastmod>2020-05-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://matthewc.dev/edk2-pytool-library/master/edk2toollib/windows/policy/</loc>
      <lastmod>2020-05-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
