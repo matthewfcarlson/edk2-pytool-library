@@ -1,0 +1,3305 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/variable_format/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Variable format - EDK2 Pytool Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../css/version-select.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#module-edk2toollibuefiedk2variable_format" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              EDK2 Pytool Library
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Variable format
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    EDK2 Pytool Library
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../developing/" title="Developing" class="md-nav__link">
+      Developing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../publishing/" title="Publishing" class="md-nav__link">
+      Publishing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../using/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../features/logging.ansi_handler/" title="Logging.ansi handler" class="md-nav__link">
+      Logging.ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../features/utility_functions.GetHostInfo/" title="Utility functions.get host info" class="md-nav__link">
+      Utility functions.get host info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../features/windows_firmware_policy/" title="Windows firmware policy" class="md-nav__link">
+      Windows firmware policy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bin/" title="Bin" class="md-nav__link">
+      Bin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../gitignore_parser/" title="Gitignore parser" class="md-nav__link">
+      Gitignore parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../utility_functions/" title="Utility functions" class="md-nav__link">
+      Utility functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Acpi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Acpi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/dmar_parser/" title="Dmar parser" class="md-nav__link">
+      Dmar parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../acpi/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      Log
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        Log
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/ansi_handler/" title="Ansi handler" class="md-nav__link">
+      Ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/file_handler/" title="File handler" class="md-nav__link">
+      File handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/junit_report_format/" title="Junit report format" class="md-nav__link">
+      Junit report format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/markdown_handler/" title="Markdown handler" class="md-nav__link">
+      Markdown handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../log/string_handler/" title="String handler" class="md-nav__link">
+      String handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      Tpm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-7">
+        Tpm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_defs/" title="Tpm2 defs" class="md-nav__link">
+      Tpm2 defs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_policy_calc/" title="Tpm2 policy calc" class="md-nav__link">
+      Tpm2 policy calc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_simulator/" title="Tpm2 simulator" class="md-nav__link">
+      Tpm2 simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tpm/tpm2_stream/" title="Tpm2 stream" class="md-nav__link">
+      Tpm2 stream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8" checked>
+    
+    <label class="md-nav__link" for="nav-6-8">
+      Uefi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        Uefi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../authenticated_variables_structure_support/" title="Authenticated variables structure support" class="md-nav__link">
+      Authenticated variables structure support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bmp_object/" title="Bmp object" class="md-nav__link">
+      Bmp object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_auth_header/" title="Fmp auth header" class="md-nav__link">
+      Fmp auth header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../fmp_capsule_header/" title="Fmp capsule header" class="md-nav__link">
+      Fmp capsule header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pi_firmware_file/" title="Pi firmware file" class="md-nav__link">
+      Pi firmware file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../pi_firmware_volume/" title="Pi firmware volume" class="md-nav__link">
+      Pi firmware volume
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../status_codes/" title="Status codes" class="md-nav__link">
+      Status codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uefi_capsule_header/" title="Uefi capsule header" class="md-nav__link">
+      Uefi capsule header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../uefi_multi_phase/" title="Uefi multi phase" class="md-nav__link">
+      Uefi multi phase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../wincert/" title="Wincert" class="md-nav__link">
+      Wincert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12" type="checkbox" id="nav-6-8-12" checked>
+    
+    <label class="md-nav__link" for="nav-6-8-12">
+      Edk2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-8-12">
+        Edk2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fmp_payload_header/" title="Fmp payload header" class="md-nav__link">
+      Fmp payload header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ftw_working_block_format/" title="Ftw working block format" class="md-nav__link">
+      Ftw working block format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guid_list/" title="Guid list" class="md-nav__link">
+      Guid list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../path_utilities/" title="Path utilities" class="md-nav__link">
+      Path utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../variablestore_manulipulations/" title="Variablestore manulipulations" class="md-nav__link">
+      Variablestore manulipulations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Variable format
+      </label>
+    
+    <a href="./" title="Variable format" class="md-nav__link md-nav__link--active">
+      Variable format
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authenticatedvariableheader" class="md-nav__link">
+    AuthenticatedVariableHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_data_size" class="md-nav__link">
+    get_buffer_data_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_padding_size" class="md-nav__link">
+    get_buffer_padding_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_size" class="md-nav__link">
+    get_buffer_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_packed_name" class="md-nav__link">
+    get_packed_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_bytes" class="md-nav__link">
+    load_from_bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_file" class="md-nav__link">
+    load_from_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_struct" class="md-nav__link">
+    pack_struct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate_structure_fields" class="md-nav__link">
+    populate_structure_fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialize" class="md-nav__link">
+    serialize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_data" class="md-nav__link">
+    set_data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_name" class="md-nav__link">
+    set_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variableheader" class="md-nav__link">
+    VariableHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descendants" class="md-nav__link">
+    Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_data_size_1" class="md-nav__link">
+    get_buffer_data_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_padding_size_1" class="md-nav__link">
+    get_buffer_padding_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_size_1" class="md-nav__link">
+    get_buffer_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_packed_name_1" class="md-nav__link">
+    get_packed_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_bytes_1" class="md-nav__link">
+    load_from_bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_file_1" class="md-nav__link">
+    load_from_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_struct_1" class="md-nav__link">
+    pack_struct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate_structure_fields_1" class="md-nav__link">
+    populate_structure_fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialize_1" class="md-nav__link">
+    serialize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_data_1" class="md-nav__link">
+    set_data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_name_1" class="md-nav__link">
+    set_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variablestoreheader" class="md-nav__link">
+    VariableStoreHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_file_2" class="md-nav__link">
+    load_from_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialize_2" class="md-nav__link">
+    serialize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-8" type="checkbox" id="nav-6-8-12-8">
+    
+    <label class="md-nav__link" for="nav-6-8-12-8">
+      Build objects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-12-8">
+        Build objects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../build_objects/readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-12-9" type="checkbox" id="nav-6-8-12-9">
+    
+    <label class="md-nav__link" for="nav-6-8-12-9">
+      Parsers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-12-9">
+        Parsers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/base_parser/" title="Base parser" class="md-nav__link">
+      Base parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/buildreport_parser/" title="Buildreport parser" class="md-nav__link">
+      Buildreport parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dec_parser/" title="Dec parser" class="md-nav__link">
+      Dec parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/dsc_parser/" title="Dsc parser" class="md-nav__link">
+      Dsc parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/fdf_parser/" title="Fdf parser" class="md-nav__link">
+      Fdf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/guid_parser/" title="Guid parser" class="md-nav__link">
+      Guid parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/inf_parser/" title="Inf parser" class="md-nav__link">
+      Inf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/override_parser/" title="Override parser" class="md-nav__link">
+      Override parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../parsers/targettxt_parser/" title="Targettxt parser" class="md-nav__link">
+      Targettxt parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+    
+    <label class="md-nav__link" for="nav-6-9">
+      Windows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-9">
+        Windows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/locate_tools/" title="Locate tools" class="md-nav__link">
+      Locate tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-3" type="checkbox" id="nav-6-9-3">
+    
+    <label class="md-nav__link" for="nav-6-9-3">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-9-3">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/cat_generator/" title="Cat generator" class="md-nav__link">
+      Cat generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../windows/capsule/inf_generator/" title="Inf generator" class="md-nav__link">
+      Inf generator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authenticatedvariableheader" class="md-nav__link">
+    AuthenticatedVariableHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_data_size" class="md-nav__link">
+    get_buffer_data_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_padding_size" class="md-nav__link">
+    get_buffer_padding_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_size" class="md-nav__link">
+    get_buffer_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_packed_name" class="md-nav__link">
+    get_packed_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_bytes" class="md-nav__link">
+    load_from_bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_file" class="md-nav__link">
+    load_from_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_struct" class="md-nav__link">
+    pack_struct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate_structure_fields" class="md-nav__link">
+    populate_structure_fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialize" class="md-nav__link">
+    serialize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_data" class="md-nav__link">
+    set_data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_name" class="md-nav__link">
+    set_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variableheader" class="md-nav__link">
+    VariableHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descendants" class="md-nav__link">
+    Descendants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_data_size_1" class="md-nav__link">
+    get_buffer_data_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_padding_size_1" class="md-nav__link">
+    get_buffer_padding_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_buffer_size_1" class="md-nav__link">
+    get_buffer_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_packed_name_1" class="md-nav__link">
+    get_packed_name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_bytes_1" class="md-nav__link">
+    load_from_bytes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_file_1" class="md-nav__link">
+    load_from_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack_struct_1" class="md-nav__link">
+    pack_struct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#populate_structure_fields_1" class="md-nav__link">
+    populate_structure_fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialize_1" class="md-nav__link">
+    serialize
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_data_1" class="md-nav__link">
+    set_data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_name_1" class="md-nav__link">
+    set_name
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variablestoreheader" class="md-nav__link">
+    VariableStoreHeader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods_2" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_from_file_2" class="md-nav__link">
+    load_from_file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serialize_2" class="md-nav__link">
+    serialize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/uefi/edk2/variable_format.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="module-edk2toollibuefiedk2variable_format">Module edk2toollib.uefi.edk2.variable_format</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="s s-Atom">#</span> <span class="s s-Atom">@file</span> <span class="s s-Atom">variable_format</span><span class="p">.</span><span class="s s-Atom">py</span>
+
+<span class="s s-Atom">#</span> <span class="nv">Module</span> <span class="s s-Atom">contains</span> <span class="s s-Atom">helper</span> <span class="s s-Atom">classes</span> <span class="s s-Atom">and</span> <span class="s s-Atom">functions</span> <span class="s s-Atom">to</span> <span class="s s-Atom">work</span> <span class="s s-Atom">with</span> <span class="nv">UEFI</span> <span class="nv">Variables</span><span class="p">.</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="nv">Copyright</span> <span class="p">(</span><span class="s s-Atom">c</span><span class="p">)</span> <span class="nv">Microsoft</span> <span class="nv">Corporation</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="nv">SPDX</span><span class="o">-</span><span class="nv">License</span><span class="o">-</span><span class="nv">Identifier</span><span class="s s-Atom">:</span> <span class="nv">BSD</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="nv">Clause</span><span class="o">-</span><span class="nv">Patent</span>
+
+<span class="s s-Atom">##</span>
+
+<span class="s s-Atom">import</span> <span class="s s-Atom">uuid</span>
+
+<span class="s s-Atom">import</span> <span class="s s-Atom">struct</span>
+
+<span class="s s-Atom">import</span> <span class="s s-Atom">sys</span>
+
+<span class="s s-Atom">import</span> <span class="s s-Atom">edk2toollib</span><span class="p">.</span><span class="s s-Atom">uefi</span><span class="p">.</span><span class="s s-Atom">uefi_multi_phase</span> <span class="s s-Atom">as</span> <span class="s s-Atom">ump</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="nv">UEFI</span> <span class="nv">GUIDs</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="nv">EfiVariableGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">fields=</span><span class="p">(</span><span class="mh">0xDDCF3616</span><span class="p">,</span> <span class="mh">0x3275</span><span class="p">,</span> <span class="mh">0x4164</span><span class="p">,</span> <span class="mh">0x98</span><span class="p">,</span> <span class="mh">0xB6</span><span class="p">,</span> <span class="mh">0xFE85707FFE7D</span><span class="p">))</span>
+
+<span class="nv">EfiAuthenticatedVariableGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">fields=</span><span class="p">(</span><span class="mh">0xAAF32C78</span><span class="p">,</span> <span class="mh">0x947B</span><span class="p">,</span> <span class="mh">0x439A</span><span class="p">,</span> <span class="mh">0xA1</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">,</span> <span class="mh">0x2E144EC37792</span><span class="p">))</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="nv">UEFI</span> <span class="s s-Atom">#</span><span class="nv">Defines</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="nv">HEADER_ALIGNMENT</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="nv">VARIABLE_STORE_FORMATTED</span> <span class="o">=</span> <span class="mh">0x5A</span>
+
+<span class="nv">VARIABLE_STORE_HEALTHY</span> <span class="o">=</span> <span class="mh">0xFE</span>
+
+<span class="nv">VARIABLE_DATA</span> <span class="o">=</span> <span class="mh">0x55AA</span>
+
+<span class="nv">VAR_IN_DELETED_TRANSITION</span> <span class="o">=</span> <span class="mh">0xFE</span>  <span class="s s-Atom">#</span> <span class="nv">Variable</span> <span class="o">is</span> <span class="s s-Atom">in</span> <span class="s s-Atom">obsolete</span> <span class="s s-Atom">transition</span><span class="p">.</span>
+
+<span class="nv">VAR_DELETED</span> <span class="o">=</span> <span class="mh">0xFD</span>  <span class="s s-Atom">#</span> <span class="nv">Variable</span> <span class="o">is</span> <span class="s s-Atom">obsolete</span><span class="p">.</span>
+
+<span class="nv">VAR_HEADER_VALID_ONLY</span> <span class="o">=</span> <span class="mh">0x7F</span>  <span class="s s-Atom">#</span> <span class="nv">Variable</span> <span class="s s-Atom">header</span> <span class="s s-Atom">has</span> <span class="s s-Atom">been</span> <span class="s s-Atom">valid</span><span class="p">.</span>
+
+<span class="nv">VAR_ADDED</span> <span class="o">=</span> <span class="mh">0x3F</span>  <span class="s s-Atom">#</span> <span class="nv">Variable</span> <span class="s s-Atom">has</span> <span class="s s-Atom">been</span> <span class="s s-Atom">completely</span> <span class="s s-Atom">added</span><span class="p">.</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="nv">VARIABLE_STORE_HEADER</span>
+
+<span class="s s-Atom">#</span> <span class="nv">Can</span> <span class="s s-Atom">parse</span> <span class="s s-Atom">or</span> <span class="s s-Atom">produce</span> <span class="s s-Atom">an</span> <span class="nv">VARIABLE_STORE_HEADER</span> <span class="s s-Atom">structure</span><span class="o">/</span><span class="s s-Atom">byte</span> <span class="s s-Atom">buffer</span><span class="p">.</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="s s-Atom">typedef</span> <span class="s s-Atom">struct</span> <span class="p">{</span>
+
+<span class="s s-Atom">#</span>   <span class="nv">EFI_GUID</span>  <span class="nv">Signature</span><span class="p">;</span>
+
+<span class="s s-Atom">#</span>   <span class="nv">UINT32</span>  <span class="nv">Size</span><span class="p">;</span>
+
+<span class="s s-Atom">#</span>   <span class="nv">UINT8</span>   <span class="nv">Format</span><span class="p">;</span>
+
+<span class="s s-Atom">#</span>   <span class="nv">UINT8</span>   <span class="nv">State</span><span class="p">;</span>
+
+<span class="s s-Atom">#</span>   <span class="nv">UINT16</span>  <span class="nv">Reserved</span><span class="p">;</span>
+
+<span class="s s-Atom">#</span>   <span class="nv">UINT32</span>  <span class="nv">Reserved1</span><span class="p">;</span>
+
+<span class="s s-Atom">#</span> <span class="p">}</span> <span class="nv">VARIABLE_STORE_HEADER</span><span class="p">;</span>
+
+<span class="s s-Atom">class</span> <span class="nv">VariableStoreHeader</span><span class="p">(</span><span class="s s-Atom">object</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+    <span class="s s-Atom">def</span> <span class="k">__</span><span class="nf">init__</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span> <span class="o">=</span> <span class="s2">&quot;=16sLBBHL&quot;</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">spell</span><span class="o">-</span><span class="nn">checker</span><span class="p">:</span> <span class="s s-Atom">disable</span><span class="o">-</span><span class="s s-Atom">line</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span> <span class="o">=</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Size</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Format</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Reserved0</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Reserved1</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Type</span> <span class="o">=</span> <span class="s s-Atom">&#39;Var&#39;</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">load_from_file</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">file</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">This</span> <span class="s s-Atom">function</span> <span class="s s-Atom">assumes</span> <span class="s s-Atom">that</span> <span class="s s-Atom">the</span> <span class="s s-Atom">file</span> <span class="s s-Atom">has</span> <span class="s s-Atom">been</span> <span class="s s-Atom">seeked</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">to</span> <span class="s s-Atom">the</span> <span class="s s-Atom">correct</span> <span class="s s-Atom">starting</span> <span class="s s-Atom">location</span><span class="p">.</span>
+
+        <span class="s s-Atom">orig_seek</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">tell</span><span class="p">()</span>
+
+        <span class="s s-Atom">struct_bytes</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">))</span>
+
+        <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="p">(</span><span class="s s-Atom">signature_bin</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Size</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Format</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Reserved0</span><span class="p">,</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Reserved1</span><span class="p">)</span> <span class="o">=</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">unpack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">struct_bytes</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">signature_bin</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">signature_bin</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Check</span> <span class="s s-Atom">one</span> <span class="s s-Atom">last</span> <span class="s s-Atom">thing</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span> <span class="p">!</span><span class="o">=</span> <span class="nv">EfiVariableGuid</span> <span class="s s-Atom">and</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span> <span class="p">!</span><span class="o">=</span> <span class="nv">EfiAuthenticatedVariableGuid</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">Exception</span><span class="p">(</span><span class="s2">&quot;VarStore is of unknown type! %s&quot;</span> <span class="c1">% self.Signature)</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span> <span class="o">==</span> <span class="nv">EfiAuthenticatedVariableGuid</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Type</span> <span class="o">=</span> <span class="s s-Atom">&#39;AuthVar&#39;</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">signature_bin</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span><span class="p">.</span><span class="s s-Atom">bytes</span> <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;</span> <span class="s s-Atom">else</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Signature</span><span class="p">.</span><span class="s s-Atom">bytes_le</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">signature_bin</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Size</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Format</span><span class="p">,</span>
+
+                           <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Reserved0</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Reserved1</span><span class="p">)</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span> <span class="nv">TODO</span><span class="s s-Atom">:</span> <span class="nv">VariableHeader</span> <span class="s s-Atom">and</span> <span class="nv">AuthenticatedVariableHeader</span> <span class="s s-Atom">are</span> <span class="o">not</span> <span class="s s-Atom">truly</span>
+
+<span class="s s-Atom">#</span>       <span class="s s-Atom">header</span> <span class="s s-Atom">structures</span><span class="p">.</span> <span class="nv">They</span><span class="s s-Atom">&#39;re entire variables. This code should be</span>
+
+<span class="s s-Atom">#       cleaned up.</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom"># VARIABLE_HEADER</span>
+
+<span class="s s-Atom"># Can parse or produce an VARIABLE_HEADER structure/byte buffer.</span>
+
+<span class="s s-Atom">#</span>
+
+<span class="s s-Atom"># typedef struct {</span>
+
+<span class="s s-Atom">#   UINT16      StartId;</span>
+
+<span class="s s-Atom">#   UINT8       State;</span>
+
+<span class="s s-Atom">#   UINT8       Reserved;</span>
+
+<span class="s s-Atom">#   UINT32      Attributes;</span>
+
+<span class="s s-Atom">#   UINT32      NameSize;</span>
+
+<span class="s s-Atom">#   UINT32      DataSize;</span>
+
+<span class="s s-Atom">#   EFI_GUID    VendorGuid;</span>
+
+<span class="s s-Atom"># } VARIABLE_HEADER;</span>
+
+<span class="s s-Atom">class VariableHeader(object):</span>
+
+<span class="s s-Atom">    def __init__(self):</span>
+
+<span class="s s-Atom">        self.StructString = &quot;=HBBLLL16s&quot;  # spell-checker: disable-line</span>
+
+<span class="s s-Atom">        self.StructSize = struct.calcsize(self.StructString)</span>
+
+<span class="s s-Atom">        self.StartId = VARIABLE_DATA</span>
+
+<span class="s s-Atom">        self.State = VAR_ADDED</span>
+
+<span class="s s-Atom">        self.Attributes = (ump.EFI_VARIABLE_NON_VOLATILE | ump.EFI_VARIABLE_BOOTSERVICE_ACCESS)</span>
+
+<span class="s s-Atom">        self.NameSize = 0</span>
+
+<span class="s s-Atom">        self.DataSize = 0</span>
+
+<span class="s s-Atom">        self.VendorGuid = uuid.uuid4()</span>
+
+<span class="s s-Atom">        self.Name = None</span>
+
+<span class="s s-Atom">        self.Data = None</span>
+
+<span class="s s-Atom">    def populate_structure_fields(self, in_bytes):</span>
+
+<span class="s s-Atom">        (self.StartId, self.State, reserved, self.Attributes, self.NameSize,</span>
+
+<span class="s s-Atom">            self.DataSize, self.VendorGuid) = struct.unpack(self.StructString, in_bytes)</span>
+
+<span class="s s-Atom">    def load_from_bytes(self, in_bytes):</span>
+
+<span class="s s-Atom">        # Load this object with the contents of the data.</span>
+
+<span class="s s-Atom">        self.populate_structure_fields(in_bytes[0:self.StructSize])</span>
+
+<span class="s s-Atom">        # Update the GUID to be a UUID object.</span>
+
+<span class="s s-Atom">        if sys.byteorder == &#39;big&#39;:</span>
+
+<span class="s s-Atom">            self.VendorGuid = uuid.UUID(bytes=self.VendorGuid)</span>
+
+<span class="s s-Atom">        else:</span>
+
+<span class="s s-Atom">            self.VendorGuid = uuid.UUID(bytes_le=self.VendorGuid)</span>
+
+<span class="s s-Atom">        # Before loading data, make sure that this is a valid variable.</span>
+
+<span class="s s-Atom">        if self.StartId != VARIABLE_DATA:</span>
+
+<span class="s s-Atom">            raise EOFError(&quot;No variable data!&quot;)</span>
+
+<span class="s s-Atom">        # Finally, load the data.</span>
+
+<span class="s s-Atom">        data_offset = self.StructSize</span>
+
+<span class="s s-Atom">        self.Name = in_bytes[data_offset:(data_offset + self.NameSize)].decode(&#39;utf</span><span class="o">-</span><span class="mi">16</span><span class="s s-Atom">&#39;)</span>
+
+<span class="s s-Atom">        self.Name = self.Name[:-1]  # Strip the terminating char.</span>
+
+<span class="s s-Atom">        data_offset += self.NameSize</span>
+
+<span class="s s-Atom">        self.Data = in_bytes[data_offset:(data_offset + self.DataSize)]</span>
+
+<span class="s s-Atom">        return self</span>
+
+<span class="s s-Atom">    def load_from_file(self, file):</span>
+
+<span class="s s-Atom">        # This function assumes that the file has been seeked</span>
+
+<span class="s s-Atom">        # to the correct starting location.</span>
+
+<span class="s s-Atom">        orig_seek = file.tell()</span>
+
+<span class="s s-Atom">        struct_bytes = file.read(struct.calcsize(self.StructString))</span>
+
+<span class="s s-Atom">        # Load this object with the contents of the data.</span>
+
+<span class="s s-Atom">        self.populate_structure_fields(struct_bytes)</span>
+
+<span class="s s-Atom">        # Update the GUID to be a UUID object.</span>
+
+<span class="s s-Atom">        if sys.byteorder == &#39;big&#39;:</span>
+
+<span class="s s-Atom">            self.VendorGuid = uuid.UUID(bytes=self.VendorGuid)</span>
+
+<span class="s s-Atom">        else:</span>
+
+<span class="s s-Atom">            self.VendorGuid = uuid.UUID(bytes_le=self.VendorGuid)</span>
+
+<span class="s s-Atom">        # Before loading data, make sure that this is a valid variable.</span>
+
+<span class="s s-Atom">        if self.StartId != VARIABLE_DATA:</span>
+
+<span class="s s-Atom">            file.seek(orig_seek)</span>
+
+<span class="s s-Atom">            raise EOFError(&quot;No variable data!&quot;)</span>
+
+<span class="s s-Atom">        # Finally, load the data.</span>
+
+<span class="s s-Atom">        self.Name = file.read(self.NameSize).decode(&#39;utf</span><span class="o">-</span><span class="mi">16</span><span class="s s-Atom">&#39;)[:-1]  # Strip the terminating char.</span>
+
+<span class="s s-Atom">        self.Data = file.read(self.DataSize)</span>
+
+<span class="s s-Atom">        file.seek(orig_seek)</span>
+
+<span class="s s-Atom">        return self</span>
+
+<span class="s s-Atom">    def get_buffer_data_size(self):</span>
+
+<span class="s s-Atom">        return self.StructSize + self.NameSize + self.DataSize</span>
+
+<span class="s s-Atom">    def get_buffer_padding_size(self):</span>
+
+<span class="s s-Atom">        buffer_data_size = self.get_buffer_data_size()</span>
+
+<span class="s s-Atom">        padding_size = 0</span>
+
+<span class="s s-Atom">        if buffer_data_size % HEADER_ALIGNMENT != 0:</span>
+
+<span class="s s-Atom">            padding_size += HEADER_ALIGNMENT - (buffer_data_size % HEADER_ALIGNMENT)</span>
+
+<span class="s s-Atom">        return padding_size</span>
+
+<span class="s s-Atom">    def get_buffer_size(self):</span>
+
+<span class="s s-Atom">        return self.get_buffer_data_size() + self.get_buffer_padding_size()</span>
+
+<span class="s s-Atom">    def get_packed_name(self):</span>
+
+<span class="s s-Atom">        # Make sure to replace the terminating char.</span>
+
+<span class="s s-Atom">        # name_bytes = b&quot;\x00&quot;.join([char for char in (self.Name + b&#39;\x00&#39;)])</span>
+
+<span class="s s-Atom">        name_bytes = self.Name.encode(&#39;utf</span><span class="o">-</span><span class="mi">16</span><span class="s s-Atom">&#39;)</span>
+
+<span class="s s-Atom">        # Python encode will leave an &quot;0xFFFE&quot; on the front</span>
+
+<span class="s s-Atom">        # to declare the encoding type. UEFI does not use this.</span>
+
+<span class="s s-Atom">        name_bytes = name_bytes[2:]</span>
+
+<span class="s s-Atom">        # Python encode skips the terminating character, so let&#39;s</span> <span class="s s-Atom">add</span> <span class="s s-Atom">that</span><span class="p">.</span>
+
+        <span class="s s-Atom">name_bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">b</span><span class="s2">&quot;\x00\x00&quot;</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">name_bytes</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">new_name</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">new_name</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_packed_name</span><span class="p">())</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">set_data</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">new_data</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">new_data</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="s s-Atom">new_data</span><span class="p">)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">pack_struct</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">vendor_guid</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">.</span><span class="s s-Atom">bytes</span> <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;</span> <span class="s s-Atom">else</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">.</span><span class="s s-Atom">bytes_le</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Attributes</span><span class="p">,</span>
+
+                           <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">,</span> <span class="s s-Atom">vendor_guid</span><span class="p">)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">with_padding</span><span class="o">=</span><span class="nv">False</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">bytes</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">pack_struct</span><span class="p">()</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Now</span> <span class="s s-Atom">add</span> <span class="s s-Atom">the</span> <span class="s s-Atom">name</span> <span class="s s-Atom">and</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_packed_name</span><span class="p">()</span>
+
+        <span class="s s-Atom">bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Add</span> <span class="s s-Atom">padding</span> <span class="s s-Atom">if</span> <span class="s s-Atom">necessary</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">with_padding:</span>
+
+            <span class="s s-Atom">bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">b</span><span class="err">&quot;</span><span class="s s-Atom">\xFF</span><span class="s2">&quot; * self.get_buffer_padding_size()</span>
+
+<span class="s2">        return bytes</span>
+
+<span class="s2">#</span>
+
+<span class="s2"># AUTHENTICATED_VARIABLE_HEADER</span>
+
+<span class="s2"># Can parse or produce an AUTHENTICATED_VARIABLE_HEADER structure/byte buffer.</span>
+
+<span class="s2">#</span>
+
+<span class="s2"># typedef struct {</span>
+
+<span class="s2">#   UINT16      StartId;</span>
+
+<span class="s2">#   UINT8       State;</span>
+
+<span class="s2">#   UINT8       Reserved;</span>
+
+<span class="s2">#   UINT32      Attributes;</span>
+
+<span class="s2">#   UINT64      MonotonicCount;</span>
+
+<span class="s2">#   EFI_TIME    TimeStamp;</span>
+
+<span class="s2">#   UINT32      PubKeyIndex;</span>
+
+<span class="s2">#   UINT32      NameSize;</span>
+
+<span class="s2">#   UINT32      DataSize;</span>
+
+<span class="s2">#   EFI_GUID    VendorGuid;</span>
+
+<span class="s2"># } AUTHENTICATED_VARIABLE_HEADER;</span>
+
+<span class="s2">class AuthenticatedVariableHeader(VariableHeader):</span>
+
+<span class="s2">    def __init__(self):</span>
+
+<span class="s2">        super(AuthenticatedVariableHeader, self).__init__()</span>
+
+<span class="s2">        self.StructString = &quot;</span><span class="o">=</span><span class="nv">HBBLQ16sLLL16s</span><span class="err">&quot;</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">spell</span><span class="o">-</span><span class="nn">checker</span><span class="p">:</span> <span class="s s-Atom">disable</span><span class="o">-</span><span class="s s-Atom">line</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span> <span class="o">=</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">MonotonicCount</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">TimeStamp</span> <span class="o">=</span> <span class="s s-Atom">b&#39;&#39;</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">PubKeyIndex</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="s s-Atom">reserved</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Attributes</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">MonotonicCount</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">TimeStamp</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">PubKeyIndex</span><span class="p">,</span>
+
+         <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span> <span class="o">=</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">unpack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">pack_struct</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">with_padding</span><span class="o">=</span><span class="nv">False</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">vendor_guid</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">.</span><span class="s s-Atom">bytes</span> <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;</span> <span class="s s-Atom">else</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">.</span><span class="s s-Atom">bytes_le</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Attributes</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">MonotonicCount</span><span class="p">,</span>
+
+                           <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">TimeStamp</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">PubKeyIndex</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">,</span> <span class="s s-Atom">vendor_guid</span><span class="p">)</span>
+
+<span class="s s-Atom">if</span> <span class="k">__</span><span class="s s-Atom">name__</span> <span class="o">==</span> <span class="s s-Atom">&#39;__main__&#39;:</span>
+
+    <span class="s s-Atom">pass</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="variables">Variables</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">EfiAuthenticatedVariableGuid</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">EfiVariableGuid</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">HEADER_ALIGNMENT</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VARIABLE_DATA</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VARIABLE_STORE_FORMATTED</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VARIABLE_STORE_HEALTHY</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VAR_ADDED</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VAR_DELETED</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VAR_HEADER_VALID_ONLY</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">VAR_IN_DELETED_TRANSITION</span>
+</code></pre></div>
+
+
+<h2 id="classes">Classes</h2>
+<h3 id="authenticatedvariableheader">AuthenticatedVariableHeader</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">AuthenticatedVariableHeader</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">AuthenticatedVariableHeader</span>(<span class="n">VariableHeader</span>):
+
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+
+        <span class="n">super</span>(<span class="n">AuthenticatedVariableHeader</span>, <span class="nb">self</span>).<span class="n">__init__</span>()
+
+        <span class="nb">self</span>.<span class="n">StructString</span> = <span class="s">&quot;=HBBLQ16sLLL16s&quot;</span>  <span class="c1"># spell-checker: disable-line</span>
+
+        <span class="nb">self</span>.<span class="n">StructSize</span> = <span class="n">struct</span>.<span class="n">calcsize</span>(<span class="nb">self</span>.<span class="n">StructString</span>)
+
+        <span class="nb">self</span>.<span class="n">MonotonicCount</span> = <span class="mi">0</span>
+
+        <span class="nb">self</span>.<span class="n">TimeStamp</span> = <span class="n">b&#39;&#39;</span>
+
+        <span class="nb">self</span>.<span class="n">PubKeyIndex</span> = <span class="mi">0</span>
+
+    <span class="n">def</span> <span class="n">populate_structure_fields</span>(<span class="nb">self</span>, <span class="n">in_bytes</span>):
+
+        (<span class="nb">self</span>.<span class="n">StartId</span>, <span class="nb">self</span>.<span class="n">State</span>, <span class="nb">reserved</span>, <span class="nb">self</span>.<span class="n">Attributes</span>, <span class="nb">self</span>.<span class="n">MonotonicCount</span>, <span class="nb">self</span>.<span class="n">TimeStamp</span>, <span class="nb">self</span>.<span class="n">PubKeyIndex</span>,
+
+         <span class="nb">self</span>.<span class="n">NameSize</span>, <span class="nb">self</span>.<span class="n">DataSize</span>, <span class="nb">self</span>.<span class="n">VendorGuid</span>) = <span class="n">struct</span>.<span class="nb">unpack</span>(<span class="nb">self</span>.<span class="n">StructString</span>, <span class="n">in_bytes</span>)
+
+    <span class="n">def</span> <span class="n">pack_struct</span>(<span class="nb">self</span>, <span class="n">with_padding</span>=<span class="nb">False</span>):
+
+        <span class="n">vendor_guid</span> = <span class="nb">self</span>.<span class="n">VendorGuid</span>.<span class="nb">bytes</span> <span class="k">if</span> <span class="n">sys</span>.<span class="n">byteorder</span> == <span class="s">&#39;big&#39;</span> <span class="k">else</span> <span class="nb">self</span>.<span class="n">VendorGuid</span>.<span class="n">bytes_le</span>
+
+        <span class="k">return</span> <span class="n">struct</span>.<span class="nb">pack</span>(<span class="nb">self</span>.<span class="n">StructString</span>, <span class="nb">self</span>.<span class="n">StartId</span>, <span class="nb">self</span>.<span class="n">State</span>, <span class="mi">0</span>, <span class="nb">self</span>.<span class="n">Attributes</span>, <span class="nb">self</span>.<span class="n">MonotonicCount</span>,
+
+                           <span class="nb">self</span>.<span class="n">TimeStamp</span>, <span class="nb">self</span>.<span class="n">PubKeyIndex</span>, <span class="nb">self</span>.<span class="n">NameSize</span>, <span class="nb">self</span>.<span class="n">DataSize</span>, <span class="n">vendor_guid</span>)
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<ul>
+<li>edk2toollib.uefi.edk2.variable_format.VariableHeader</li>
+</ul>
+<h4 id="methods">Methods</h4>
+<h4 id="get_buffer_data_size">get_buffer_data_size</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_buffer_data_size</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_buffer_data_size</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">StructSize</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_buffer_padding_size">get_buffer_padding_size</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_buffer_padding_size</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_buffer_padding_size</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="n">buffer_data_size</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">get_buffer_data_size</span><span class="p">()</span>
+
+        <span class="n">padding_size</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">buffer_data_size</span> <span class="o">%</span> <span class="n">HEADER_ALIGNMENT</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="n">padding_size</span> <span class="o">+=</span> <span class="n">HEADER_ALIGNMENT</span> <span class="o">-</span> <span class="p">(</span><span class="n">buffer_data_size</span> <span class="o">%</span> <span class="n">HEADER_ALIGNMENT</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">padding_size</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_buffer_size">get_buffer_size</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_buffer_size</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_buffer_size</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">get_buffer_data_size</span><span class="p">()</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">get_buffer_padding_size</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_packed_name">get_packed_name</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_packed_name</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_packed_name</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="o">#</span> <span class="n">Make</span> <span class="n">sure</span> <span class="k">to</span> <span class="k">replace</span> <span class="n">the</span> <span class="n">terminating</span> <span class="nb">char</span><span class="p">.</span>
+
+        <span class="o">#</span> <span class="n">name_bytes</span> <span class="o">=</span> <span class="n">b</span><span class="ss">&quot;\x00&quot;</span><span class="p">.</span><span class="k">join</span><span class="p">([</span><span class="nb">char</span> <span class="k">for</span> <span class="nb">char</span> <span class="k">in</span> <span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">Name</span> <span class="o">+</span> <span class="n">b</span><span class="s1">&#39;\x00&#39;</span><span class="p">)])</span>
+
+        <span class="n">name_bytes</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-16&#39;</span><span class="p">)</span>
+
+        <span class="o">#</span> <span class="n">Python</span> <span class="n">encode</span> <span class="n">will</span> <span class="n">leave</span> <span class="n">an</span> <span class="ss">&quot;0xFFFE&quot;</span> <span class="k">on</span> <span class="n">the</span> <span class="n">front</span>
+
+        <span class="o">#</span> <span class="k">to</span> <span class="k">declare</span> <span class="n">the</span> <span class="k">encoding</span> <span class="k">type</span><span class="p">.</span> <span class="n">UEFI</span> <span class="n">does</span> <span class="k">not</span> <span class="n">use</span> <span class="n">this</span><span class="p">.</span>
+
+        <span class="n">name_bytes</span> <span class="o">=</span> <span class="n">name_bytes</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+
+        <span class="o">#</span> <span class="n">Python</span> <span class="n">encode</span> <span class="n">skips</span> <span class="n">the</span> <span class="n">terminating</span> <span class="nb">character</span><span class="p">,</span> <span class="n">so</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">add</span> <span class="n">that</span><span class="p">.</span>
+
+        <span class="n">name_bytes</span> <span class="o">+=</span> <span class="n">b</span><span class="ss">&quot;\x00\x00&quot;</span>
+
+        <span class="k">return</span> <span class="n">name_bytes</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="load_from_bytes">load_from_bytes</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">load_from_bytes</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">in_bytes</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="s s-Atom">def</span> <span class="nf">load_from_bytes</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="mi">0</span><span class="s s-Atom">:self</span><span class="p">.</span><span class="nv">StructSize</span><span class="p">])</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Before</span> <span class="s s-Atom">loading</span> <span class="s s-Atom">data</span><span class="p">,</span> <span class="s s-Atom">make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">that</span> <span class="s s-Atom">this</span> <span class="o">is</span> <span class="s s-Atom">a</span> <span class="s s-Atom">valid</span> <span class="s s-Atom">variable</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="p">!</span><span class="o">=</span> <span class="nv">VARIABLE_DATA</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">EOFError</span><span class="p">(</span><span class="s2">&quot;No variable data!&quot;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Finally</span><span class="p">,</span> <span class="s s-Atom">load</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">data_offset</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="s s-Atom">data_offset:</span><span class="p">(</span><span class="s s-Atom">data_offset</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">)].</span><span class="nf">decode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span><span class="p">[:-</span><span class="mi">1</span><span class="p">]</span>  <span class="s s-Atom">#</span> <span class="nv">Strip</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">data_offset</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="s s-Atom">data_offset:</span><span class="p">(</span><span class="s s-Atom">data_offset</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">)]</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="load_from_file">load_from_file</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">load_from_file</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">file</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="s s-Atom">def</span> <span class="nf">load_from_file</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">file</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">This</span> <span class="s s-Atom">function</span> <span class="s s-Atom">assumes</span> <span class="s s-Atom">that</span> <span class="s s-Atom">the</span> <span class="s s-Atom">file</span> <span class="s s-Atom">has</span> <span class="s s-Atom">been</span> <span class="s s-Atom">seeked</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">to</span> <span class="s s-Atom">the</span> <span class="s s-Atom">correct</span> <span class="s s-Atom">starting</span> <span class="s s-Atom">location</span><span class="p">.</span>
+
+        <span class="s s-Atom">orig_seek</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">tell</span><span class="p">()</span>
+
+        <span class="s s-Atom">struct_bytes</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">))</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">struct_bytes</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Before</span> <span class="s s-Atom">loading</span> <span class="s s-Atom">data</span><span class="p">,</span> <span class="s s-Atom">make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">that</span> <span class="s s-Atom">this</span> <span class="o">is</span> <span class="s s-Atom">a</span> <span class="s s-Atom">valid</span> <span class="s s-Atom">variable</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="p">!</span><span class="o">=</span> <span class="nv">VARIABLE_DATA</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">EOFError</span><span class="p">(</span><span class="s2">&quot;No variable data!&quot;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Finally</span><span class="p">,</span> <span class="s s-Atom">load</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">).</span><span class="nf">decode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)[:-</span><span class="mi">1</span><span class="p">]</span>  <span class="s s-Atom">#</span> <span class="nv">Strip</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">)</span>
+
+        <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="pack_struct">pack_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">pack_struct</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">with_padding</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">pack_struct</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">with_padding</span><span class="o">=</span><span class="k">False</span><span class="p">):</span>
+
+        <span class="n">vendor_guid</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">VendorGuid</span><span class="p">.</span><span class="n">bytes</span> <span class="k">if</span> <span class="n">sys</span><span class="p">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;big&#39;</span> <span class="k">else</span> <span class="k">self</span><span class="p">.</span><span class="n">VendorGuid</span><span class="p">.</span><span class="n">bytes_le</span>
+
+        <span class="k">return</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">StartId</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">State</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Attributes</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">MonotonicCount</span><span class="p">,</span>
+
+                           <span class="k">self</span><span class="p">.</span><span class="k">TimeStamp</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">PubKeyIndex</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span><span class="p">,</span> <span class="n">vendor_guid</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="populate_structure_fields">populate_structure_fields</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">populate_structure_fields</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">in_bytes</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">populate_structure_fields</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">in_bytes</span><span class="p">):</span>
+
+        <span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StartId</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">State</span><span class="p">,</span> <span class="n">reserved</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Attributes</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">MonotonicCount</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">TimeStamp</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">PubKeyIndex</span><span class="p">,</span>
+
+         <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">VendorGuid</span><span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">,</span> <span class="n">in_bytes</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="serialize">serialize</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">with_padding</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="nt">def</span> <span class="nt">serialize</span><span class="o">(</span><span class="nt">self</span><span class="o">,</span> <span class="nt">with_padding</span><span class="o">=</span><span class="nt">False</span><span class="o">):</span>
+
+        <span class="nt">bytes</span> <span class="o">=</span> <span class="nt">self</span><span class="p">.</span><span class="nc">pack_struct</span><span class="o">()</span>
+
+        <span class="err">#</span> <span class="nt">Now</span> <span class="nt">add</span> <span class="nt">the</span> <span class="nt">name</span> <span class="nt">and</span> <span class="nt">data</span><span class="o">.</span>
+
+        <span class="nt">bytes</span> <span class="o">+=</span> <span class="nt">self</span><span class="p">.</span><span class="nc">get_packed_name</span><span class="o">()</span>
+
+        <span class="nt">bytes</span> <span class="o">+=</span> <span class="nt">self</span><span class="p">.</span><span class="nc">Data</span>
+
+        <span class="err">#</span> <span class="nt">Add</span> <span class="nt">padding</span> <span class="nt">if</span> <span class="nt">necessary</span><span class="o">.</span>
+
+        <span class="nt">if</span> <span class="nt">with_padding</span><span class="o">:</span>
+
+            <span class="nt">bytes</span> <span class="o">+=</span> <span class="nt">b</span><span class="s2">&quot;\xFF&quot;</span> <span class="o">*</span> <span class="nt">self</span><span class="p">.</span><span class="nc">get_buffer_padding_size</span><span class="o">()</span>
+
+        <span class="nt">return</span> <span class="nt">bytes</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="set_data">set_data</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">set_data</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">new_data</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">set_data</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">new_data</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="k">Data</span> <span class="o">=</span> <span class="n">new_data</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="set_name">set_name</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">new_name</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">set_name</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">new_name</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">new_name</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">get_packed_name</span><span class="p">())</span>
+</code></pre></div>
+
+
+</details>
+<h3 id="variableheader">VariableHeader</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">VariableHeader</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="s s-Atom">class</span> <span class="nv">VariableHeader</span><span class="p">(</span><span class="s s-Atom">object</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+    <span class="s s-Atom">def</span> <span class="k">__</span><span class="nf">init__</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span> <span class="o">=</span> <span class="s2">&quot;=HBBLLL16s&quot;</span>  <span class="s s-Atom">#</span> <span class="s s-Atom">spell</span><span class="o">-</span><span class="nn">checker</span><span class="p">:</span> <span class="s s-Atom">disable</span><span class="o">-</span><span class="s s-Atom">line</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span> <span class="o">=</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="o">=</span> <span class="nv">VARIABLE_DATA</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span> <span class="o">=</span> <span class="nv">VAR_ADDED</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Attributes</span> <span class="o">=</span> <span class="p">(</span><span class="s s-Atom">ump</span><span class="p">.</span><span class="nv">EFI_VARIABLE_NON_VOLATILE</span> <span class="p">|</span> <span class="s s-Atom">ump</span><span class="p">.</span><span class="nv">EFI_VARIABLE_BOOTSERVICE_ACCESS</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nf">uuid4</span><span class="p">()</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="nv">None</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="nv">None</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="s s-Atom">reserved</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Attributes</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">,</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span> <span class="o">=</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">unpack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">load_from_bytes</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="mi">0</span><span class="s s-Atom">:self</span><span class="p">.</span><span class="nv">StructSize</span><span class="p">])</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Before</span> <span class="s s-Atom">loading</span> <span class="s s-Atom">data</span><span class="p">,</span> <span class="s s-Atom">make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">that</span> <span class="s s-Atom">this</span> <span class="o">is</span> <span class="s s-Atom">a</span> <span class="s s-Atom">valid</span> <span class="s s-Atom">variable</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="p">!</span><span class="o">=</span> <span class="nv">VARIABLE_DATA</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">EOFError</span><span class="p">(</span><span class="s2">&quot;No variable data!&quot;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Finally</span><span class="p">,</span> <span class="s s-Atom">load</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">data_offset</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="s s-Atom">data_offset:</span><span class="p">(</span><span class="s s-Atom">data_offset</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">)].</span><span class="nf">decode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span><span class="p">[:-</span><span class="mi">1</span><span class="p">]</span>  <span class="s s-Atom">#</span> <span class="nv">Strip</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">data_offset</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="s s-Atom">data_offset:</span><span class="p">(</span><span class="s s-Atom">data_offset</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">)]</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">load_from_file</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">file</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">This</span> <span class="s s-Atom">function</span> <span class="s s-Atom">assumes</span> <span class="s s-Atom">that</span> <span class="s s-Atom">the</span> <span class="s s-Atom">file</span> <span class="s s-Atom">has</span> <span class="s s-Atom">been</span> <span class="s s-Atom">seeked</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">to</span> <span class="s s-Atom">the</span> <span class="s s-Atom">correct</span> <span class="s s-Atom">starting</span> <span class="s s-Atom">location</span><span class="p">.</span>
+
+        <span class="s s-Atom">orig_seek</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">tell</span><span class="p">()</span>
+
+        <span class="s s-Atom">struct_bytes</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">))</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">struct_bytes</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Before</span> <span class="s s-Atom">loading</span> <span class="s s-Atom">data</span><span class="p">,</span> <span class="s s-Atom">make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">that</span> <span class="s s-Atom">this</span> <span class="o">is</span> <span class="s s-Atom">a</span> <span class="s s-Atom">valid</span> <span class="s s-Atom">variable</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="p">!</span><span class="o">=</span> <span class="nv">VARIABLE_DATA</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">EOFError</span><span class="p">(</span><span class="s2">&quot;No variable data!&quot;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Finally</span><span class="p">,</span> <span class="s s-Atom">load</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">).</span><span class="nf">decode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)[:-</span><span class="mi">1</span><span class="p">]</span>  <span class="s s-Atom">#</span> <span class="nv">Strip</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">)</span>
+
+        <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">get_buffer_data_size</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">get_buffer_padding_size</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">buffer_data_size</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_buffer_data_size</span><span class="p">()</span>
+
+        <span class="s s-Atom">padding_size</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">buffer_data_size</span> <span class="c1">% HEADER_ALIGNMENT != 0:</span>
+
+            <span class="s s-Atom">padding_size</span> <span class="s s-Atom">+=</span> <span class="nv">HEADER_ALIGNMENT</span> <span class="o">-</span> <span class="p">(</span><span class="s s-Atom">buffer_data_size</span> <span class="c1">% HEADER_ALIGNMENT)</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">padding_size</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">get_buffer_size</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_buffer_data_size</span><span class="p">()</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_buffer_padding_size</span><span class="p">()</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">get_packed_name</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">to</span> <span class="s s-Atom">replace</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">name_bytes</span> <span class="o">=</span> <span class="s s-Atom">b</span><span class="err">&quot;</span><span class="s s-Atom">\x00</span><span class="err">&quot;</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="s s-Atom">char</span> <span class="s s-Atom">for</span> <span class="s s-Atom">char</span> <span class="nf">in</span> <span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">+</span> <span class="s s-Atom">b&#39;\x00&#39;</span><span class="p">)])</span>
+
+        <span class="s s-Atom">name_bytes</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Python</span> <span class="s s-Atom">encode</span> <span class="s s-Atom">will</span> <span class="s s-Atom">leave</span> <span class="s s-Atom">an</span> <span class="s2">&quot;0xFFFE&quot;</span> <span class="s s-Atom">on</span> <span class="s s-Atom">the</span> <span class="s s-Atom">front</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">to</span> <span class="s s-Atom">declare</span> <span class="s s-Atom">the</span> <span class="s s-Atom">encoding</span> <span class="s s-Atom">type</span><span class="p">.</span> <span class="nv">UEFI</span> <span class="s s-Atom">does</span> <span class="o">not</span> <span class="s s-Atom">use</span> <span class="s s-Atom">this</span><span class="p">.</span>
+
+        <span class="s s-Atom">name_bytes</span> <span class="o">=</span> <span class="s s-Atom">name_bytes</span><span class="p">[</span><span class="mi">2</span><span class="s s-Atom">:</span><span class="p">]</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Python</span> <span class="s s-Atom">encode</span> <span class="s s-Atom">skips</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">character</span><span class="p">,</span> <span class="s s-Atom">so</span> <span class="s s-Atom">let&#39;s add that.</span>
+
+<span class="s s-Atom">        name_bytes += b&quot;\x00\x00&quot;</span>
+
+<span class="s s-Atom">        return name_bytes</span>
+
+<span class="s s-Atom">    def set_name(self, new_name):</span>
+
+<span class="s s-Atom">        self.Name = new_name</span>
+
+<span class="s s-Atom">        self.NameSize = len(self.get_packed_name())</span>
+
+<span class="s s-Atom">    def set_data(self, new_data):</span>
+
+<span class="s s-Atom">        self.Data = new_data</span>
+
+<span class="s s-Atom">        self.DataSize = len(new_data)</span>
+
+<span class="s s-Atom">    def pack_struct(self):</span>
+
+<span class="s s-Atom">        vendor_guid = self.VendorGuid.bytes if sys.byteorder == &#39;big</span><span class="err">&#39;</span> <span class="s s-Atom">else</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">.</span><span class="s s-Atom">bytes_le</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">State</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Attributes</span><span class="p">,</span>
+
+                           <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">,</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">,</span> <span class="s s-Atom">vendor_guid</span><span class="p">)</span>
+
+    <span class="s s-Atom">def</span> <span class="nf">serialize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">with_padding</span><span class="o">=</span><span class="nv">False</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">bytes</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">pack_struct</span><span class="p">()</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Now</span> <span class="s s-Atom">add</span> <span class="s s-Atom">the</span> <span class="s s-Atom">name</span> <span class="s s-Atom">and</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_packed_name</span><span class="p">()</span>
+
+        <span class="s s-Atom">bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Add</span> <span class="s s-Atom">padding</span> <span class="s s-Atom">if</span> <span class="s s-Atom">necessary</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">with_padding:</span>
+
+            <span class="s s-Atom">bytes</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">b</span><span class="err">&quot;</span><span class="s s-Atom">\xFF</span><span class="err">&quot;</span> <span class="o">*</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">get_buffer_padding_size</span><span class="p">()</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">bytes</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="descendants">Descendants</h4>
+<ul>
+<li>edk2toollib.uefi.edk2.variable_format.AuthenticatedVariableHeader</li>
+</ul>
+<h4 id="methods_1">Methods</h4>
+<h4 id="get_buffer_data_size_1">get_buffer_data_size</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_buffer_data_size</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_buffer_data_size</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">StructSize</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_buffer_padding_size_1">get_buffer_padding_size</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_buffer_padding_size</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_buffer_padding_size</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="n">buffer_data_size</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">get_buffer_data_size</span><span class="p">()</span>
+
+        <span class="n">padding_size</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">buffer_data_size</span> <span class="o">%</span> <span class="n">HEADER_ALIGNMENT</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+
+            <span class="n">padding_size</span> <span class="o">+=</span> <span class="n">HEADER_ALIGNMENT</span> <span class="o">-</span> <span class="p">(</span><span class="n">buffer_data_size</span> <span class="o">%</span> <span class="n">HEADER_ALIGNMENT</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">padding_size</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_buffer_size_1">get_buffer_size</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_buffer_size</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_buffer_size</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">get_buffer_data_size</span><span class="p">()</span> <span class="o">+</span> <span class="k">self</span><span class="p">.</span><span class="n">get_buffer_padding_size</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="get_packed_name_1">get_packed_name</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_packed_name</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_packed_name</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="o">#</span> <span class="n">Make</span> <span class="n">sure</span> <span class="k">to</span> <span class="k">replace</span> <span class="n">the</span> <span class="n">terminating</span> <span class="nb">char</span><span class="p">.</span>
+
+        <span class="o">#</span> <span class="n">name_bytes</span> <span class="o">=</span> <span class="n">b</span><span class="ss">&quot;\x00&quot;</span><span class="p">.</span><span class="k">join</span><span class="p">([</span><span class="nb">char</span> <span class="k">for</span> <span class="nb">char</span> <span class="k">in</span> <span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">Name</span> <span class="o">+</span> <span class="n">b</span><span class="s1">&#39;\x00&#39;</span><span class="p">)])</span>
+
+        <span class="n">name_bytes</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-16&#39;</span><span class="p">)</span>
+
+        <span class="o">#</span> <span class="n">Python</span> <span class="n">encode</span> <span class="n">will</span> <span class="n">leave</span> <span class="n">an</span> <span class="ss">&quot;0xFFFE&quot;</span> <span class="k">on</span> <span class="n">the</span> <span class="n">front</span>
+
+        <span class="o">#</span> <span class="k">to</span> <span class="k">declare</span> <span class="n">the</span> <span class="k">encoding</span> <span class="k">type</span><span class="p">.</span> <span class="n">UEFI</span> <span class="n">does</span> <span class="k">not</span> <span class="n">use</span> <span class="n">this</span><span class="p">.</span>
+
+        <span class="n">name_bytes</span> <span class="o">=</span> <span class="n">name_bytes</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+
+        <span class="o">#</span> <span class="n">Python</span> <span class="n">encode</span> <span class="n">skips</span> <span class="n">the</span> <span class="n">terminating</span> <span class="nb">character</span><span class="p">,</span> <span class="n">so</span> <span class="n">let</span><span class="err">&#39;</span><span class="n">s</span> <span class="k">add</span> <span class="n">that</span><span class="p">.</span>
+
+        <span class="n">name_bytes</span> <span class="o">+=</span> <span class="n">b</span><span class="ss">&quot;\x00\x00&quot;</span>
+
+        <span class="k">return</span> <span class="n">name_bytes</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="load_from_bytes_1">load_from_bytes</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">load_from_bytes</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">in_bytes</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="s s-Atom">def</span> <span class="nf">load_from_bytes</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">in_bytes</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="mi">0</span><span class="s s-Atom">:self</span><span class="p">.</span><span class="nv">StructSize</span><span class="p">])</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Before</span> <span class="s s-Atom">loading</span> <span class="s s-Atom">data</span><span class="p">,</span> <span class="s s-Atom">make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">that</span> <span class="s s-Atom">this</span> <span class="o">is</span> <span class="s s-Atom">a</span> <span class="s s-Atom">valid</span> <span class="s s-Atom">variable</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="p">!</span><span class="o">=</span> <span class="nv">VARIABLE_DATA</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">EOFError</span><span class="p">(</span><span class="s2">&quot;No variable data!&quot;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Finally</span><span class="p">,</span> <span class="s s-Atom">load</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">data_offset</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructSize</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="s s-Atom">data_offset:</span><span class="p">(</span><span class="s s-Atom">data_offset</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">)].</span><span class="nf">decode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span><span class="p">[:-</span><span class="mi">1</span><span class="p">]</span>  <span class="s s-Atom">#</span> <span class="nv">Strip</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">data_offset</span> <span class="s s-Atom">+=</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">in_bytes</span><span class="p">[</span><span class="s s-Atom">data_offset:</span><span class="p">(</span><span class="s s-Atom">data_offset</span> <span class="o">+</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">)]</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="load_from_file_1">load_from_file</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">load_from_file</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">file</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="s s-Atom">def</span> <span class="nf">load_from_file</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">,</span> <span class="s s-Atom">file</span><span class="p">)</span><span class="s s-Atom">:</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">This</span> <span class="s s-Atom">function</span> <span class="s s-Atom">assumes</span> <span class="s s-Atom">that</span> <span class="s s-Atom">the</span> <span class="s s-Atom">file</span> <span class="s s-Atom">has</span> <span class="s s-Atom">been</span> <span class="s s-Atom">seeked</span>
+
+        <span class="s s-Atom">#</span> <span class="s s-Atom">to</span> <span class="s s-Atom">the</span> <span class="s s-Atom">correct</span> <span class="s s-Atom">starting</span> <span class="s s-Atom">location</span><span class="p">.</span>
+
+        <span class="s s-Atom">orig_seek</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">tell</span><span class="p">()</span>
+
+        <span class="s s-Atom">struct_bytes</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">struct</span><span class="p">.</span><span class="nf">calcsize</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StructString</span><span class="p">))</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Load</span> <span class="s s-Atom">this</span> <span class="s s-Atom">object</span> <span class="s s-Atom">with</span> <span class="s s-Atom">the</span> <span class="s s-Atom">contents</span> <span class="s s-Atom">of</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nf">populate_structure_fields</span><span class="p">(</span><span class="s s-Atom">struct_bytes</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Update</span> <span class="s s-Atom">the</span> <span class="nv">GUID</span> <span class="s s-Atom">to</span> <span class="s s-Atom">be</span> <span class="s s-Atom">a</span> <span class="nv">UUID</span> <span class="s s-Atom">object</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">sys</span><span class="p">.</span><span class="s s-Atom">byteorder</span> <span class="o">==</span> <span class="s s-Atom">&#39;big&#39;:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="nn">else</span><span class="p">:</span>
+
+            <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span> <span class="o">=</span> <span class="s s-Atom">uuid</span><span class="p">.</span><span class="nv">UUID</span><span class="p">(</span><span class="s s-Atom">bytes_le</span><span class="o">=</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">VendorGuid</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Before</span> <span class="s s-Atom">loading</span> <span class="s s-Atom">data</span><span class="p">,</span> <span class="s s-Atom">make</span> <span class="s s-Atom">sure</span> <span class="s s-Atom">that</span> <span class="s s-Atom">this</span> <span class="o">is</span> <span class="s s-Atom">a</span> <span class="s s-Atom">valid</span> <span class="s s-Atom">variable</span><span class="p">.</span>
+
+        <span class="s s-Atom">if</span> <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">StartId</span> <span class="p">!</span><span class="o">=</span> <span class="nv">VARIABLE_DATA</span><span class="s s-Atom">:</span>
+
+            <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+            <span class="s s-Atom">raise</span> <span class="nv">EOFError</span><span class="p">(</span><span class="s2">&quot;No variable data!&quot;</span><span class="p">)</span>
+
+        <span class="s s-Atom">#</span> <span class="nv">Finally</span><span class="p">,</span> <span class="s s-Atom">load</span> <span class="s s-Atom">the</span> <span class="s s-Atom">data</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Name</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">NameSize</span><span class="p">).</span><span class="nf">decode</span><span class="p">(</span><span class="s s-Atom">&#39;utf-16&#39;</span><span class="p">)[:-</span><span class="mi">1</span><span class="p">]</span>  <span class="s s-Atom">#</span> <span class="nv">Strip</span> <span class="s s-Atom">the</span> <span class="s s-Atom">terminating</span> <span class="s s-Atom">char</span><span class="p">.</span>
+
+        <span class="s s-Atom">self</span><span class="p">.</span><span class="nv">Data</span> <span class="o">=</span> <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="s s-Atom">self</span><span class="p">.</span><span class="nv">DataSize</span><span class="p">)</span>
+
+        <span class="s s-Atom">file</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="s s-Atom">orig_seek</span><span class="p">)</span>
+
+        <span class="s s-Atom">return</span> <span class="s s-Atom">self</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="pack_struct_1">pack_struct</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">pack_struct</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">pack_struct</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="n">vendor_guid</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">VendorGuid</span><span class="p">.</span><span class="n">bytes</span> <span class="k">if</span> <span class="n">sys</span><span class="p">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;big&#39;</span> <span class="k">else</span> <span class="k">self</span><span class="p">.</span><span class="n">VendorGuid</span><span class="p">.</span><span class="n">bytes_le</span>
+
+        <span class="k">return</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">StartId</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">State</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Attributes</span><span class="p">,</span>
+
+                           <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span><span class="p">,</span> <span class="n">vendor_guid</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="populate_structure_fields_1">populate_structure_fields</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">populate_structure_fields</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">in_bytes</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">populate_structure_fields</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">in_bytes</span><span class="p">):</span>
+
+        <span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StartId</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">State</span><span class="p">,</span> <span class="n">reserved</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Attributes</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span><span class="p">,</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">VendorGuid</span><span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">,</span> <span class="n">in_bytes</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="serialize_1">serialize</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">with_padding</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="nt">def</span> <span class="nt">serialize</span><span class="o">(</span><span class="nt">self</span><span class="o">,</span> <span class="nt">with_padding</span><span class="o">=</span><span class="nt">False</span><span class="o">):</span>
+
+        <span class="nt">bytes</span> <span class="o">=</span> <span class="nt">self</span><span class="p">.</span><span class="nc">pack_struct</span><span class="o">()</span>
+
+        <span class="err">#</span> <span class="nt">Now</span> <span class="nt">add</span> <span class="nt">the</span> <span class="nt">name</span> <span class="nt">and</span> <span class="nt">data</span><span class="o">.</span>
+
+        <span class="nt">bytes</span> <span class="o">+=</span> <span class="nt">self</span><span class="p">.</span><span class="nc">get_packed_name</span><span class="o">()</span>
+
+        <span class="nt">bytes</span> <span class="o">+=</span> <span class="nt">self</span><span class="p">.</span><span class="nc">Data</span>
+
+        <span class="err">#</span> <span class="nt">Add</span> <span class="nt">padding</span> <span class="nt">if</span> <span class="nt">necessary</span><span class="o">.</span>
+
+        <span class="nt">if</span> <span class="nt">with_padding</span><span class="o">:</span>
+
+            <span class="nt">bytes</span> <span class="o">+=</span> <span class="nt">b</span><span class="s2">&quot;\xFF&quot;</span> <span class="o">*</span> <span class="nt">self</span><span class="p">.</span><span class="nc">get_buffer_padding_size</span><span class="o">()</span>
+
+        <span class="nt">return</span> <span class="nt">bytes</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="set_data_1">set_data</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">set_data</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">new_data</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">set_data</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">new_data</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="k">Data</span> <span class="o">=</span> <span class="n">new_data</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">DataSize</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="set_name_1">set_name</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">new_name</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">set_name</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">new_name</span><span class="p">):</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">new_name</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">NameSize</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">get_packed_name</span><span class="p">())</span>
+</code></pre></div>
+
+
+</details>
+<h3 id="variablestoreheader">VariableStoreHeader</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">VariableStoreHeader</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">VariableStoreHeader</span>(<span class="n">object</span>):
+
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>):
+
+        <span class="nb">self</span>.<span class="n">StructString</span> = <span class="s">&quot;=16sLBBHL&quot;</span>  <span class="c1"># spell-checker: disable-line</span>
+
+        <span class="nb">self</span>.<span class="n">StructSize</span> = <span class="n">struct</span>.<span class="n">calcsize</span>(<span class="nb">self</span>.<span class="n">StructString</span>)
+
+        <span class="nb">self</span>.<span class="nb">Signature</span> = <span class="n">None</span>
+
+        <span class="nb">self</span>.<span class="n">Size</span> = <span class="n">None</span>
+
+        <span class="nb">self</span>.<span class="n">Format</span> = <span class="n">None</span>
+
+        <span class="nb">self</span>.<span class="n">State</span> = <span class="n">None</span>
+
+        <span class="nb">self</span>.<span class="n">Reserved0</span> = <span class="n">None</span>
+
+        <span class="nb">self</span>.<span class="n">Reserved1</span> = <span class="n">None</span>
+
+        <span class="nb">self</span>.<span class="n">Type</span> = <span class="s">&#39;Var&#39;</span>
+
+    <span class="n">def</span> <span class="n">load_from_file</span>(<span class="nb">self</span>, <span class="nb">file</span>):
+
+        <span class="c1"># This function assumes that the file has been seeked</span>
+
+        <span class="c1"># to the correct starting location.</span>
+
+        <span class="n">orig_seek</span> = <span class="nb">file</span>.<span class="nb">tell</span>()
+
+        <span class="n">struct_bytes</span> = <span class="nb">file</span>.<span class="nb">read</span>(<span class="n">struct</span>.<span class="n">calcsize</span>(<span class="nb">self</span>.<span class="n">StructString</span>))
+
+        <span class="nb">file</span>.<span class="nb">seek</span>(<span class="n">orig_seek</span>)
+
+        <span class="c1"># Load this object with the contents of the data.</span>
+
+        (<span class="n">signature_bin</span>, <span class="nb">self</span>.<span class="n">Size</span>, <span class="nb">self</span>.<span class="n">Format</span>, <span class="nb">self</span>.<span class="n">State</span>, <span class="nb">self</span>.<span class="n">Reserved0</span>,
+
+            <span class="nb">self</span>.<span class="n">Reserved1</span>) = <span class="n">struct</span>.<span class="nb">unpack</span>(<span class="nb">self</span>.<span class="n">StructString</span>, <span class="n">struct_bytes</span>)
+
+        <span class="c1"># Update the GUID to be a UUID object.</span>
+
+        <span class="k">if</span> <span class="n">sys</span>.<span class="n">byteorder</span> == <span class="s">&#39;big&#39;</span>:
+
+            <span class="nb">self</span>.<span class="nb">Signature</span> = <span class="n">uuid</span>.<span class="n">UUID</span>(<span class="nb">bytes</span>=<span class="n">signature_bin</span>)
+
+        <span class="n">else:</span>
+
+            <span class="nb">self</span>.<span class="nb">Signature</span> = <span class="n">uuid</span>.<span class="n">UUID</span>(<span class="n">bytes_le</span>=<span class="n">signature_bin</span>)
+
+        <span class="c1"># Check one last thing.</span>
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="nb">Signature</span> != <span class="n">EfiVariableGuid</span> <span class="o">and</span> <span class="nb">self</span>.<span class="nb">Signature</span> != <span class="n">EfiAuthenticatedVariableGuid:</span>
+
+            <span class="n">raise</span> <span class="nb">Exception</span>(<span class="s">&quot;VarStore is of unknown type! %s&quot;</span> % <span class="nb">self</span>.<span class="nb">Signature</span>)
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="nb">Signature</span> == <span class="n">EfiAuthenticatedVariableGuid:</span>
+
+            <span class="nb">self</span>.<span class="n">Type</span> = <span class="s">&#39;AuthVar&#39;</span>
+
+        <span class="k">return</span> <span class="nb">self</span>
+
+    <span class="n">def</span> <span class="n">serialize</span>(<span class="nb">self</span>):
+
+        <span class="n">signature_bin</span> = <span class="nb">self</span>.<span class="nb">Signature</span>.<span class="nb">bytes</span> <span class="k">if</span> <span class="n">sys</span>.<span class="n">byteorder</span> == <span class="s">&#39;big&#39;</span> <span class="k">else</span> <span class="nb">self</span>.<span class="nb">Signature</span>.<span class="n">bytes_le</span>
+
+        <span class="k">return</span> <span class="n">struct</span>.<span class="nb">pack</span>(<span class="nb">self</span>.<span class="n">StructString</span>, <span class="n">signature_bin</span>, <span class="nb">self</span>.<span class="n">Size</span>, <span class="nb">self</span>.<span class="n">Format</span>,
+
+                           <span class="nb">self</span>.<span class="n">State</span>, <span class="nb">self</span>.<span class="n">Reserved0</span>, <span class="nb">self</span>.<span class="n">Reserved1</span>)
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="methods_2">Methods</h4>
+<h4 id="load_from_file_2">load_from_file</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">load_from_file</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">file</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">load_from_file</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">file</span><span class="p">):</span>
+
+        <span class="o">#</span> <span class="n">This</span> <span class="k">function</span> <span class="n">assumes</span> <span class="n">that</span> <span class="n">the</span> <span class="n">file</span> <span class="n">has</span> <span class="n">been</span> <span class="n">seeked</span>
+
+        <span class="o">#</span> <span class="k">to</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">starting</span> <span class="k">location</span><span class="p">.</span>
+
+        <span class="n">orig_seek</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="n">tell</span><span class="p">()</span>
+
+        <span class="n">struct_bytes</span> <span class="o">=</span> <span class="n">file</span><span class="p">.</span><span class="k">read</span><span class="p">(</span><span class="n">struct</span><span class="p">.</span><span class="n">calcsize</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">))</span>
+
+        <span class="n">file</span><span class="p">.</span><span class="n">seek</span><span class="p">(</span><span class="n">orig_seek</span><span class="p">)</span>
+
+        <span class="o">#</span> <span class="k">Load</span> <span class="n">this</span> <span class="k">object</span> <span class="k">with</span> <span class="n">the</span> <span class="n">contents</span> <span class="k">of</span> <span class="n">the</span> <span class="k">data</span><span class="p">.</span>
+
+        <span class="p">(</span><span class="n">signature_bin</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">Size</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Format</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">State</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Reserved0</span><span class="p">,</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">Reserved1</span><span class="p">)</span> <span class="o">=</span> <span class="n">struct</span><span class="p">.</span><span class="n">unpack</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">,</span> <span class="n">struct_bytes</span><span class="p">)</span>
+
+        <span class="o">#</span> <span class="k">Update</span> <span class="n">the</span> <span class="n">GUID</span> <span class="k">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">UUID</span> <span class="k">object</span><span class="p">.</span>
+
+        <span class="k">if</span> <span class="n">sys</span><span class="p">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;big&#39;</span><span class="p">:</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">Signature</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="n">UUID</span><span class="p">(</span><span class="n">bytes</span><span class="o">=</span><span class="n">signature_bin</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="n">Signature</span> <span class="o">=</span> <span class="n">uuid</span><span class="p">.</span><span class="n">UUID</span><span class="p">(</span><span class="n">bytes_le</span><span class="o">=</span><span class="n">signature_bin</span><span class="p">)</span>
+
+        <span class="o">#</span> <span class="k">Check</span> <span class="n">one</span> <span class="k">last</span> <span class="n">thing</span><span class="p">.</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">Signature</span> <span class="o">!=</span> <span class="n">EfiVariableGuid</span> <span class="k">and</span> <span class="k">self</span><span class="p">.</span><span class="n">Signature</span> <span class="o">!=</span> <span class="n">EfiAuthenticatedVariableGuid</span><span class="p">:</span>
+
+            <span class="n">raise</span> <span class="k">Exception</span><span class="p">(</span><span class="ss">&quot;VarStore is of unknown type! %s&quot;</span> <span class="o">%</span> <span class="k">self</span><span class="p">.</span><span class="n">Signature</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">Signature</span> <span class="o">==</span> <span class="n">EfiAuthenticatedVariableGuid</span><span class="p">:</span>
+
+            <span class="k">self</span><span class="p">.</span><span class="k">Type</span> <span class="o">=</span> <span class="s1">&#39;AuthVar&#39;</span>
+
+        <span class="k">return</span> <span class="k">self</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="serialize_2">serialize</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">serialize</span><span class="p">(</span>
+    <span class="bp">self</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">serialize</span><span class="p">(</span><span class="k">self</span><span class="p">):</span>
+
+        <span class="n">signature_bin</span> <span class="o">=</span> <span class="k">self</span><span class="p">.</span><span class="n">Signature</span><span class="p">.</span><span class="n">bytes</span> <span class="k">if</span> <span class="n">sys</span><span class="p">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;big&#39;</span> <span class="k">else</span> <span class="k">self</span><span class="p">.</span><span class="n">Signature</span><span class="p">.</span><span class="n">bytes_le</span>
+
+        <span class="k">return</span> <span class="n">struct</span><span class="p">.</span><span class="n">pack</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">StructString</span><span class="p">,</span> <span class="n">signature_bin</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="k">Size</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Format</span><span class="p">,</span>
+
+                           <span class="k">self</span><span class="p">.</span><span class="k">State</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Reserved0</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">Reserved1</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../variablestore_manulipulations/" title="Variablestore manulipulations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Variablestore manulipulations
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../build_objects/readme/" title="Readme" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Readme
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../.."}})</script>
+      
+        <script src="../../../../js/version-select.js"></script>
+      
+    
+  </body>
+</html>
