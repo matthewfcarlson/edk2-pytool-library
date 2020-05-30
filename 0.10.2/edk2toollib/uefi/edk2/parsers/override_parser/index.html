@@ -1,0 +1,2066 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project Mu Documentation">
+      
+      
+        <link rel="canonical" href="https://matthewc.dev/edk2-pytool-library/master/edk2toollib/uefi/edk2/parsers/override_parser/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Override parser - EDK2 Pytool Library</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../../../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../../../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../../../../css/version-select.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#module-edk2toollibuefiedk2parsersoverride_parser" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" aria-label="EDK2 Pytool Library" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              EDK2 Pytool Library
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Override parser
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://matthewc.dev/edk2-pytool-library/master/" title="EDK2 Pytool Library" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    EDK2 Pytool Library
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/matthewfcarlson/edk2-pytool-library/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../developing/" title="Developing" class="md-nav__link">
+      Developing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../publishing/" title="Publishing" class="md-nav__link">
+      Publishing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../using/" title="Using" class="md-nav__link">
+      Using
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Features
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Features
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../features/logging.ansi_handler/" title="Logging.ansi handler" class="md-nav__link">
+      Logging.ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../features/utility_functions.GetHostInfo/" title="Utility functions.get host info" class="md-nav__link">
+      Utility functions.get host info
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../../features/windows_firmware_policy/" title="Windows firmware policy" class="md-nav__link">
+      Windows firmware policy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Reference
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../bin/" title="Bin" class="md-nav__link">
+      Bin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../gitignore_parser/" title="Gitignore parser" class="md-nav__link">
+      Gitignore parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../utility_functions/" title="Utility functions" class="md-nav__link">
+      Utility functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-5" type="checkbox" id="nav-6-5">
+    
+    <label class="md-nav__link" for="nav-6-5">
+      Acpi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-5">
+        Acpi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../acpi/dmar_parser/" title="Dmar parser" class="md-nav__link">
+      Dmar parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../acpi/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-6" type="checkbox" id="nav-6-6">
+    
+    <label class="md-nav__link" for="nav-6-6">
+      Log
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-6">
+        Log
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../log/ansi_handler/" title="Ansi handler" class="md-nav__link">
+      Ansi handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../log/file_handler/" title="File handler" class="md-nav__link">
+      File handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../log/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../log/junit_report_format/" title="Junit report format" class="md-nav__link">
+      Junit report format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../log/markdown_handler/" title="Markdown handler" class="md-nav__link">
+      Markdown handler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../log/string_handler/" title="String handler" class="md-nav__link">
+      String handler
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-7" type="checkbox" id="nav-6-7">
+    
+    <label class="md-nav__link" for="nav-6-7">
+      Tpm
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-7">
+        Tpm
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tpm/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tpm/tpm2_defs/" title="Tpm2 defs" class="md-nav__link">
+      Tpm2 defs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tpm/tpm2_policy_calc/" title="Tpm2 policy calc" class="md-nav__link">
+      Tpm2 policy calc
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tpm/tpm2_simulator/" title="Tpm2 simulator" class="md-nav__link">
+      Tpm2 simulator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../tpm/tpm2_stream/" title="Tpm2 stream" class="md-nav__link">
+      Tpm2 stream
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8" type="checkbox" id="nav-6-8" checked>
+    
+    <label class="md-nav__link" for="nav-6-8">
+      Uefi
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-8">
+        Uefi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../authenticated_variables_structure_support/" title="Authenticated variables structure support" class="md-nav__link">
+      Authenticated variables structure support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bmp_object/" title="Bmp object" class="md-nav__link">
+      Bmp object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pi_firmware_file/" title="Pi firmware file" class="md-nav__link">
+      Pi firmware file
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../pi_firmware_volume/" title="Pi firmware volume" class="md-nav__link">
+      Pi firmware volume
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../status_codes/" title="Status codes" class="md-nav__link">
+      Status codes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../uefi_multi_phase/" title="Uefi multi phase" class="md-nav__link">
+      Uefi multi phase
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../wincert/" title="Wincert" class="md-nav__link">
+      Wincert
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-9" type="checkbox" id="nav-6-8-9" checked>
+    
+    <label class="md-nav__link" for="nav-6-8-9">
+      Edk2
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-8-9">
+        Edk2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ftw_working_block_format/" title="Ftw working block format" class="md-nav__link">
+      Ftw working block format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../guid_list/" title="Guid list" class="md-nav__link">
+      Guid list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../path_utilities/" title="Path utilities" class="md-nav__link">
+      Path utilities
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../variablestore_manulipulations/" title="Variablestore manulipulations" class="md-nav__link">
+      Variablestore manulipulations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../variable_format/" title="Variable format" class="md-nav__link">
+      Variable format
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-9-7" type="checkbox" id="nav-6-8-9-7">
+    
+    <label class="md-nav__link" for="nav-6-8-9-7">
+      Build objects
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-9-7">
+        Build objects
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../build_objects/readme/" title="Readme" class="md-nav__link">
+      Readme
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-8-9-8" type="checkbox" id="nav-6-8-9-8" checked>
+    
+    <label class="md-nav__link" for="nav-6-8-9-8">
+      Parsers
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="4">
+      <label class="md-nav__title" for="nav-6-8-9-8">
+        Parsers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../base_parser/" title="Base parser" class="md-nav__link">
+      Base parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../buildreport_parser/" title="Buildreport parser" class="md-nav__link">
+      Buildreport parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dec_parser/" title="Dec parser" class="md-nav__link">
+      Dec parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dsc_parser/" title="Dsc parser" class="md-nav__link">
+      Dsc parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../fdf_parser/" title="Fdf parser" class="md-nav__link">
+      Fdf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../guid_parser/" title="Guid parser" class="md-nav__link">
+      Guid parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../inf_parser/" title="Inf parser" class="md-nav__link">
+      Inf parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Override parser
+      </label>
+    
+    <a href="./" title="Override parser" class="md-nav__link md-nav__link--active">
+      Override parser
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opparseerror" class="md-nav__link">
+    OpParseError
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with_traceback" class="md-nav__link">
+    with_traceback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overrideparser" class="md-nav__link">
+    OverrideParser
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    Static methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_override_lines" class="md-nav__link">
+    get_override_lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_override_line" class="md-nav__link">
+    parse_override_line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../targettxt_parser/" title="Targettxt parser" class="md-nav__link">
+      Targettxt parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9" type="checkbox" id="nav-6-9">
+    
+    <label class="md-nav__link" for="nav-6-9">
+      Windows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-9">
+        Windows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/locate_tools/" title="Locate tools" class="md-nav__link">
+      Locate tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6-9-3" type="checkbox" id="nav-6-9-3">
+    
+    <label class="md-nav__link" for="nav-6-9-3">
+      Capsule
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-6-9-3">
+        Capsule
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/capsule/cat_generator/" title="Cat generator" class="md-nav__link">
+      Cat generator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/capsule/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../windows/capsule/inf_generator/" title="Inf generator" class="md-nav__link">
+      Inf generator
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opparseerror" class="md-nav__link">
+    OpParseError
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with_traceback" class="md-nav__link">
+    with_traceback
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overrideparser" class="md-nav__link">
+    OverrideParser
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    Static methods
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_override_lines" class="md-nav__link">
+    get_override_lines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parse_override_line" class="md-nav__link">
+    parse_override_line
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/matthewfcarlson/edk2-pytool-library/edit/master/docs/edk2toollib/uefi/edk2/parsers/override_parser.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="module-edk2toollibuefiedk2parsersoverride_parser">Module edk2toollib.uefi.edk2.parsers.override_parser</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="c1">## @file override_parser.py</span>
+
+<span class="c1"># Contains classes to help with the parsing of INF files that</span>
+
+<span class="c1"># may contain OVERRIDE information.</span>
+
+<span class="c1">#</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># Copyright (c) Microsoft Corporation</span>
+
+<span class="c1">#</span>
+
+<span class="c1"># SPDX-License-Identifier: BSD-2-Clause-Patent</span>
+
+<span class="c1">##</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="n">FORMAT_VERSION_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>   <span class="c1"># Version 1: #OVERRIDE : VERSION | PATH_TO_MODULE | HASH | YYYY-MM-DDThh-mm-ss</span>
+
+<span class="k">class</span> <span class="nc">OpParseError</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
+
+    <span class="n">PE_VER</span> <span class="o">=</span> <span class="s1">&#39;VERSION&#39;</span>
+
+    <span class="n">PE_PATH</span> <span class="o">=</span> <span class="s1">&#39;PATH&#39;</span>
+
+    <span class="n">PE_HASH</span> <span class="o">=</span> <span class="s1">&#39;HASH&#39;</span>
+
+    <span class="n">PE_DATE</span> <span class="o">=</span> <span class="s1">&#39;DATE&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">my_type</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">my_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_VER</span><span class="p">,</span> <span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_PATH</span><span class="p">,</span>
+
+                           <span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_HASH</span><span class="p">,</span> <span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_DATE</span><span class="p">):</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unknown type &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">my_type</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="n">my_type</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="nb">repr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">OverrideParser</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    OverrideParser is a simple file parser for .inf files that</span>
+
+<span class="sd">    contain OVERRIDE data (i.e. overriding other .infs).</span>
+
+<span class="sd">    Creating the object can be done by passing either a valid file path</span>
+
+<span class="sd">    or a string containing the contents of an .inf file.</span>
+
+<span class="sd">    Will raise an exception if the file doesn&#39;t exist or if the contents</span>
+
+<span class="sd">    do not contain any OVERRIDE data.</span>
+
+<span class="sd">    NOTE: There is an argument to be made that this class should actually be</span>
+
+<span class="sd">          a subclass of InfParser, however, the InfParser is looking for far</span>
+
+<span class="sd">          more details and has a much higher overhead. During a parser refactor,</span>
+
+<span class="sd">          this should be considered.</span>
+
+<span class="sd">    ALSO NOTE: There is a pattern used here where the object parses during</span>
+
+<span class="sd">               instantiation. This pattern does not necessarily match the other</span>
+
+<span class="sd">               parsers. The pros and cons of this should also be weighed during</span>
+
+<span class="sd">               any parser refactor.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">inf_contents</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+
+        <span class="nb">super</span><span class="p">(</span><span class="n">OverrideParser</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+        <span class="c1"># Make sure that at least some data is provided.</span>
+
+        <span class="k">if</span> <span class="n">file_path</span> <span class="ow">is</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">inf_contents</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;file_path or inf_contents is required.&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Make sure not too much data is provided.</span>
+
+        <span class="k">if</span> <span class="n">file_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">inf_contents</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Only provide file_path or inf_contents. (</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">inf_contents</span><span class="p">))</span>
+
+        <span class="c1"># If a file path was provided, make sure it exists.</span>
+
+        <span class="k">if</span> <span class="n">file_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;File path &#39;</span><span class="si">%s</span><span class="s2">&#39; does not exist.&quot;</span> <span class="o">%</span> <span class="n">file_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">file_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="k">else</span> <span class="s1">&#39;String Buffer&#39;</span>
+
+        <span class="c1"># Set up the contents for parsing.</span>
+
+        <span class="n">parse_contents</span> <span class="o">=</span> <span class="n">inf_contents</span>
+
+        <span class="k">if</span> <span class="n">file_path</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+
+                <span class="n">parse_contents</span> <span class="o">=</span> <span class="nb">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parse_contents</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Failed to read contents of file &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">override_lines</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_override_lines</span><span class="p">(</span><span class="n">parse_contents</span><span class="p">)</span>
+
+        <span class="c1"># If no override lines were found, we&#39;re basically done here.</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">override_lines</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;File &#39;</span><span class="si">%s</span><span class="s2">&#39; did not contain any override lines.&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">overrides</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">override_line</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">override_lines</span><span class="p">:</span>
+
+            <span class="k">try</span><span class="p">:</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">overrides</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parse_override_line</span><span class="p">(</span><span class="n">override_line</span><span class="p">[</span><span class="s1">&#39;line&#39;</span><span class="p">]))</span>
+
+            <span class="k">except</span> <span class="n">OpParseError</span> <span class="k">as</span> <span class="n">pe</span><span class="p">:</span>
+
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parse error &#39;</span><span class="si">%s</span><span class="s2">&#39; occurred while processing line </span><span class="si">%d</span><span class="s2"> of &#39;</span><span class="si">%s</span><span class="s2">&#39;.&quot;</span> <span class="o">%</span>
+
+                                 <span class="p">(</span><span class="n">pe</span><span class="p">,</span> <span class="n">override_line</span><span class="p">[</span><span class="s1">&#39;lineno&#39;</span><span class="p">],</span> <span class="n">override_line</span><span class="p">[</span><span class="s1">&#39;line&#39;</span><span class="p">]))</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">get_override_lines</span><span class="p">(</span><span class="n">parse_contents</span><span class="p">):</span>
+
+        <span class="n">parse_lines</span> <span class="o">=</span> <span class="n">parse_contents</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">parse_lines</span><span class="p">)):</span>
+
+            <span class="k">if</span> <span class="n">parse_lines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;#OVERRIDE&quot;</span><span class="p">):</span>
+
+                <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s1">&#39;lineno&#39;</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="n">parse_lines</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()})</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+
+    <span class="nd">@staticmethod</span>
+
+    <span class="k">def</span> <span class="nf">parse_override_line</span><span class="p">(</span><span class="n">line_contents</span><span class="p">):</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="c1"># Split the override string into pieces.</span>
+
+        <span class="c1"># First the #OVERRIDE, which is separated by a :.</span>
+
+        <span class="c1"># Then everything else by |.</span>
+
+        <span class="n">line_parts</span> <span class="o">=</span> <span class="n">line_contents</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+
+        <span class="n">line_parts</span> <span class="o">=</span> <span class="p">[</span><span class="n">part</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="n">line_parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)]</span>
+
+        <span class="c1"># Step 1: Check version and number of blocks in this entry</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="n">result</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line_parts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_VER</span><span class="p">)</span>
+
+        <span class="c1"># Verify this is a known version and has valid number of entries</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">((</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">FORMAT_VERSION_1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">and</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line_parts</span><span class="p">)</span> <span class="o">==</span> <span class="n">FORMAT_VERSION_1</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
+
+            <span class="k">raise</span> <span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_VER</span><span class="p">)</span>
+
+        <span class="c1"># Step 2: Process the path to overridden module</span>
+
+        <span class="c1"># Normalize the path to support different slashes.</span>
+
+        <span class="n">result</span><span class="p">[</span><span class="s1">&#39;original_path&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">line_parts</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+        <span class="c1"># Step 3: Grep hash entry</span>
+
+        <span class="n">result</span><span class="p">[</span><span class="s1">&#39;current_hash&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">line_parts</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="c1"># Step 4: Parse the time of hash generation</span>
+
+        <span class="k">try</span><span class="p">:</span>
+
+            <span class="n">result</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">line_parts</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H-%M-%S&quot;</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+
+            <span class="k">raise</span> <span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="o">.</span><span class="n">PE_DATE</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="variables">Variables</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">FORMAT_VERSION_1</span>
+</code></pre></div>
+
+
+<h2 id="classes">Classes</h2>
+<h3 id="opparseerror">OpParseError</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">OpParseError</span><span class="p">(</span>
+    <span class="n">my_type</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Common base class for all non-exit exceptions.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">OpParseError</span>(<span class="nb">Exception</span>):
+
+    <span class="n">PE_VER</span> = <span class="s">&#39;VERSION&#39;</span>
+
+    <span class="n">PE_PATH</span> = <span class="s">&#39;PATH&#39;</span>
+
+    <span class="n">PE_HASH</span> = <span class="s">&#39;HASH&#39;</span>
+
+    <span class="n">PE_DATE</span> = <span class="s">&#39;DATE&#39;</span>
+
+    <span class="n">def</span> <span class="n">__init__</span>(<span class="nb">self</span>, <span class="n">my_type</span>):
+
+        <span class="k">if</span> <span class="n">my_type</span> <span class="nb">not</span> <span class="nb">in</span> (<span class="n">OpParseError</span>.<span class="n">PE_VER</span>, <span class="n">OpParseError</span>.<span class="n">PE_PATH</span>,
+
+                           <span class="n">OpParseError</span>.<span class="n">PE_HASH</span>, <span class="n">OpParseError</span>.<span class="n">PE_DATE</span>):
+
+            <span class="n">raise</span> <span class="n">ValueError</span>(<span class="s">&quot;Unknown type &#39;%s&#39;&quot;</span> % <span class="n">my_type</span>)
+
+        <span class="nb">self</span>.<span class="nb">type</span> = <span class="n">my_type</span>
+
+    <span class="n">def</span> <span class="n">__str__</span>(<span class="nb">self</span>):
+
+        <span class="k">return</span> <span class="k">repr</span>(<span class="nb">self</span>.<span class="nb">type</span>)
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<ul>
+<li>builtins.Exception</li>
+<li>builtins.BaseException</li>
+</ul>
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">PE_DATE</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">PE_HASH</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">PE_PATH</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">PE_VER</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">args</span>
+</code></pre></div>
+
+
+<h4 id="methods">Methods</h4>
+<h4 id="with_traceback">with_traceback</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">with_traceback</span><span class="p">(</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Exception.with_traceback(tb) &ndash;
+set self.<strong>traceback</strong> to tb and return self.</p>
+<h3 id="overrideparser">OverrideParser</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">OverrideParser</span><span class="p">(</span>
+    <span class="n">file_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">inf_contents</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>OverrideParser is a simple file parser for .inf files that
+contain OVERRIDE data (i.e. overriding other .infs).
+Creating the object can be done by passing either a valid file path
+or a string containing the contents of an .inf file.</p>
+<p>Will raise an exception if the file doesn&rsquo;t exist or if the contents
+do not contain any OVERRIDE data.</p>
+<p>NOTE: There is an argument to be made that this class should actually be
+      a subclass of InfParser, however, the InfParser is looking for far
+      more details and has a much higher overhead. During a parser refactor,
+      this should be considered.</p>
+<p>ALSO NOTE: There is a pattern used here where the object parses during
+           instantiation. This pattern does not necessarily match the other
+           parsers. The pros and cons of this should also be weighed during
+           any parser refactor.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="n">OverrideParser</span><span class="p">(</span><span class="k">object</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">    OverrideParser is a simple file parser for .inf files that</span>
+
+<span class="ss">    contain OVERRIDE data (i.e. overriding other .infs).</span>
+
+<span class="ss">    Creating the object can be done by passing either a valid file path</span>
+
+<span class="ss">    or a string containing the contents of an .inf file.</span>
+
+<span class="ss">    Will raise an exception if the file doesn&#39;t exist or if the contents</span>
+
+<span class="ss">    do not contain any OVERRIDE data.</span>
+
+<span class="ss">    NOTE: There is an argument to be made that this class should actually be</span>
+
+<span class="ss">          a subclass of InfParser, however, the InfParser is looking for far</span>
+
+<span class="ss">          more details and has a much higher overhead. During a parser refactor,</span>
+
+<span class="ss">          this should be considered.</span>
+
+<span class="ss">    ALSO NOTE: There is a pattern used here where the object parses during</span>
+
+<span class="ss">               instantiation. This pattern does not necessarily match the other</span>
+
+<span class="ss">               parsers. The pros and cons of this should also be weighed during</span>
+
+<span class="ss">               any parser refactor.</span>
+
+<span class="ss">    &quot;&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">file_path</span><span class="o">=</span><span class="k">None</span><span class="p">,</span><span class="w"> </span><span class="n">inf_contents</span><span class="o">=</span><span class="k">None</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">super</span><span class="p">(</span><span class="n">OverrideParser</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="ow">some</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">provided</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">file_path</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">None</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">inf_contents</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="k">None</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="ss">&quot;file_path or inf_contents is required.&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">too</span><span class="w"> </span><span class="n">much</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">provided</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">file_path</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">inf_contents</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="ss">&quot;Only provide file_path or inf_contents. (%s, %s)&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span><span class="w"> </span><span class="n">inf_contents</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">file</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="n">was</span><span class="w"> </span><span class="n">provided</span><span class="p">,</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">sure</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="ow">exists</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">file_path</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="ss">&quot;File path &#39;%s&#39; does not exist.&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">file_path</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">file_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">file_path</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;String Buffer&#39;</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Set</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">contents</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">parsing</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">parse_contents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inf_contents</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">file_path</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">None</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">with</span><span class="w"> </span><span class="k">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;r&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">file</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">parse_contents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">file</span><span class="p">.</span><span class="k">read</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="nl">parse_contents</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">ValueError</span><span class="p">(</span><span class="ss">&quot;Failed to read contents of file &#39;%s&#39;.&quot;</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">file_path</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">override_lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">get_override_lines</span><span class="p">(</span><span class="n">parse_contents</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="k">no</span><span class="w"> </span><span class="n">override</span><span class="w"> </span><span class="n">lines</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="k">found</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="s1">&#39;re basically done here.</span>
+
+<span class="s1">        if not self.override_lines:</span>
+
+<span class="s1">            raise ValueError(&quot;File &#39;</span><span class="o">%</span><span class="n">s</span><span class="s1">&#39; did not contain any override lines.&quot; % self.file_path)</span>
+
+<span class="s1">        self.overrides = []</span>
+
+<span class="s1">        for override_line in self.override_lines:</span>
+
+<span class="s1">            try:</span>
+
+<span class="s1">                self.overrides.append(self.parse_override_line(override_line[&#39;</span><span class="n">line</span><span class="s1">&#39;]))</span>
+
+<span class="s1">            except OpParseError as pe:</span>
+
+<span class="s1">                raise ValueError(&quot;Parse error &#39;</span><span class="o">%</span><span class="n">s</span><span class="s1">&#39; occurred while processing line %d of &#39;</span><span class="o">%</span><span class="n">s</span><span class="s1">&#39;.&quot; %</span>
+
+<span class="s1">                                 (pe, override_line[&#39;</span><span class="k">lineno</span><span class="s1">&#39;], override_line[&#39;</span><span class="n">line</span><span class="s1">&#39;]))</span>
+
+<span class="s1">    @staticmethod</span>
+
+<span class="s1">    def get_override_lines(parse_contents):</span>
+
+<span class="s1">        parse_lines = parse_contents.split(&#39;</span><span class="err">\</span><span class="n">n</span><span class="s1">&#39;)</span>
+
+<span class="s1">        result = []</span>
+
+<span class="s1">        for i in range(0, len(parse_lines)):</span>
+
+<span class="s1">            if parse_lines[i].strip().upper().startswith(&quot;#OVERRIDE&quot;):</span>
+
+<span class="s1">                result.append({&#39;</span><span class="k">lineno</span><span class="s1">&#39;: i + 1, &#39;</span><span class="n">line</span><span class="s1">&#39;: parse_lines[i].strip()})</span>
+
+<span class="s1">        return result</span>
+
+<span class="s1">    @staticmethod</span>
+
+<span class="s1">    def parse_override_line(line_contents):</span>
+
+<span class="s1">        result = {}</span>
+
+<span class="s1">        # Split the override string into pieces.</span>
+
+<span class="s1">        # First the #OVERRIDE, which is separated by a :.</span>
+
+<span class="s1">        # Then everything else by |.</span>
+
+<span class="s1">        line_parts = line_contents.split(&quot;:&quot;)</span>
+
+<span class="s1">        line_parts = [part.strip() for part in line_parts[1].split(&quot;|&quot;)]</span>
+
+<span class="s1">        # Step 1: Check version and number of blocks in this entry</span>
+
+<span class="s1">        try:</span>
+
+<span class="s1">            result[&#39;</span><span class="n">version</span><span class="s1">&#39;] = int(line_parts[0])</span>
+
+<span class="s1">        except ValueError:</span>
+
+<span class="s1">            raise OpParseError(OpParseError.PE_VER)</span>
+
+<span class="s1">        # Verify this is a known version and has valid number of entries</span>
+
+<span class="s1">        if not ((result[&#39;</span><span class="n">version</span><span class="s1">&#39;] == FORMAT_VERSION_1[0]) and (len(line_parts) == FORMAT_VERSION_1[1])):</span>
+
+<span class="s1">            raise OpParseError(OpParseError.PE_VER)</span>
+
+<span class="s1">        # Step 2: Process the path to overridden module</span>
+
+<span class="s1">        # Normalize the path to support different slashes.</span>
+
+<span class="s1">        result[&#39;</span><span class="n">original_path</span><span class="s1">&#39;] = os.path.normpath(line_parts[1])</span>
+
+<span class="s1">        # Step 3: Grep hash entry</span>
+
+<span class="s1">        result[&#39;</span><span class="n">current_hash</span><span class="s1">&#39;] = line_parts[2]</span>
+
+<span class="s1">        # Step 4: Parse the time of hash generation</span>
+
+<span class="s1">        try:</span>
+
+<span class="s1">            result[&#39;</span><span class="nc">datetime</span><span class="err">&#39;]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">datetime</span><span class="p">.</span><span class="nc">datetime</span><span class="p">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">line_parts</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;%Y-%m-%dT%H-%M-%S&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="nl">ValueError</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="p">.</span><span class="n">PE_DATE</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">result</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="static-methods">Static methods</h4>
+<h4 id="get_override_lines">get_override_lines</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_override_lines</span><span class="p">(</span>
+    <span class="n">parse_contents</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">get_override_lines</span><span class="p">(</span><span class="n">parse_contents</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">parse_lines</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_contents</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">parse_lines</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">parse_lines</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="nf">upper</span><span class="p">().</span><span class="n">startswith</span><span class="p">(</span><span class="ss">&quot;#OVERRIDE&quot;</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">result</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="err">{</span><span class="s1">&#39;lineno&#39;</span><span class="err">:</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;line&#39;</span><span class="err">:</span><span class="w"> </span><span class="n">parse_lines</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span><span class="err">}</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">result</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h4 id="parse_override_line">parse_override_line</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">parse_override_line</span><span class="p">(</span>
+    <span class="n">line_contents</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nv">@staticmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">parse_override_line</span><span class="p">(</span><span class="n">line_contents</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Split</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">override</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">pieces</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">First</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">#OVERRIDE</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">:</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Then</span><span class="w"> </span><span class="n">everything</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="o">|</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">line_parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line_contents</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;:&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">line_parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">part.strip() for part in line_parts[1</span><span class="o">]</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;|&quot;</span><span class="p">)</span><span class="err">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Step</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="k">Check</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">blocks</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">entry</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">result</span><span class="o">[</span><span class="n">&#39;version&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="n">line_parts</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="nl">ValueError</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="p">.</span><span class="n">PE_VER</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Verify</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">known</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">entries</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="p">((</span><span class="k">result</span><span class="o">[</span><span class="n">&#39;version&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">FORMAT_VERSION_1</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">line_parts</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">FORMAT_VERSION_1</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">))</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="p">.</span><span class="n">PE_VER</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Step</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="n">Process</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">overridden</span><span class="w"> </span><span class="k">module</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="k">Normalize</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">support</span><span class="w"> </span><span class="n">different</span><span class="w"> </span><span class="n">slashes</span><span class="p">.</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">result</span><span class="o">[</span><span class="n">&#39;original_path&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">os</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">line_parts</span><span class="o">[</span><span class="n">1</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Step</span><span class="w"> </span><span class="mi">3</span><span class="err">:</span><span class="w"> </span><span class="n">Grep</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="n">entry</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">result</span><span class="o">[</span><span class="n">&#39;current_hash&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">line_parts</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">#</span><span class="w"> </span><span class="n">Step</span><span class="w"> </span><span class="mi">4</span><span class="err">:</span><span class="w"> </span><span class="nf">Parse</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nc">time</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="n">generation</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">result</span><span class="o">[</span><span class="n">&#39;datetime&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">datetime</span><span class="p">.</span><span class="nc">datetime</span><span class="p">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">line_parts</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;%Y-%m-%dT%H-%M-%S&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="ow">except</span><span class="w"> </span><span class="nl">ValueError</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">raise</span><span class="w"> </span><span class="n">OpParseError</span><span class="p">(</span><span class="n">OpParseError</span><span class="p">.</span><span class="n">PE_DATE</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">result</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../inf_parser/" title="Inf parser" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Inf parser
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../targettxt_parser/" title="Targettxt parser" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Targettxt parser
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright (c) Microsoft.  All rights reserved
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:"../../../../.."}})</script>
+      
+        <script src="../../../../../js/version-select.js"></script>
+      
+    
+  </body>
+</html>
