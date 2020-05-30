@@ -484,6 +484,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#is_valid_version" class="md-nav__link">
+    is_valid_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#locate_class_in_module" class="md-nav__link">
     locate_class_in_module
   </a>
@@ -1591,6 +1598,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#is_valid_version" class="md-nav__link">
+    is_valid_version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#locate_class_in_module" class="md-nav__link">
     locate_class_in_module
   </a>
@@ -2427,6 +2441,20 @@
 
     <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">)</span>
 
+<span class="k">def</span> <span class="nf">is_valid_version</span><span class="p">(</span><span class="n">version</span><span class="p">):</span>
+
+    <span class="sd">&#39;&#39;&#39;</span>
+
+<span class="sd">    Returns whether a version is valid it must be (number).(number).(and so on) or (number)</span>
+
+<span class="sd">    There is no limit to the number of extra numbers you can have in a version string</span>
+
+<span class="sd">    &#39;&#39;&#39;</span>
+
+    <span class="n">version_reg</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[0-9]+(\.[0-9]+)*$&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">version_reg</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span>
+
 <span class="k">def</span> <span class="nf">import_module_by_file_name</span><span class="p">(</span><span class="n">module_file_path</span><span class="p">):</span>
 
     <span class="sd">&#39;&#39;&#39; Standard method of importing a Python file. Expecting absolute path. &#39;&#39;&#39;</span>
@@ -3019,6 +3047,32 @@
     <span class="n">spec</span><span class="p">.</span><span class="n">loader</span><span class="p">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">ImportedModule</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ImportedModule</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="is_valid_version">is_valid_version</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">is_valid_version</span><span class="p">(</span>
+    <span class="n">version</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Returns whether a version is valid it must be (number).(number).(and so on) or (number) 
+There is no limit to the number of extra numbers you can have in a version string</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">is_valid_version</span><span class="p">(</span><span class="k">version</span><span class="p">):</span>
+
+    <span class="s1">&#39;&#39;&#39;</span>
+
+<span class="s1">    Returns whether a version is valid it must be (number).(number).(and so on) or (number)</span>
+
+<span class="s1">    There is no limit to the number of extra numbers you can have in a version string</span>
+
+<span class="s1">    &#39;&#39;&#39;</span>
+
+    <span class="n">version_reg</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">compile</span><span class="p">(</span><span class="n">r</span><span class="s1">&#39;^[0-9]+(\.[0-9]+)*$&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">version_reg</span><span class="p">.</span><span class="k">match</span><span class="p">(</span><span class="k">version</span><span class="p">)</span> <span class="k">is</span> <span class="k">not</span> <span class="k">None</span>
 </code></pre></div>
 
 
